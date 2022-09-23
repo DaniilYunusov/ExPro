@@ -1,0 +1,77 @@
+<?xml version="1.0"?>
+<BZ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Name="TestSubBases" Author="Dem" CreateDate="08.09.2008 21:39:18" UpdateDate="22.04.2009 2:51:11">
+  <Comment>Test</Comment>
+  <Rule Name="Правило1">
+    <Act>A=2</Act>
+    <Act>B=2</Act>
+    <Act>Alfa=2</Act>
+    <Act>S=Треугольник("S",{a=A,b=B,alfa=Alfa})</Act>
+    <Act>ВЫВОД(S)</Act>
+    <Comment />
+    <Enable>true</Enable>
+    <Priority>50</Priority>
+  </Rule>
+  <Variable Name="Треуг1" Goal="true">
+    <Goal>True</Goal>
+    <Comment />
+    <StartValue />
+    <Type>NoType</Type>
+  </Variable>
+  <Variable Name="Alfa" Goal="false">
+    <Goal>False</Goal>
+    <Comment />
+    <StartValue />
+    <Type>NoType</Type>
+  </Variable>
+  <Variable Name="S" Goal="false">
+    <Goal>False</Goal>
+    <Comment />
+    <StartValue />
+    <Type>NoType</Type>
+  </Variable>
+  <Variable Name="B" Goal="false">
+    <Goal>False</Goal>
+    <Comment />
+    <StartValue />
+    <Type>NoType</Type>
+  </Variable>
+  <Variable Name="A" Goal="false">
+    <Goal>False</Goal>
+    <Comment />
+    <StartValue />
+    <Type>NoType</Type>
+  </Variable>
+  <BZ Name="Треугольник" Author="Dem" CreateDate="08.09.2008 21:39:18" UpdateDate="08.09.2008 21:39:18">
+    <Comment />
+    <Rule Name="Правило1">
+      <Act>S=a*b*sin(alfa)/2</Act>
+      <Comment />
+      <Enable>true</Enable>
+      <Priority>100</Priority>
+    </Rule>
+    <Variable Name="a" Goal="true">
+      <Goal>True</Goal>
+      <Comment />
+      <StartValue />
+      <Type>NoType</Type>
+    </Variable>
+    <Variable Name="b" Goal="true">
+      <Goal>True</Goal>
+      <Comment />
+      <StartValue />
+      <Type>NoType</Type>
+    </Variable>
+    <Variable Name="S" Goal="true">
+      <Goal>True</Goal>
+      <Comment />
+      <StartValue />
+      <Type>NoType</Type>
+    </Variable>
+    <Variable Name="alfa" Goal="true">
+      <Goal>True</Goal>
+      <Comment />
+      <StartValue />
+      <Type>NoType</Type>
+    </Variable>
+  </BZ>
+</BZ>

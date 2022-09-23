@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<BZ Name="q" Author="q">
+  <Comment>q</Comment>
+  <Variable Name="N">
+    <Goal />
+  </Variable>
+  <Rule Name="Правило1">
+    <Comment>
+    </Comment>
+    <Act>N=-3</Act>
+    <Act>While(N&lt;0)</Act>
+    <Act>Write(N)</Act>
+    <Act>N=N+1</Act>
+    <Act>End</Act>
+    <Act>Write("bu")</Act>
+    <Act>Write(N)</Act>
+  </Rule>
+</BZ>

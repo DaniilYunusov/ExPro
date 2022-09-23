@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<BZ Name="TestMinMax" Author="DEM@N">
+  <Comment>Тест функций МИН и МАКС</Comment>
+  <Variable Name="L">
+    <Goal />
+  </Variable>
+  <Rule Name="Правило1">
+    <Comment>
+    </Comment>
+    <Act>L=[[3,1],[2,4]]</Act>
+    <Act>ВЫВОД(МИН(L))</Act>
+    <Act>ВЫВОД(МАКС(L))</Act>
+    <Act>L=[122,293,4,25,43,42,23]</Act>
+    <Act>ВЫВОД(МИН(L))</Act>
+    <Act>ВЫВОД(МАКС(L))</Act>
+    <Act>L=["q","w","e","r","w","e","f","r"]</Act>
+    <Act>ВЫВОД(МИН(L))</Act>
+    <Act>ВЫВОД(МАКС(L))</Act>
+  </Rule>
+</BZ>

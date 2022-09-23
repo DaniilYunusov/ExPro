@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<BZ Name="Тест на функцию ИЗМ" Author="Юрин">
+  <Variable Name="X">
+    <Goal />
+  </Variable>
+  <Variable Name="Y">
+    <Goal />
+  </Variable>
+  <Rule Name="Правило1">
+    <Act>X=12.3</Act>
+  </Rule>
+  <Rule Name="Правило2">
+    <Act>ИЗМ(X,7.4)</Act>
+    <Act>Y=X+5.1</Act>
+    <Act>ВЫВОД("Y=",Y)</Act>
+    <Act>ВЫВОД("X=",X)</Act>
+  </Rule>
+</BZ>

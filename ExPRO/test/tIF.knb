@@ -1,0 +1,56 @@
+<?xml version="1.0"?>
+<BZ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Name="tIF" Author="Dem" CreateDate="07.12.2008 0:44:54" UpdateDate="12.02.2009 18:45:05">
+  <Comment>TestIF</Comment>
+  <Variable Name="X" Goal="true">
+    <Goal>True</Goal>
+    <Comment />
+    <StartValue />
+    <Type>NoType</Type>
+  </Variable>
+  <Variable Name="A" Goal="false">
+    <Goal>False</Goal>
+    <Comment />
+    <StartValue />
+    <Type>NoType</Type>
+  </Variable>
+  <Variable Name="B" Goal="false">
+    <Goal>False</Goal>
+    <Comment />
+    <StartValue />
+    <Type>NoType</Type>
+  </Variable>
+  <Variable Name="w1" Goal="false">
+    <Goal>False</Goal>
+    <Comment />
+    <StartValue />
+    <Type>NoType</Type>
+  </Variable>
+  <Variable Name="w2" Goal="false">
+    <Goal>False</Goal>
+    <Comment />
+    <StartValue />
+    <Type>NoType</Type>
+  </Variable>
+  <Rule Name="Правило1">
+    <Act>w1=ВВОД()</Act>
+    <Act>w2=ВВОД()</Act>
+    <Act>X=ЕСЛИ(w1&gt;w2,A,B)</Act>
+    <Act>ВЫВОД(X)</Act>
+    <Act>X=ВВОД()</Act>
+    <Act>ЕСЛ(X&gt;0)</Act>
+    <Act>ВЫВОД("OK")</Act>
+    <Act>ВЫХОД</Act>
+    <Enable>true</Enable>
+    <Priority>100</Priority>
+  </Rule>
+  <Rule Name="Правило2">
+    <Act>A=5</Act>
+    <Enable>true</Enable>
+    <Priority>50</Priority>
+  </Rule>
+  <Rule Name="Правило3">
+    <Act>B=10</Act>
+    <Enable>true</Enable>
+    <Priority>25</Priority>
+  </Rule>
+</BZ>

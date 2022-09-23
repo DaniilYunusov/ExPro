@@ -1,0 +1,48 @@
+<?xml version="1.0"?>
+<BZ Name="Определение прибыли от производства продукции" Author="Мухаметзянов">
+  <Comment>111</Comment>
+  <Variable Name="РР" />
+  <Variable Name="Кс" />
+  <Variable Name="КВП" />
+  <Variable Name="КРП" />
+  <Variable Name="Пед" />
+  <Variable Name="Сед" />
+  <Variable Name="ПотР" />
+  <Variable Name="Пг">
+    <Goal />
+  </Variable>
+  <Variable Name="Перем14" />
+  <Variable Name="Перем15" />
+  <Variable Name="Перем16" />
+  <Variable Name="Цед" />
+  <Rule Name="R4">
+    <Condition>КВП &lt;= РР</Condition>
+    <Act>КРП = КВП</Act>
+  </Rule>
+  <Rule Name="R5">
+    <Comment>Определение количества реализованной продукции КРП</Comment>
+    <Act>РР = Кс*ПотР</Act>
+  </Rule>
+  <Rule Name="R2">
+    <Comment>Определение размера рынка</Comment>
+    <Act>Пед=Цед-Сед</Act>
+  </Rule>
+  <Rule Name="R3">
+    <Comment>Определение_прибыли_единицы_продукции</Comment>
+    <Act>Сед=ВВОД("Себестоимость_единицы_продукции ")</Act>
+    <Act>Цед=ВВОД("Цена_единицы_продукции ")</Act>
+    <Act>КВП=ВВОД("Количество_выпускаемой_продукции ")</Act>
+    <Act>ПотР=ВВОД("Размер_потенциального_рынка ")</Act>
+    <Act>Кс=ВВОД("Коеффициент_спроса_продукции ")</Act>
+  </Rule>
+  <Rule Name="R1">
+    <Comment>Ввод_фактов</Comment>
+    <Act>Пг=Пед*КРП</Act>
+    <Act>ВЫВОД("Размер_годовой_прибыли: ","Пг= ",Пг)</Act>
+  </Rule>
+  <Rule Name="R4a">
+    <Comment>Определение_размера_годовой_прибыли</Comment>
+    <Condition>КВП &gt; РР</Condition>
+    <Act>КРП = РР</Act>
+  </Rule>
+</BZ>

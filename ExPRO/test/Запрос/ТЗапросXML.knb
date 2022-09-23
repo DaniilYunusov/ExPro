@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<BZ Name="Тест на работу с запросами SQL" Author="Юрин А.М.">
+  <Variable Name="Кол_хлеб">
+    <Goal />
+  </Variable>
+  <Variable Name="Стоим">
+    <Type>System.Double</Type>
+    <Goal />
+  </Variable>
+  <Variable Name="Кол_ед" />
+  <Rule Name="Запрос">
+    <Act>Кол_хлеб=ЗАПРОС("Склады.mdb","SELECT Количество FROM Склад WHERE Товар='Хлеб' AND Количество&gt;10")</Act>
+    <Act>Write(Кол_хлеб)</Act>
+  </Rule>
+  <Rule Name="Стоимость товара">
+    <Act>Кол_ед=ЭЛЕМСП(1,Кол_хлеб)</Act>
+    <Act>Стоим=Кол_ед*800</Act>
+    <Act>ВЫВОД("Стоимость товара=", Стоим)</Act>
+  </Rule>
+</BZ>

@@ -1,0 +1,42 @@
+<?xml version="1.0"?>
+<BZ Name="TestTable" Author="DEM@N">
+  <Comment>test</Comment>
+  <Variable Name="T">
+    <Goal />
+  </Variable>
+  <Variable Name="T2">
+    <StartValue>tab</StartValue>
+  </Variable>
+  <Table Name="tab" ColCount="3">
+    <Comment>BuGaGa</Comment>
+    <Width>
+    </Width>
+    <WidthColum>
+      <twc>
+      </twc>
+      <twc>200</twc>
+      <twc>300</twc>
+    </WidthColum>
+    <Headers>
+      <h>c1</h>
+      <h>c2</h>
+      <h>c3</h>
+    </Headers>
+    <tr>
+      <td>1</td>
+      <td>2</td>
+      <td>3</td>
+    </tr>
+    <tr>
+      <td>ВВОД()</td>
+      <td>ВВОД()</td>
+      <td>ВВОД()</td>
+    </tr>
+  </Table>
+  <Rule Name="Правило1">
+    <Act>ВЫВОД(T2)</Act>
+    <Act>ВЫВОД(tab)</Act>
+    <Act>T=tab</Act>
+    <Act>ВЫВОД(T)</Act>
+  </Rule>
+</BZ>

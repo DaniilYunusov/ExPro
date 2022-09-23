@@ -1,0 +1,1762 @@
+<?xml version="1.0"?>
+<BZ Name="Духи для вас." Author="Никитина-Макарова Надежда">
+  <Comment>    Все это предназначено как для женщин, так и для мужчин.</Comment>
+  <Variable Name="A">
+    <Comment>Строка для вывода текста в результате</Comment>
+    <Type>string</Type>
+  </Variable>
+  <Variable Name="A1">
+    <Comment>Строка для вывода текста в результате</Comment>
+    <Type>string</Type>
+  </Variable>
+  <Variable Name="B">
+    <Comment>Строка для вывода текста в результате</Comment>
+    <Type>string</Type>
+  </Variable>
+  <Variable Name="B1">
+    <Comment>Строка для вывода текста в результате</Comment>
+    <Type>string</Type>
+  </Variable>
+  <Variable Name="C">
+    <Comment>Строка для вывода текста в результате</Comment>
+    <Type>string</Type>
+  </Variable>
+  <Variable Name="C1">
+    <Comment>Строка для вывода текста в результате</Comment>
+    <Type>string</Type>
+  </Variable>
+  <Variable Name="D">
+    <Comment>Строка для вывода текста в результате</Comment>
+    <Type>string</Type>
+  </Variable>
+  <Variable Name="D1">
+    <Comment>Строка для вывода текста в результате</Comment>
+    <Type>string</Type>
+  </Variable>
+  <Variable Name="E">
+    <Comment>Строка для вывода текста в результате</Comment>
+    <Type>string</Type>
+  </Variable>
+  <Variable Name="E1">
+    <Comment>Строка для вывода текста в результате</Comment>
+    <Type>string</Type>
+  </Variable>
+  <Variable Name="F">
+    <Comment>Строка для вывода текста в результате</Comment>
+    <Type>string</Type>
+  </Variable>
+  <Variable Name="F1">
+    <Comment>Выбор темы</Comment>
+  </Variable>
+  <Variable Name="F39">
+    <Comment>Выбор подтемы, если вы выбрали тему духи для женщин</Comment>
+  </Variable>
+  <Variable Name="F40">
+    <Comment>Выбор положительного или отрицательного ответа для женщин</Comment>
+  </Variable>
+  <Variable Name="F41">
+    <Comment>Выбор положительного или отрицательного ответа для женщин</Comment>
+  </Variable>
+  <Variable Name="F42">
+    <Comment>Выбор положительного или отрицательного ответа для женщин</Comment>
+  </Variable>
+  <Variable Name="F43">
+    <Comment>Выбор положительного или отрицательного ответа для женщин</Comment>
+  </Variable>
+  <Variable Name="F44">
+    <Comment>Выбор положительного или отрицательного ответа для женщин</Comment>
+  </Variable>
+  <Variable Name="F45">
+    <Comment>Выбор положительного или отрицательного ответа для женщин</Comment>
+  </Variable>
+  <Variable Name="F46">
+    <Comment>Выбор положительного или отрицательного ответа для женщин</Comment>
+  </Variable>
+  <Variable Name="F47">
+    <Comment>Выбор положительного или отрицательного ответа для женщин</Comment>
+  </Variable>
+  <Variable Name="F48">
+    <Comment>Выбор духов на все случаи жизни</Comment>
+  </Variable>
+  <Variable Name="F49">
+    <Comment>Выбор цвета волос</Comment>
+  </Variable>
+  <Variable Name="F50">
+    <Comment>Выбор гардероба духов</Comment>
+  </Variable>
+  <Variable Name="F51">
+    <Comment>Выбор по стойкости ароматов</Comment>
+  </Variable>
+  <Variable Name="F52">
+    <Comment>Выбор одного из восьми образов женщины</Comment>
+  </Variable>
+  <Variable Name="F53">
+    <Comment>выбор духов по цене</Comment>
+  </Variable>
+  <Variable Name="F54">
+    <Comment>Выбор положительного или отрицательного ответа для мужчин</Comment>
+  </Variable>
+  <Variable Name="F55">
+    <Comment>Выбор положительного или отрицательного ответа для мужчин</Comment>
+  </Variable>
+  <Variable Name="F56">
+    <Comment>Выбор положительного или отрицательного ответа для мужчин</Comment>
+  </Variable>
+  <Variable Name="F57">
+    <Comment>Выбор положительного или отрицательного ответа для мужчин</Comment>
+  </Variable>
+  <Variable Name="F58">
+    <Comment>Выбор положительного или отрицательного ответа для мужчин</Comment>
+  </Variable>
+  <Variable Name="F59">
+    <Comment>Выбор положительного или отрицательного ответа для мужчин</Comment>
+  </Variable>
+  <Variable Name="F60">
+    <Comment>Вводит знак зодиака</Comment>
+    <Type>string</Type>
+  </Variable>
+  <Variable Name="F61">
+    <Comment>Вводит планету</Comment>
+  </Variable>
+  <Variable Name="F62">
+    <Comment>Выбор категории из подтемы составляющие ароматы </Comment>
+  </Variable>
+  <Variable Name="F63">
+    <Comment>Выбор ингредиентов духов из категории вещества животного происхождения</Comment>
+  </Variable>
+  <Variable Name="F64">
+    <Comment>Выбор разделов духов из категории вещества растительного происхождения</Comment>
+  </Variable>
+  <Variable Name="F65">
+    <Comment>Выбор ингредиентов духов из раздела вещества цветы</Comment>
+  </Variable>
+  <Variable Name="F66">
+    <Comment>Выбор ингредиентов духов из раздела вещества камедь и смолы</Comment>
+  </Variable>
+  <Variable Name="F67">
+    <Comment>Выбор ингредиентов духов из раздела вещества мхи, древесина и кора</Comment>
+  </Variable>
+  <Variable Name="G">
+    <Comment>Строка для вывода текста в результате</Comment>
+    <Type>string</Type>
+  </Variable>
+  <Variable Name="G1">
+    <Comment>Строка для вывода текста в результате</Comment>
+    <Type>string</Type>
+  </Variable>
+  <Variable Name="H">
+    <Comment>Строка для вывода текста в результате</Comment>
+    <Type>string</Type>
+  </Variable>
+  <Variable Name="H1">
+    <Comment>Строка для вывода текста в результате</Comment>
+  </Variable>
+  <Variable Name="I">
+    <Comment>Строка для вывода текста в результате</Comment>
+    <Type>string</Type>
+  </Variable>
+  <Variable Name="I1">
+    <Comment>Строка для вывода текста в результате</Comment>
+  </Variable>
+  <Variable Name="J">
+    <Comment>Строка для вывода текста в результате</Comment>
+    <Type>string</Type>
+  </Variable>
+  <Variable Name="J1">
+    <Comment>Строка для вывода текста в результате</Comment>
+  </Variable>
+  <Variable Name="K">
+    <Comment>Строка для вывода текста в результате</Comment>
+    <Type>string</Type>
+  </Variable>
+  <Variable Name="K1">
+    <Comment>Строка для вывода текста в результате</Comment>
+  </Variable>
+  <Variable Name="L">
+    <Comment>Строка для вывода текста в результате</Comment>
+    <Type>string</Type>
+  </Variable>
+  <Variable Name="L1">
+    <Comment>Строка для вывода текста в результате</Comment>
+  </Variable>
+  <Variable Name="M">
+    <Comment>Строка для вывода текста в результате</Comment>
+    <Type>string</Type>
+  </Variable>
+  <Variable Name="M1">
+    <Comment>Строка для вывода текста в результате</Comment>
+  </Variable>
+  <Variable Name="N">
+    <Comment>Строка для вывода текста в результате</Comment>
+    <Type>string</Type>
+  </Variable>
+  <Variable Name="N1">
+    <Comment>Строка для вывода текста в результате</Comment>
+  </Variable>
+  <Variable Name="O">
+    <Comment>Строка для вывода текста в результате</Comment>
+    <Type>string</Type>
+  </Variable>
+  <Variable Name="O1">
+    <Comment>Строка для вывода текста в результате</Comment>
+  </Variable>
+  <Variable Name="P">
+    <Comment>Строка для вывода текста в результате</Comment>
+    <Type>string</Type>
+  </Variable>
+  <Variable Name="P1">
+    <Comment>Строка для вывода текста в результате</Comment>
+  </Variable>
+  <Variable Name="Q">
+    <Comment>Строка для вывода текста в результате</Comment>
+    <Type>string</Type>
+  </Variable>
+  <Variable Name="Q1">
+    <Comment>Строка для вывода текста в результате</Comment>
+  </Variable>
+  <Variable Name="R">
+    <Comment>Строка для вывода текста в результате</Comment>
+    <Type>string</Type>
+  </Variable>
+  <Variable Name="S">
+    <Comment>Выводит окончательный текст в результат</Comment>
+    <Type>string</Type>
+    <Goal />
+  </Variable>
+  <Variable Name="S1">
+    <Comment>Строка для вывода текста в результате</Comment>
+    <Type>string</Type>
+  </Variable>
+  <Variable Name="T">
+    <Comment>Строка для вывода текста в результате</Comment>
+    <Type>string</Type>
+  </Variable>
+  <Variable Name="U">
+    <Comment>Строка для вывода текста в результате</Comment>
+    <Type>string</Type>
+  </Variable>
+  <Variable Name="V">
+    <Comment>Строка для вывода текста в результате</Comment>
+    <Type>string</Type>
+  </Variable>
+  <Variable Name="W">
+    <Comment>Строка для вывода текста в результате</Comment>
+    <Type>string</Type>
+  </Variable>
+  <Variable Name="X">
+    <Comment>Строка для вывода текста в результате</Comment>
+    <Type>string</Type>
+  </Variable>
+  <Variable Name="Y">
+    <Comment>Строка для вывода текста в результате</Comment>
+    <Type>string</Type>
+  </Variable>
+  <Variable Name="Z">
+    <Comment>Строка для вывода текста в результате</Comment>
+    <Type>string</Type>
+  </Variable>
+  <Rule Name="Пр1">
+    <Act>F1=ВЫБОР("Что вас интересует?",["Духи для мужчин","Духи для женщин","Из чего сделаны духи?","Цена духов"])</Act>
+  </Rule>
+  <Rule Name="Пр62">
+    <Comment>Предлагается выбрать , интересующую вас, тему</Comment>
+    <Condition>F1="Духи для женщин"</Condition>
+    <Act>F39=ВЫБОР("Выберите нужное",["Духи в подарок","Духи на все случаи жизни"])</Act>
+  </Rule>
+  <Rule Name="Пр63">
+    <Comment>Выбор подтем, если вы выбрали тему духи для женщин</Comment>
+    <Condition>F39="Духи в подарок"</Condition>
+    <Act>F40=ВЫБОР("Она до безумия любит розу и жасмин. Жизнерадостная женщина, любящая одеваться и выходить в свет, умеющая преподнести себя",["да","нет"])</Act>
+  </Rule>
+  <Rule Name="Пр46">
+    <Comment>Выбор положительного или отрицательного  ответа , прочитав текст о  женщине</Comment>
+    <Condition>F40="да"</Condition>
+    <Act>S="Ей подойдут духи Diva от Унгаро"</Act>
+    <Act>ВЫВОД(S)</Act>
+  </Rule>
+  <Rule Name="Пр66">
+    <Comment>Вывод текста, в случае положительного ответа</Comment>
+    <Condition>F40="нет"</Condition>
+    <Act>F41=ВЫБОР("Она спортсменка, любит уик-энды на берегу моря или на природе в деревне, на даче. Она весела и смешлива, но слишком тяжелые духи вызывают у нее головную боль",["да","нет"])</Act>
+  </Rule>
+  <Rule Name="Пр67">
+    <Comment>Выбор положительного или отрицательного  ответа , прочитав текст о  женщине,  в случае отрицательного ответа </Comment>
+    <Condition>F41="да"</Condition>
+    <Act>S="Ей подходят духи Vent frais (Свежий ветер) от Бальмена"</Act>
+    <Act>ВЫВОД(S)</Act>
+  </Rule>
+  <Rule Name="Пр49">
+    <Comment>Вывод текста, в случае положительного ответа</Comment>
+    <Condition>F41="нет"</Condition>
+    <Act>F42=ВЫБОР("У нее вкус к ретро, опрятной и хорошо сшитой одежде, превосходным тканям современных расцветок, в ней море достоинств",["да","нет"])</Act>
+  </Rule>
+  <Rule Name="Пр50">
+    <Comment>Выбор положительного или отрицательного  ответа , прочитав текст о  женщине,  в случае отрицательного ответа </Comment>
+    <Condition>F42="да"</Condition>
+    <Act>S="Ей подходят духи Cuir de Russie (Русская кожа)  от Шанель"</Act>
+    <Act>ВЫВОД(S)</Act>
+  </Rule>
+  <Rule Name="Пр51">
+    <Comment>Вывод текста, в случае положительного ответа</Comment>
+    <Condition>F42="нет"</Condition>
+    <Act>F43=ВЫБОР("Она не любит цветочных или пряных духов, решительно современна, авангардистка, обожант путешествия и новые встречи",["да","нет"])</Act>
+  </Rule>
+  <Rule Name="Пр52">
+    <Comment>Выбор положительного или отрицательного  ответа , прочитав текст о  женщине,  в случае отрицательного ответа </Comment>
+    <Condition>F43="да"</Condition>
+    <Act>S="Ей подходят духи Calandre от Пако Рабанна"</Act>
+    <Act>ВЫВОД(S)</Act>
+  </Rule>
+  <Rule Name="Пр53">
+    <Comment>Вывод текста, в случае положительного ответа</Comment>
+    <Condition>F43="нет"</Condition>
+    <Act>F44=ВЫБОР("Она нежна и романтична, любит огромные охапки цветов, большие дома и детей, семейные праздники и солнечные ванны",["да","нет"])</Act>
+  </Rule>
+  <Rule Name="Пр54">
+    <Comment>Выбор положительного или отрицательного  ответа , прочитав текст о  женщине, в случае отрицательного ответа</Comment>
+    <Condition>F44="да"</Condition>
+    <Act>S="Ей подходят духи Fleur de rocaille (Цветок рокай) от Карона"</Act>
+    <Act>ВЫВОД(S)</Act>
+  </Rule>
+  <Rule Name="Пр55">
+    <Comment>Вывод текста, в случае положительного ответа</Comment>
+    <Condition>F44="нет"</Condition>
+    <Act>F45=ВЫБОР("Она не любит слишком типичных духов, предпочитает цветочное облако, едва заметный запах розы, элегантную и спортивную одежду, классическую музыку и выходы в ресторан",["да","нет"])</Act>
+  </Rule>
+  <Rule Name="Пр56">
+    <Comment>Выбор положительного или отрицательного  ответа , прочитав текст о  женщине,  в случае отрицательного ответа </Comment>
+    <Condition>F45="да"</Condition>
+    <Act>S="Ей подходят духи Paris от Сен-Лорана"</Act>
+    <Act>ВЫВОД(S)</Act>
+  </Rule>
+  <Rule Name="Пр65">
+    <Comment>Вывод текста, в случае положительного ответа</Comment>
+    <Condition>F45="нет"</Condition>
+    <Act>F46=ВЫБОР("Она обожает теплые и пряные ароматы пачули и экзотические запахи, шелк и меха, фрукты и сладости",["да","нет"])</Act>
+  </Rule>
+  <Rule Name="Пр58">
+    <Comment>Выбор положительного или отрицательного  ответа , прочитав текст о  женщине,  в случае отрицательного ответа </Comment>
+    <Condition>F46="да"</Condition>
+    <Act>S="Ей подходят духи Sheherazade от Деспре"</Act>
+  </Rule>
+  <Rule Name="Пр59">
+    <Comment>Вывод текста, в случае положительного ответа</Comment>
+    <Condition>F46="нет"</Condition>
+    <Act>F47=ВЫБОР("Наконец, если и правда вы очень боитесь ошибиться, вот два аромата, совершенно безобидные, классические, на все случаи жизни, не агрессивны и удивительно изысканные",["да","нет"])</Act>
+  </Rule>
+  <Rule Name="Пр64">
+    <Comment>Выбор положительного или отрицательного  ответа , прочитав текст о  женщине,  в случае отрицательного ответа </Comment>
+    <Condition>F47="да"</Condition>
+    <Act>S="Попробуйте подарить ей Ivoir (Слоновая кость) от Бальмена или Caleche (Ландо) от Эрме"</Act>
+    <Act>ВЫВОД(S)</Act>
+  </Rule>
+  <Rule Name="Пр61">
+    <Comment>Вывод текста, в случае положительного ответа</Comment>
+    <Condition>F47="нет"</Condition>
+    <Act>S="Начните с самого начала"</Act>
+    <Act>ВЫВОД(S)</Act>
+  </Rule>
+  <Rule Name="Пр68">
+    <Comment>В случае отрицательного ответа, начните с начала</Comment>
+    <Condition>F39="Духи на все случаи жизни"</Condition>
+    <Act>F48=ВЫБОР("Выберите себе духи",["По цвету волос","Сочетающиеся с мехом","Для любого времени года","Гардероб с духами","По стойкости ароматов","Восемь образов женщины"])</Act>
+  </Rule>
+  <Rule Name="Пр69">
+    <Comment>Вывод категорий, если вы выбрали подтему духи на все случаи жизни</Comment>
+    <Condition>F48="По цвету волос"</Condition>
+    <Act>F49=ВЫБОР("Выберите свой цвет волос",["брюнетка со светлой кожей","брюнетка","блондинка или шатенка","классическая блондинка","жгучая брюнетка"])</Act>
+  </Rule>
+  <Rule Name="Пр70">
+    <Comment>Выбор своего цвета волос</Comment>
+    <Condition>F49="брюнетка со светлой кожей"</Condition>
+    <Act>S="Ваши духи - Mitsouko от Герлена"</Act>
+    <Act>ВЫВОД(S)</Act>
+  </Rule>
+  <Rule Name="Пр71">
+    <Comment>Вывод текста, если вы брюнетка со светлой кожей </Comment>
+    <Condition>F49="брюнетка"</Condition>
+    <Act>S="Ваши духи - Shalimar от Герлен"</Act>
+    <Act>ВЫВОД(S)</Act>
+  </Rule>
+  <Rule Name="Пр72">
+    <Comment>Вывод текста, если вы брюнетка </Comment>
+    <Condition>F49="блондинка или шатенка"</Condition>
+    <Act>S="Ваши духи - Zibeline от Парфамз Вайл"</Act>
+    <Act>ВЫВОД(S)</Act>
+  </Rule>
+  <Rule Name="Пр73">
+    <Comment>Вывод текста, если вы блондинка или шатенка</Comment>
+    <Condition>F49="классическая блондинка"</Condition>
+    <Act>S="Ваши духи - Cassandra от Парфамз Вайл"</Act>
+    <Act>ВЫВОД(S)</Act>
+  </Rule>
+  <Rule Name="Пр74">
+    <Comment>Вывод текста, если вы классическая блондинка</Comment>
+    <Condition>F49="жгучая брюнетка"</Condition>
+    <Act>S="Ваши духи - Noir от Парфамз Вайл"</Act>
+    <Act>ВЫВОД(S)</Act>
+  </Rule>
+  <Rule Name="Пр75">
+    <Comment>Вывод текста, если вы жгучая брюнетка</Comment>
+    <Condition>F48="Сочетающиеся с мехом"</Condition>
+    <Act>S="Вот эти духи:"</Act>
+    <Act>A="1.Ramage отБуржуа"</Act>
+    <Act>B="2.Must от Картье"</Act>
+    <Act>C="3.L Interdit от Живанши"</Act>
+    <Act>D="4.Vol de nuit от Герлен"</Act>
+    <Act>E="5.1000 от Пату"</Act>
+    <Act>F="6.Scandal от Ланвен"</Act>
+    <Act>G="7.Tabu от Дан"</Act>
+    <Act>ВЫВОД(S,нс,A,нс,B,нс,C,нс,D,нс,E,нс,F,нс,G)</Act>
+  </Rule>
+  <Rule Name="Пр76">
+    <Comment>Вывод духов, хорошо сочетающихся с мехом</Comment>
+    <Condition>F48="Для любого времени года"</Condition>
+    <Act>S="Вот эти духи:"</Act>
+    <Act>B="1.Septieme sens от Сони Рикель"</Act>
+    <Act>C="2.Armani от Джорджио Армани"</Act>
+    <Act>ВЫВОД(S,нс,B,нс,C)</Act>
+  </Rule>
+  <Rule Name="Пр77">
+    <Comment>Вывод текста духов для любого времени года</Comment>
+    <Condition>F48="Гардероб с духами"</Condition>
+    <Act>F50=ВЫБОР("Для тех, кто хотел бы пользоваться различными духами во все случаи жизни, можно предложить несколько вариантов:",["Профессиональная жизнь","Семейная жизнь","Светские вечера","Интимная обстановка","Юность и веселье","Вызов и уверенность в себе"])</Act>
+  </Rule>
+  <Rule Name="Пр78">
+    <Comment>Выбор своего гардероба духов</Comment>
+    <Condition>F50="Профессиональная жизнь"</Condition>
+    <Act>S="Вот эти духи:"</Act>
+    <Act>A="1.Rive gauche (Левый берег) - Сен-Лоран"</Act>
+    <Act>B="2.Coriandre - Кутюрье"</Act>
+    <Act>C="3.Must - Ревлон"</Act>
+    <Act>D="4.Diorella - Кристиан Диор"</Act>
+    <Act>ВЫВОД(S,нс,A,нс,B,нс,C,нс,D)</Act>
+  </Rule>
+  <Rule Name="Пр79">
+    <Comment>Вывод текста, если вы ведете профессиональный образ жизни</Comment>
+    <Condition>F50="Семейная жизнь"</Condition>
+    <Act>S="Вот эти духи:"</Act>
+    <Act>A="1.Chamade - Герлен"</Act>
+    <Act>B="2.Parure - Герлен"</Act>
+    <Act>C="3.Madame Rochas - Роша"</Act>
+    <Act>D="4.Baghari - Пиге"</Act>
+    <Act>E="5.Diorissimo - Кристиан Диор"</Act>
+    <Act>ВЫВОД(S,нс,A,нс,B,нс,C,нс,D,нс,E)</Act>
+  </Rule>
+  <Rule Name="Пр80">
+    <Comment>Вывод текста, если вы с семьей </Comment>
+    <Condition>F50="Светские вечера"</Condition>
+    <Act>S="Вот эти духи:"</Act>
+    <Act>A="1.Azzaro - Лорис Аззаро"</Act>
+    <Act>B="2.Chloe - Лагерфельд"</Act>
+    <Act>C="3.Chanel №5 - Шанель"</Act>
+    <Act>D="4.Glamour - Буржуа"</Act>
+    <Act>E="5.Must - Картье"</Act>
+    <Act>F="6.Vol de nuit - Герлен"</Act>
+    <Act>G="7.Capricci - Н. Риччи"</Act>
+    <Act>ВЫВОД(S,нс,A,нс,B,нс,C,нс,D,нс,E,нс,F,нс,G)</Act>
+  </Rule>
+  <Rule Name="Пр81">
+    <Comment>Вывод текста, если на светском вечере</Comment>
+    <Condition>F50="Интимная обстановка"</Condition>
+    <Act>S="Вот эти духи:"</Act>
+    <Act>A="1.Diva - Унгаро"</Act>
+    <Act>B="2.La nuit - П. Рабанн"</Act>
+    <Act>C="3.Or (Золото) - Торрент"</Act>
+    <Act>D="4.Gianni Versacce - Джанни Версаче "</Act>
+    <Act>E="5.Opium - Сен-Лоран"</Act>
+    <Act>F="6.Interdit (Запрет) - Живанши"</Act>
+    <Act>G="7.Septieme sens (Седьмое чувство) - Рикель"</Act>
+    <Act>ВЫВОД(S,нс,A,нс,B,нс,C,нс,D,нс,E,нс,F,нс,G)</Act>
+  </Rule>
+  <Rule Name="Пр82">
+    <Comment>Вывод текста, если вы в интимной обстановке</Comment>
+    <Condition>F50="Юность и веселье"</Condition>
+    <Act>S="Вот эти духи:"</Act>
+    <Act>A="1.Caline - Пату"</Act>
+    <Act>B="2.Miss Worth - Уорт"</Act>
+    <Act>C="3.Miss Balmain - Бальмен"</Act>
+    <Act>D="4.Diorella - Кристиан Диор"</Act>
+    <Act>E="5.Les Belles di Ricce (Красавицы от Риччи) - Нина Риччи"</Act>
+    <Act>ВЫВОД(S,нс,A,нс,B,нс,C,нс,D,нс,E)</Act>
+  </Rule>
+  <Rule Name="Пр83">
+    <Comment>Вывод текста, если вы на веселе</Comment>
+    <Condition>F50="Вызов и уверенность в себе"</Condition>
+    <Act>S="Вот эти духи:"</Act>
+    <Act>A="1.Coco - Шанель"</Act>
+    <Act>B="2.Femme - Роша"</Act>
+    <Act>C="3.Joy - Пату"</Act>
+    <Act>D="4.Cinnabar - Э. Лаудер"</Act>
+    <Act>E="5.Shalimar - Герлен"</Act>
+    <Act>F="6.Soir de Paris (Парижский вечер) - Буржуа"</Act>
+    <Act>ВЫВОД(S,нс,A,нс,B,нс,C,нс,D,нс,E,нс,F)</Act>
+  </Rule>
+  <Rule Name="Пр84">
+    <Comment>Вывод текста, если вам нужна уверенность в себе</Comment>
+    <Condition>F48="По стойкости ароматов"</Condition>
+    <Act>F51=ВЫБОР("Если не брать во внимание концентрацию продукта, некоторые духи в зависимости от композиции держатся дольше и характеризуются большей стойкостью. Вот нескоько примеров:",["Менее стойкие духи","Более стойкие духи"])</Act>
+  </Rule>
+  <Rule Name="Пр85">
+    <Comment>Выбор духов по стойкости ароматов</Comment>
+    <Condition>F51="Менее стойкие духи"</Condition>
+    <Act>S="Менее стойки освежающие воды, зеленые шипры:"</Act>
+    <Act>A="1.Miss Dior"</Act>
+    <Act>B="2.Givenchy III"</Act>
+    <Act>C="3.Vivara"</Act>
+    <Act>D="цветочные зеленые духи:"</Act>
+    <Act>E="1.Vent Vert Бальмена"</Act>
+    <Act>F="2.Alex Гре"</Act>
+    <Act>G="3.Fidji Лароша"</Act>
+    <Act>H="А также духи с большим содержанием (лимона, бергамота, цитрона)."</Act>
+    <Act>ВЫВОД(S,нс,A,нс,B,нс,C,нс,D,нс,E,нс,F,нс,G,нс,H)</Act>
+  </Rule>
+  <Rule Name="Пр86">
+    <Comment>Вывод текста, если вас интересуют менее стойкие духи</Comment>
+    <Condition>F51="Более стойкие духи"</Condition>
+    <Act>S="Более стойкие ароматы восточные, амбровые и пряные."</Act>
+    <Act>A="Чем больше в композиции нот животного происхождения"</Act>
+    <Act>B="и древесных, тем лучше держится запах."</Act>
+    <Act>C="Стойкими являются духи с цветочно-альдегидной композицией:"</Act>
+    <Act>D="1.Parfum I Гуччи"</Act>
+    <Act>E="2.Parure Герлена"</Act>
+    <Act>F="3.Arpege Ланвен"</Act>
+    <Act>G="шипровые цветочно-альдегидные духи:"</Act>
+    <Act>H="1.Magriffe Карвена"</Act>
+    <Act>I="2.Gianni Versacce"</Act>
+    <Act>J="3.Chant d aromes Герлена"</Act>
+    <Act>K="4.Etourdissant Деспре"</Act>
+    <Act>L="а также с кожаной нотой:"</Act>
+    <Act>M="1.Ellypse Фат"</Act>
+    <Act>N="2.Cabochare Гре"</Act>
+    <Act>O="3.Paradoxe Кардена"</Act>
+    <Act>ВЫВОД(S,нс,A,нс,B,нс,C,нс,D,нс,E,нс,F,нс,G,нс,H,нс,I,нс,J,нс,K,нс,L,нс,M,нс,N,нс,O)</Act>
+  </Rule>
+  <Rule Name="Пр90">
+    <Comment>вывод текста, если вас интересуют более стойкие духи</Comment>
+    <Condition>F48="Восемь образов женщины"</Condition>
+    <Act>F52=ВЫБОР("Чтобы ориентироваться в лавине ароматной продукции, можно предложить в некотором роде тематический путеводитель:",["Изысканность и загадочность","Романтизм и нежность","Активная жизнь","Высокая мода","Богатство и блеск","Спорт и уик-энд","Изысканность и обольщение","Юность и чувственность"])</Act>
+  </Rule>
+  <Rule Name="Пр88">
+    <Comment>Выбор одного из восьми образов женщины</Comment>
+    <Condition>F52="Изысканность и загадочность"</Condition>
+    <Act>S="Вот эти духи:"</Act>
+    <Act>A="1.Dis (Десять) - Балансиага"</Act>
+    <Act>B="2.Nocturnes - Карон"</Act>
+    <Act>C="3.Dioressence - Диор"</Act>
+    <Act>D="4.Private Collection (Частная коллекция) - Эсте Лаудер"</Act>
+    <Act>E="5.Ysatis - Живанши"</Act>
+    <Act>F="6.Fidji - Ларош"</Act>
+    <Act>G="7.Baleche (Ландо) - Эрме"</Act>
+    <Act>H="8.Ombre rose (Розовая тень) - Ж. К. Броссо"</Act>
+    <Act>I="9.Chloe - Карл Лагерфельд"</Act>
+    <Act>J="10.Fantasque - Феро"</Act>
+    <Act>K="11.Capricci - Нина Риччи"</Act>
+    <Act>L="12.Fracas (Гром) - Пиге"</Act>
+    <Act>M="13.Balahe - Леонар"</Act>
+    <Act>N="14.Eau d Edena (Вода Эдема) - Кашарель"</Act>
+    <Act>O="15.Magic - Селин"</Act>
+    <Act>P="16.Poison (Яд) - Диор"</Act>
+    <Act>Q="17.Nina - Нина Риччи"</Act>
+    <Act>ВЫВОД(S,нс,A,нс,B,нс,C,нс,D,нс,E,нс,F,нс,G,нс,H,нс,I,нс,J,нс,K,нс,L,нс,M,нс,N,нс,O,нс,P,нс,Q)</Act>
+  </Rule>
+  <Rule Name="Пр89">
+    <Comment>Вывод текста, если вы изысканы и загадочны</Comment>
+    <Condition>F52="Романтизм и нежность"</Condition>
+    <Act>S="Вот эти духи:"</Act>
+    <Act>A="1.Anais Anais - Кашарель"</Act>
+    <Act>B="2.Fleurs de Rocaille (Цветы Рокай) - Карон"</Act>
+    <Act>C="3.Guilandes - Карвен"</Act>
+    <Act>D="4.Diorissimo - Диор"</Act>
+    <Act>E="5.White Linen - Эсте Лаудер"</Act>
+    <Act>F="6.Muguet (Ландыш) - Герлен"</Act>
+    <Act>G="7.Clair du jour (Свет дня) - Ланвен"</Act>
+    <Act>H="8.Tamango - Леонар"</Act>
+    <Act>I="9.Madrigal - Молинар"</Act>
+    <Act>J="10.Dans la nuit (В ночи) - Уорт"</Act>
+    <Act>K="11.Jardin de Bagatelle - Герлен"</Act>
+    <Act>L="12.Flore - Каролина Эррера"</Act>
+    <Act>M="13.Dune - Диор"</Act>
+    <Act>N="14.Hanae Mori - Ханаэ Мори"</Act>
+    <Act>ВЫВОД(S,нс,A,нс,B,нс,C,нс,D,нс,E,нс,F,нс,G,нс,H,нс,I,нс,J,нс,K,нс,L,нс,M,нс,N)</Act>
+  </Rule>
+  <Rule Name="Пр91">
+    <Comment>вывод текста, если вы романтичны и нежны</Comment>
+    <Condition>F52="Активная жизнь"</Condition>
+    <Act>S="Вот эти духи:"</Act>
+    <Act>A="1.Coco - Шанель"</Act>
+    <Act>B="2.Amerique - Курреж"</Act>
+    <Act>C="3.Chamade (Сигнал о сдаче) - Герлен"</Act>
+    <Act>D="4.Parfum - Эрме"</Act>
+    <Act>E="5.Clao - Убиган"</Act>
+    <Act>F="6.Premiere (Премьера) - Ж. К. Кастельбажак"</Act>
+    <Act>G="7.Normandie - Пату"</Act>
+    <Act>H="8.My Sin (Мой знак) - Ланвен"</Act>
+    <Act>I="9.Quartz - Молине"</Act>
+    <Act>J="10.Paradoxe - Карден"</Act>
+    <Act>K="11.Turbulences (Турбулентные потоки) - Ревийона"</Act>
+    <Act>L="12.Mystere (Тайна) - Роша"</Act>
+    <Act>M="13.Envole (Взлет) - Лапидус"</Act>
+    <Act>N="14.Miss Worth - Уорт"</Act>
+    <Act>O="15.Rive gauche (Левый берег) - Сен-Лоран"</Act>
+    <Act>P="16.Chanel №19 - Шанель"</Act>
+    <Act>Q="17.Versus Donna - Джанни Версаче"</Act>
+    <Act>R="18.Hugo Woman - Хуго Босс"</Act>
+    <Act>ВЫВОД(S,нс,A,нс,B,нс,C,нс,D,нс,E,нс,F,нс,G,нс,H,нс,I,нс,J,нс,K,нс,L,нс,M,нс,N,нс,O,нс,P,нс,Q,нс,R)</Act>
+  </Rule>
+  <Rule Name="Пр92">
+    <Comment>Вывод текста, если  у вас активная жизнь</Comment>
+    <Condition>F52="Высокая мода"</Condition>
+    <Act>S="Вот эти духи:"</Act>
+    <Act>A="1.Ma griffe (Моя марка) - Карвен"</Act>
+    <Act>B="2.Etourdissant (Поразительный) - Деспре"</Act>
+    <Act>C="3.Cardin"</Act>
+    <Act>D="4.Jean-Louis Scherrer"</Act>
+    <Act>E="5.Detchema - Ревийона"</Act>
+    <Act>F="6.Visa - Пига"</Act>
+    <Act>G="7.Y - Сен-Лоран"</Act>
+    <Act>H="8.Madame - Торрант"</Act>
+    <Act>I="9.Miss Dior"</Act>
+    <Act>J="10.Escada Margaretha Ley - Эскада"</Act>
+    <Act>K="11.Madame Rochas - Роша"</Act>
+    <Act>ВЫВОД(S,нс,A,нс,B,нс,C,нс,D,нс,E,нс,F,нс,G,нс,H,нс,I,нс,J,нс,K)</Act>
+  </Rule>
+  <Rule Name="Пр93">
+    <Comment>Вывод текста, если вы предпочитаете высокую моду</Comment>
+    <Condition>F52="Богатство и блеск"</Condition>
+    <Act>S="Вот эти духи:"</Act>
+    <Act>A="1.Ivoire (Слоновая кость) - Бальмен"</Act>
+    <Act>B="2.Vivara - Эмилио Пуччи"</Act>
+    <Act>C="3.Cinnabar - Эсте Лаудер"</Act>
+    <Act>D="4.Gianni Versacce"</Act>
+    <Act>E="5.Paffinee (Утонченная) - Убиган"</Act>
+    <Act>F="6.Shalimar - Герлен"</Act>
+    <Act>G="7.Sheherazade - Жан Деспре"</Act>
+    <Act>H="8.Colony - Жан Пату"</Act>
+    <Act>I="9.Azzaro 9"</Act>
+    <Act>J="10.Habanita - Молинар"</Act>
+    <Act>K="11.Oscar de La Renta "</Act>
+    <Act>L="12.Bandit - Пиге"</Act>
+    <Act>M="13.Diva - Унгаро"</Act>
+    <Act>N="14.J ai ose (Я осмелилась) - Ларош"</Act>
+    <Act>O="15.Pavlova - Пейо"</Act>
+    <Act>P="16.White Diamonds (Чистый бриллиант) - Элизабет Тейлор"</Act>
+    <Act>Q="17.1000 - Жан Пату"</Act>
+    <Act>R="18.Byzance - Роша"</Act>
+    <Act>ВЫВОД(S,нс,A,нс,B,нс,C,нс,D,нс,E,нс,F,нс,G,нс,H,нс,I,нс,J,нс,K,нс,L,нс,M,нс,N,нс,O,нс,P,нс,Q,нс,R)</Act>
+  </Rule>
+  <Rule Name="Пр94">
+    <Comment>Вывод текста, если вас прельщает богатство и блеск</Comment>
+    <Condition>F52="Спорт и уик-энд"</Condition>
+    <Act>S="Вот эти духи:"</Act>
+    <Act>A="1.Vent vert (Свежий ветер) - Бальмен"</Act>
+    <Act>B="2.Eau (Вода) - Карон"</Act>
+    <Act>C="3.Eau (Вода) - Гуччи"</Act>
+    <Act>D="4.Eau de Cologne (Одеколон) - Эрме"</Act>
+    <Act>E="5.Eau fraoche (Свежая вода) - Леонар"</Act>
+    <Act>F="6.scles d or - Молинар"</Act>
+    <Act>G="7.Eau (Вода) - Роша"</Act>
+    <Act>H="8.Eau (Вода) - Аззаро"</Act>
+    <Act>I="9.Trophee - Ланком"</Act>
+    <Act>J="10.Eau neuve (Новая вода) - Любен"</Act>
+    <Act>K="11.Cavale (Побег) - Фаберже"</Act>
+    <Act>ВЫВОД(S,нс,A,нс,B,нс,C,нс,D,нс,E,нс,F,нс,G,нс,H,нс,I,нс,J,нс,K)</Act>
+  </Rule>
+  <Rule Name="Пр95">
+    <Comment>Вывод текста, если вы любите спорт и уик-энд</Comment>
+    <Condition>F52="Изысканность и обольщение"</Condition>
+    <Act>S="Вот эти духи:"</Act>
+    <Act>A="1.Jolie Madame (Прелестная мадам) - Бальмен"</Act>
+    <Act>B="2.Soir de Paris (Парижский вечер) - Буржуа"</Act>
+    <Act>C="3.Complice (Соучастник) - Коти"</Act>
+    <Act>D="4.Gucci №3"</Act>
+    <Act>E="5.Nahema - Герлен"</Act>
+    <Act>F="6.Bal a Versailles (Бал в Версале) - Деспре"</Act>
+    <Act>G="7.Maxim s"</Act>
+    <Act>H="8.Vivre (Жить) - Молине"</Act>
+    <Act>I="9.Septieme sens (Седьмое чувство) - Рикель"</Act>
+    <Act>J="10.Must (Необходимость) - Картье"</Act>
+    <Act>K="11.Missoni"</Act>
+    <Act>L="12.Azzaro"</Act>
+    <Act>M="13.Red Door - Элизабет Арден"</Act>
+    <Act>N="14.Gianni Versacce"</Act>
+    <Act>O="15.Coriandre - Кутюрье"</Act>
+    <Act>ВЫВОД(S,нс,A,нс,B,нс,C,нс,D,нс,E,нс,F,нс,G,нс,H,нс,I,нс,J,нс,K,нс,L,нс,M,нс,N,нс,O)</Act>
+  </Rule>
+  <Rule Name="Пр96">
+    <Comment>Вывод текста, если вы изысканы и обольстительны</Comment>
+    <Condition>F52="Юность и чувственность"</Condition>
+    <Act>S="Вот эти духи:"</Act>
+    <Act>A="1.Miss Balmain"</Act>
+    <Act>B="2.Clind oeil (Взгляд) - Буржуа"</Act>
+    <Act>C="3.Miss Dior"</Act>
+    <Act>D="4.Chant d aromes (Песнь ароматов) - Герлен"</Act>
+    <Act>E="5.Cristmas Bells - Леонар"</Act>
+    <Act>F="6.Gauloise - Молинекс"</Act>
+    <Act>G="7.Choc - Карден"</Act>
+    <Act>H="8.Сarnet de Bal (Бальная книжка) - Ревифон"</Act>
+    <Act>I="9.Babe - Фаберже"</Act>
+    <Act>J="10.Eau folle (Бешеная вода) - Ларош"</Act>
+    <Act>K="11.Sunflowers (Подсолнечник) - Арден"</Act>
+    <Act>ВЫВОД(S,нс,A,нс,B,нс,C,нс,D,нс,E,нс,F,нс,G,нс,H,нс,I,нс,J,нс,K)</Act>
+  </Rule>
+  <Rule Name="Пр97">
+    <Comment>Вывод текста, если вы юны и чувственны</Comment>
+    <Condition>F1="Цена духов"</Condition>
+    <Act>F53=ВЫБОР("Все парфюмерные жидкости состоят из концентрата (парфюмерной композиции) спирта и воды. Разница только в пропорциях.",["Самые дорогие духи","Дорогие духи","Не очень дорогие духи","Приемлимые духи","Доступные духи"])</Act>
+  </Rule>
+  <Rule Name="Пр98">
+    <Comment>Выбор категорий духов  из темы цена духов</Comment>
+    <Condition>F53="Самые дорогие духи"</Condition>
+    <Act>S="Самыми дорогими и самыми стойкими"</Act>
+    <Act>A="являются PARFUM, или EXTRAIT"</Act>
+    <Act>B="(духи, или экстракт). Они обычно"</Act>
+    <Act>C="содержат 20-30% парфюмерной композиции,"</Act>
+    <Act>D="растворенной в 90*-ном спирте."</Act>
+    <Act>ВЫВОД(S,нс,A,нс,B,нс,C,нс,D)</Act>
+  </Rule>
+  <Rule Name="Пр99">
+    <Comment>Вывод текста по категории  самые дорогие  духи</Comment>
+    <Condition>F53="Дорогие духи"</Condition>
+    <Act>S="Дорогими духами являются"</Act>
+    <Act>A="EAU DE PARFUM (парфюмированная"</Act>
+    <Act>B="или ароматная вода),"</Act>
+    <Act>C="PARFUM DE TOILETTE (туалетные"</Act>
+    <Act>D="дневные духи),"</Act>
+    <Act>E="ESPRIT DE PARFUM (дух духов,"</Act>
+    <Act>F="ароматный, парфюмированный дух) -"</Act>
+    <Act>G="второй по концентрации вид "</Act>
+    <Act>H="парфюмерной продукции одной линии,"</Act>
+    <Act>I="где содержится от 15-20%"</Act>
+    <Act>J="концентрата в 90*-ном спирте."</Act>
+    <Act>ВЫВОД(S,нс,A,нс,B,нс,C,нс,D,нс,E,нс,F,нс,G,нс,H,нс,I,нс,J)</Act>
+  </Rule>
+  <Rule Name="Пр100">
+    <Comment>Вывод текста по категории дорогие духи</Comment>
+    <Condition>F53="Не очень дорогие духи"</Condition>
+    <Act>S="Вот эти духи:"</Act>
+    <Act>A="Не очень дорогие духи"</Act>
+    <Act>B="EAU DE TOILETTE - туалетная вода"</Act>
+    <Act>C="с концентрацией  обычно 6-12%"</Act>
+    <Act>D="парфюмерной композиции в 85* спирте."</Act>
+    <Act>ВЫВОД(S,нс,A,нс,B,нс,C,нс,D)</Act>
+  </Rule>
+  <Rule Name="Пр101">
+    <Comment>Вывод текста по категории не очень дорогие духи</Comment>
+    <Condition>F53="Приемлимые духи"</Condition>
+    <Act>S="Приемлимые по цене духи"</Act>
+    <Act>A="EAU DE COLOGNE - одеколон,"</Act>
+    <Act>B="тонизирующий и свежий по определению,"</Act>
+    <Act>C="обладает довольно слабой концинтрацией"</Act>
+    <Act>D="основы, т.е. композиции (3-5% в спирте"</Act>
+    <Act>E="70-80*). Обозначение EAU DE COLOGNE"</Act>
+    <Act>F="чаще всего относится к изделиям для"</Act>
+    <Act>G="мужчин, служащим скорее для того чтобы"</Act>
+    <Act>H="освежится, протереть кожу, нежели"</Act>
+    <Act>I="надушиться. Для американского парфюма"</Act>
+    <Act>J="слово COLOGNE обычно означает"</Act>
+    <Act>K="продукцию, соответствующую"</Act>
+    <Act>L="французской парфюмированной или"</Act>
+    <Act>M="туалетной воде."</Act>
+    <Act>ВЫВОД(S,нс,A,нс,B,нс,C,нс,D,нс,E,нс,F,нс,G,нс,H,нс,I,нс,J,нс,K,нс,L,нс,M)</Act>
+  </Rule>
+  <Rule Name="Пр102">
+    <Comment>Вывод текста по категории приемлимые духи</Comment>
+    <Condition>F53="Доступные духи"</Condition>
+    <Act>S="Доступные духи"</Act>
+    <Act>A="EAU FRAICHE, EAU DE SPORT -"</Act>
+    <Act>B="освежающая, спортивная вода"</Act>
+    <Act>C="(почти всегда с цитрусовой отдушкой:"</Act>
+    <Act>D="лимон, мандарин и т.д.), "</Act>
+    <Act>E="концентрация композиции 1-3%"</Act>
+    <Act>F="в спирте 70-80*."</Act>
+    <Act>ВЫВОД(S,нс,A,нс,B,нс,C,нс,D,нс,E,нс,F)</Act>
+  </Rule>
+  <Rule Name="Пр103">
+    <Comment>Вывод текста по категории доступные духи</Comment>
+    <Condition>F1="Духи для мужчин"</Condition>
+    <Act>F54=ВЫБОР("У вас вкус к утонченности и хорошему тону, стремление к классицизму",["да","нет"])</Act>
+  </Rule>
+  <Rule Name="Пр104">
+    <Comment>Выбор положительного или отрицательного  ответа , прочитав текст о мужчине</Comment>
+    <Condition>F54="да"</Condition>
+    <Act>S="Ваши духи:"</Act>
+    <Act>A="1.Polo - Ральф"</Act>
+    <Act>B="2.Monsieur - Живанши"</Act>
+    <Act>C="3.Equipage - Эрме"</Act>
+    <Act>D="4.Eau Sauvage (Дикая вода) - Диор"</Act>
+    <Act>E="5.Vetiver - Герлен"</Act>
+    <Act>F="6.Bulgari pour homme (Булгари для мужчины)"</Act>
+    <Act>G="7.Jacomo de Jacomo (Жакомо от Жакомо)"</Act>
+    <Act>H="8.Escada poyr homme (Эскада для мужчины)"</Act>
+    <Act>ВЫВОД(S,нс,A,нс,B,нс,C,нс,D,нс,E,нс,F,нс,G,нс,H)</Act>
+  </Rule>
+  <Rule Name="Пр105">
+    <Comment>Вывод текста на экран в случае положительного ответа</Comment>
+    <Condition>F54="нет"</Condition>
+    <Act>F55=ВЫБОР("У вас побеждающий нациссизм, уверенность в себе, шарм, но также стремление к превосходству и независимости:",["да","нет"])</Act>
+  </Rule>
+  <Rule Name="Пр106">
+    <Comment>Выбор положительного или отрицательного  ответа , прочитав текст о мужчине,  в случае отрицательного ответа </Comment>
+    <Condition>F55="да"</Condition>
+    <Act>S="Ваши духи:"</Act>
+    <Act>A="1.Sagamore - Ланком"</Act>
+    <Act>B="2.Troisieme Homme (Третий мужчина) - Карон"</Act>
+    <Act>C="3.Macassar - Роша"</Act>
+    <Act>D="4.Derby - Герлен"</Act>
+    <Act>E="5.French Line (Французская линия) - Ревийон"</Act>
+    <Act>F="6.Quorum - Пюиг"</Act>
+    <Act>G="7.Dune pour homme (Дюна для мужчины) - Диор"</Act>
+    <Act>H="8.Platinum Egoist - Шанель"</Act>
+    <Act>I="9.Herrera for men (Эррера для мужчин)"</Act>
+    <Act>ВЫВОД(S,нс,A,нс,B,нс,C,нс,D,нс,E,нс,F,нс,G,нс,H,нс,I)</Act>
+  </Rule>
+  <Rule Name="Пр107">
+    <Comment>Вывод текста, в случае положительного ответа </Comment>
+    <Condition>F55="нет"</Condition>
+    <Act>F56=ВЫБОР("У вас любовь к игре и риску, удовольствию, проницательность и уверенность в суждениях:",["да","нет"])</Act>
+  </Rule>
+  <Rule Name="Пр108">
+    <Comment>Выбор положительного или отрицательного  ответа , прочитав текст о мужчине,  в случае отрицательного ответа </Comment>
+    <Condition>F56="да"</Condition>
+    <Act>S="Вот ваши духи:"</Act>
+    <Act>A="1.Dolce and Gabanna pour homme "</Act>
+    <Act>B="(Дольче и Габбана для мужчин)"</Act>
+    <Act>C="2.Pour d homme (Для мужчин) - Роша"</Act>
+    <Act>D="3.Versacce I Homme - Джанни Версаче "</Act>
+    <Act>E="4.Paco Rabanne для мужчин"</Act>
+    <Act>F="5.Ho Hang - Балансиага"</Act>
+    <Act>G="6.Missoni - Уомо"</Act>
+    <Act>H="7.B. O. - Ж. М. Синан"</Act>
+    <Act>I="8.Kauros - Сен-Лоран"</Act>
+    <Act>ВЫВОД(S,нс,A,нс,B,нс,C,нс,D,нс,E,нс,F,нс,G,нс,H,нс,I)</Act>
+  </Rule>
+  <Rule Name="Пр109">
+    <Comment>Вывод текста, в случае положительного ответа</Comment>
+    <Condition>F56="нет"</Condition>
+    <Act>F57=ВЫБОР("У вас есть осторожность и анализ, чувство меры и стремление к стабильности, личная скромность без агрессивности, некоторая спортивность:",["да","нет"])</Act>
+  </Rule>
+  <Rule Name="Пр110">
+    <Comment>Выбор положительного или отрицательного  ответа , прочитав текст о мужчине,  в случае отрицательного ответа </Comment>
+    <Condition>F57="да"</Condition>
+    <Act>S="Вот ваши духи:"</Act>
+    <Act>A="1.Quasar - Хесус дель Позо"</Act>
+    <Act>B="2.Sterling for men - Джон Стерлинг"</Act>
+    <Act>C="3.Lacoste"</Act>
+    <Act>D="4.Trophee - Ланком"</Act>
+    <Act>E="5.Open - Рожу и Гале"</Act>
+    <Act>F="6.Green Water (Зеленая вода) - Фатх"</Act>
+    <Act>G="7.Eau de Cologne (Одеколон) - Эрме"</Act>
+    <Act>ВЫВОД(S,нс,A,нс,B,нс,C,нс,D,нс,E,нс,F,нс,G)</Act>
+  </Rule>
+  <Rule Name="Пр111">
+    <Comment>Вывод текста, в случае положительного ответа</Comment>
+    <Condition>F57="нет"</Condition>
+    <Act>F58=ВЫБОР("У вас есть вкус к празднику и зрелищам, талант общения, вкус к переменам не без непостоянства, некоторая тенденция к мифомании и экстравертность с желанием вызвать любовь к себе:",["да","нет"])</Act>
+  </Rule>
+  <Rule Name="Пр112">
+    <Comment>Выбор положительного или отрицательного  ответа , прочитав текст о мужчине,  в случае отрицательного ответа </Comment>
+    <Condition>F58="да"</Condition>
+    <Act>S="Вот ваши духи:"</Act>
+    <Act>A="1.Tuscany - Арамис"</Act>
+    <Act>B="2.Jacomo - Жакомо"</Act>
+    <Act>C="3.Antalus - Шанель"</Act>
+    <Act>D="4.Santos - Картье"</Act>
+    <Act>E="5.Trussardi - Уомо"</Act>
+    <Act>F="6.Fahrenheit - Диор"</Act>
+    <Act>G="7.Escada pour homme Silver Light - Эскада"</Act>
+    <Act>ВЫВОД(S,нс,A,нс,B,нс,C,нс,D,нс,E,нс,F,нс,G)</Act>
+  </Rule>
+  <Rule Name="Пр113">
+    <Comment>Вывод текста, в случае положительного ответа</Comment>
+    <Condition>F58="нет"</Condition>
+    <Act>S="Начните с начала"</Act>
+    <Act>ВЫВОД(S)</Act>
+  </Rule>
+  <Rule Name="Пр114">
+    <Comment>В случае отрицательного ответа, предлагается начать все сначала</Comment>
+    <Condition>F1="Из чего сделаны духи?"</Condition>
+    <Act>F59=ВЫБОР("Выберите нужное",["Аромат по знаку зодиака","Аромат по планетам","Составляющие ароматы"])</Act>
+  </Rule>
+  <Rule Name="Пр115">
+    <Comment>Выбор нужной подтемы из темы из чего сделаны духи</Comment>
+    <Condition>F59="Аромат по знаку зодиака"</Condition>
+    <Act>F60=ВВОД("Введите свой знак зодиака с маленькой буквы")</Act>
+  </Rule>
+  <Rule Name="Пр116">
+    <Comment>Нужно ввести свой знак зодиака</Comment>
+    <Condition>F60="овен"</Condition>
+    <Act>S="Ваш аромат - мирра"</Act>
+    <Act>ВЫВОД(S)</Act>
+  </Rule>
+  <Rule Name="Пр117">
+    <Comment>Вывод аромата, если ваш знак зодиака овен</Comment>
+    <Condition>F60="телец"</Condition>
+    <Act>S="Ваш аромат - капуфер"</Act>
+    <Act>ВЫВОД(S)</Act>
+  </Rule>
+  <Rule Name="Пр118">
+    <Comment>Вывод аромата, если ваш знак зодиака телец</Comment>
+    <Condition>F60="весы"</Condition>
+    <Act>S="Ваш аромат - гальбан"</Act>
+    <Act>ВЫВОД(S)</Act>
+  </Rule>
+  <Rule Name="Пр119">
+    <Comment>Вывод аромата, если ваш знак зодиака весы</Comment>
+    <Condition>F60="близнецы"</Condition>
+    <Act>S="Ваш аромат - мастика"</Act>
+    <Act>ВЫВОД(S)</Act>
+  </Rule>
+  <Rule Name="Пр120">
+    <Comment>Вывод аромата, если ваш знак зодиака близнецы</Comment>
+    <Condition>F60="рак"</Condition>
+    <Act>S="Ваш аромат - камфора"</Act>
+    <Act>ВЫВОД(S)</Act>
+  </Rule>
+  <Rule Name="Пр121">
+    <Comment>Вывод аромата, если ваш знак зодиака рак</Comment>
+    <Condition>F60="лев"</Condition>
+    <Act>S="Ваш аромат - ладан"</Act>
+    <Act>ВЫВОД(S)</Act>
+  </Rule>
+  <Rule Name="Пр122">
+    <Comment>Вывод аромата, если ваш знак зодиака лев</Comment>
+    <Condition>F60="дева"</Condition>
+    <Act>S="Ваш аромат - сандал"</Act>
+    <Act>ВЫВОД(S)</Act>
+  </Rule>
+  <Rule Name="Пр123">
+    <Comment>Вывод аромата, если ваш знак зодиака дева</Comment>
+    <Condition>F60="скорпион"</Condition>
+    <Act>S="Ваш аромат - дягильный сок"</Act>
+    <Act>ВЫВОД(S)</Act>
+  </Rule>
+  <Rule Name="Пр124">
+    <Comment>Вывод аромата, если ваш знак зодиака скорпион</Comment>
+    <Condition>F60="стрелец"</Condition>
+    <Act>S="Ваш аромат - древовидное алоэ"</Act>
+    <Act>ВЫВОД(S)</Act>
+  </Rule>
+  <Rule Name="Пр125">
+    <Comment>Вывод аромата, если ваш знак зодиака стрелец</Comment>
+    <Condition>F60="козерог"</Condition>
+    <Act>S="Ваш аромат - кипарис"</Act>
+    <Act>ВЫВОД(S)</Act>
+  </Rule>
+  <Rule Name="Пр126">
+    <Comment>Вывод аромата, если ваш знак зодиака козерог</Comment>
+    <Condition>F60="водолей"</Condition>
+    <Act>S="Ваш аромат - молочай"</Act>
+    <Act>ВЫВОД(S)</Act>
+  </Rule>
+  <Rule Name="Пр127">
+    <Comment>Вывод аромата, если ваш знак зодиака водолей</Comment>
+    <Condition>F60="рыбы"</Condition>
+    <Act>S="Ваш аромат - тимьян"</Act>
+    <Act>ВЫВОД(S)</Act>
+  </Rule>
+  <Rule Name="Пр128">
+    <Comment>Вывод аромата, если ваш знак зодиака рыбы</Comment>
+    <Condition>F59="Аромат по планетам"</Condition>
+    <Act>F61=ВВОД("Введите свою планету с маленькой буквы")</Act>
+  </Rule>
+  <Rule Name="Пр129">
+    <Comment>Нужно ввести свою планету</Comment>
+    <Condition>F61="солнце"</Condition>
+    <Act>S="Аромат Солнца - шафран, амбра,"</Act>
+    <Act>A="мускус, древовидное алоэ, бальзамовое"</Act>
+    <Act>B="дерево, плоды лавра, гвоздика, нирра"</Act>
+    <Act>C="и ладан."</Act>
+    <Act>ВЫВОД(S,нс,A,нс,B,нс,C)</Act>
+  </Rule>
+  <Rule Name="Пр130">
+    <Comment>Выводится текст о планете солнце</Comment>
+    <Condition>F61="луна"</Condition>
+    <Act>S="Аромат Луны - ладан, камфора,"</Act>
+    <Act>A="семена белого мака, листья мирта"</Act>
+    <Act>B="и лавра."</Act>
+    <Act>ВЫВОД(S,нс,A,нс,B)</Act>
+  </Rule>
+  <Rule Name="Пр131">
+    <Comment>Выводится текст о планете  луна</Comment>
+    <Condition>F61="сатурн"</Condition>
+    <Act>S="Армат Сатурна - зерна черного мака,"</Act>
+    <Act>A="белена, мандрагора, мирра, пахучие"</Act>
+    <Act>B="корни всех видов."</Act>
+    <Act>ВЫВОД(S,нс,A,нс,B)</Act>
+  </Rule>
+  <Rule Name="Пр132">
+    <Comment>Выводится текст о планете статурн</Comment>
+    <Condition>F61="юпитер"</Condition>
+    <Act>S="Аромат Юпитера - семена ясеня,"</Act>
+    <Act>A="древовидное алоэ, стиракс, растительный"</Act>
+    <Act>B="клей, бензой, все благоухающие плоды,"</Act>
+    <Act>C="например мускатный орех и гвоздика."</Act>
+    <Act>ВЫВОД(S,нс,A,нс,B,нс,C)</Act>
+  </Rule>
+  <Rule Name="Пр133">
+    <Comment>Выводится текст о планете  юпитер</Comment>
+    <Condition>F61="марс"</Condition>
+    <Act>S="Аромат Марса - молочай, чемерица,"</Act>
+    <Act>A="абрикос, сандал, кипарис, "</Act>
+    <Act>B="бальзамовое дерево."</Act>
+    <Act>ВЫВОД(S,нс,A,нс,B)</Act>
+  </Rule>
+  <Rule Name="Пр134">
+    <Comment>Выводится текст о планете  марс</Comment>
+    <Condition>F61="венера"</Condition>
+    <Act>S="Аромат Венеры - мускус, амбра,"</Act>
+    <Act>A="древовидное алоэ, красные розы,"</Act>
+    <Act>B="шафран."</Act>
+    <Act>ВЫВОД(S,нс,A,нс,B)</Act>
+  </Rule>
+  <Rule Name="Пр135">
+    <Comment>Выводится текст о планете  венера</Comment>
+    <Condition>F61="меркурий"</Condition>
+    <Act>S="Аромат Меркурия - мастика, ладан,"</Act>
+    <Act>A="все виды коры деревьев, например"</Act>
+    <Act>B="корицы, кассии, мускатного ореха,"</Act>
+    <Act>C="корка лимона, зерна лавра."</Act>
+    <Act>ВЫВОД(S,нс,A,нс,B,нс,C)</Act>
+  </Rule>
+  <Rule Name="Пр136">
+    <Comment>Выводится текст о планете  меркурий</Comment>
+    <Condition>F59="Составляющие ароматы"</Condition>
+    <Act>F62=ВЫБОР("Выберите нужное",["Вещества жив. происхождения","Вещества раст. происхождения","Пряности и аром. вещества"])</Act>
+  </Rule>
+  <Rule Name="Пр137">
+    <Comment>Производится выбор категорий  веществ духов  из подтемы составляющие ароматы</Comment>
+    <Condition>F62="Вещества жив. происхождения"</Condition>
+    <Act>F63=ВЫБОР("Душистые вещества животного происхождения устанавливают гармонию между запахами духов и кожи человека, делают духи нашим вторым я. Духи непременно должны сочетаться с запахом кожи и волос.",["Амбра","Мускус","Цибетин","Бобровая струя"])</Act>
+  </Rule>
+  <Rule Name="Пр138">
+    <Comment>Производится выбор ингредиентов духов  из категории вещества животного происхождения</Comment>
+    <Condition>F63="Амбра"</Condition>
+    <Act>S="Амбра."</Act>
+    <Act>A="Уже в древнем мире она была предметом"</Act>
+    <Act>B="торговли, остается таковой и по сей день."</Act>
+    <Act>C="еянный легендами, этот продукт стоил"</Act>
+    <Act>D="7000 долларов за килограмм. Ее исполь-"</Act>
+    <Act>E="зовали Герлен, Шанель и Живодан."</Act>
+    <Act>F="Амбра - это вещество, образующееся в"</Act>
+    <Act>G="кишечнике кашалота, который регулярно"</Act>
+    <Act>H="выбрасывает его, после того как поглотит"</Act>
+    <Act>I="тонны планктона, осьминогов и рыб."</Act>
+    <Act>J="В свежем виде амбра представляет собой"</Act>
+    <Act>K="мягкую массу черноватого цвета с тошно-"</Act>
+    <Act>L="творным запахом. Под действием морской"</Act>
+    <Act>M="воды и атмосферы она осветляется, ста-"</Act>
+    <Act>N="новится серебристо-серого или коричневого"</Act>
+    <Act>O="цвета и постепенно твердеет. В это самое"</Act>
+    <Act>P="время запах облагораживается, смягчается"</Act>
+    <Act>Q="и приобретает оттенки. Старение делает ее"</Act>
+    <Act>R="беловатой с несколько сладковатым запахом."</Act>
+    <Act>S1="Полученную от животного постаревшую"</Act>
+    <Act>T="амбру измельчают, размягчают в спирте и"</Act>
+    <Act>U="применяют в виде фильтрованного раствора."</Act>
+    <Act>V="Этот чудесный продукт источает морской"</Act>
+    <Act>W="запах, слегка мускусный, одновременно"</Act>
+    <Act>X="землистый и табачный, совершенно непод-"</Act>
+    <Act>Y="ражаемый. Духи, в состав которых входит"</Act>
+    <Act>Z="амбра, обретают ауру теплую, проникновен-"</Act>
+    <Act>A1="ную, сладострастную и вызывающую, в"</Act>
+    <Act>B1="которой преобладают ароматы животного"</Act>
+    <Act>C1="происхождения в сочетании с пряностями,"</Act>
+    <Act>D1="смолами, древесиной или цветов. Класси-"</Act>
+    <Act>E1="ческий пример - парфюм Poison Кристиана"</Act>
+    <Act>G1="Диора."</Act>
+    <Act>ВЫВОД(S,нс,A,нс,B,нс,C,нс,D,нс,E,нс,F,нс,G,нс,H,нс,I,нс,J,нс,K,нс,L,нс,M,нс,N,нс,O,нс,P,нс,Q,нс,R,нс,S,нс,T,нс,U,нс,V,нс,W,нс,X,нс,Y,нс,Z,нс,A1,нс,B1,нс,C1,нс,D1,нс,E1,нс,G1)</Act>
+  </Rule>
+  <Rule Name="Пр139">
+    <Comment>Выводит текст о ингредиенте духов  амбре</Comment>
+    <Condition>F63="Мускус"</Condition>
+    <Act>S="Мускус"</Act>
+    <Act>A="Носителем мускуса является кабарга,"</Act>
+    <Act>B="безрогий олень, обитающий в Сибири,"</Act>
+    <Act>C="Северной Монголии, Центральной и"</Act>
+    <Act>D="Юго-Восточной Азии. Половые железы"</Act>
+    <Act>E="самца вырабатывают вещество, похо-"</Act>
+    <Act>F="жее на мед в свежем виде, краснова-"</Act>
+    <Act>G="того цвета. Со временем оно затверде-"</Act>
+    <Act>H="вает и становится черного цвета. Запах"</Act>
+    <Act>I="мускуса очень резкий. Это вещество то-"</Act>
+    <Act>J="же обладает эрогенными свойствами и"</Act>
+    <Act>K="в составе духов ведет к гармонии в ком-"</Act>
+    <Act>L="позиции ароматов, усиливая совокупность"</Act>
+    <Act>M="запахов, придавая им теплоту, почти"</Act>
+    <Act>N="плотскую насыщенность и чувственность."</Act>
+    <Act>O="В одной полости мускусной косули содер-"</Act>
+    <Act>P="жится от 15 до 20 граммов зерен мускуса,"</Act>
+    <Act>Q="продолговатых, коричневатых, несколько"</Act>
+    <Act>R="липких зерен. Их цена на мировом рынке"</Act>
+    <Act>S1="достигает 13000 долларов за килограмм."</Act>
+    <Act>T="Полученный путем мацерации спиртовой"</Act>
+    <Act>U="раствор мускуса используется в компози-"</Act>
+    <Act>V="циях духов."</Act>
+    <Act>W="Входя в состав духов, мускус делает их"</Act>
+    <Act>X="развращающими, богатыми и побежда-"</Act>
+    <Act>Y="ющими. Пример духов, содержащих мускус"</Act>
+    <Act>Z="- это парфюм Sunflowers (Подсолнечник),"</Act>
+    <Act>A1="производства американской фирмы Эли-"</Act>
+    <Act>B1="забет Арден."</Act>
+    <Act>ВЫВОД(S,нс,A,нс,B,нс,C,нс,D,нс,E,нс,F,нс,G,нс,H,нс,I,нс,J,нс,K,нс,L,нс,M,нс,N,нс,O,нс,P,нс,Q,нс,R,нс,S1,нс,T,нс,U,нс,V,нс,W,нс,X,нс,Y,нс,Z,нс,A1,нс,B1)</Act>
+  </Rule>
+  <Rule Name="Пр140">
+    <Comment>Выводит текст о ингредиенте духов  мускусе</Comment>
+    <Condition>F63="Цибетин"</Condition>
+    <Act>S="Цибетин"</Act>
+    <Act>A="Это вещество с резким мускусным запа-"</Act>
+    <Act>B="хом,выделяемое специальными железами"</Act>
+    <Act>C="хищных млекопитающих рода виверр -"</Act>
+    <Act>D="цибетовой кошки, или цибетты, обитающей"</Act>
+    <Act>E="в Северной Африке и Азии. В природе жи-"</Act>
+    <Act>F="вотное, освобождаясь от излишков секре-"</Act>
+    <Act>G="ции, трется о камни, но с камней цибетина"</Act>
+    <Act>H="собирается мало. Добывают цибетин, от-"</Act>
+    <Act>I="лавливая животное или выскабливая его у"</Act>
+    <Act>J="содержащихся в неволе. С того времени,"</Act>
+    <Act>K="как их стали разводить, заметили, что в"</Act>
+    <Act>L="природе одно животное выделяет в тече-"</Act>
+    <Act>M="нии года не более 40-50 г вещества. За-"</Act>
+    <Act>N="пертые в очень тесные клетки животные"</Act>
+    <Act>O="доходят до бешенства, и в этом случае"</Act>
+    <Act>P="секреция выделяется в большом коли-"</Act>
+    <Act>Q="честве."</Act>
+    <Act>R="При обработке продукта спиртом получают"</Act>
+    <Act>S1="очень жирную жидкость ярко-красного"</Act>
+    <Act>T="цвета, фекальный и аммиачный запах ко- "</Act>
+    <Act>U="торой менее резок, чем запах мускуса, с"</Act>
+    <Act>V="которым цибетин часто соседствует в"</Act>
+    <Act>W="композициях духов."</Act>
+    <Act>ВЫВОД(S,нс,A,нс,B,нс,C,нс,D,нс,E,нс,F,нс,G,нс,H,нс,I,нс,J,нс,K,нс,L,нс,M,нс,N,нс,O,нс,P,нс,Q,нс,R,нс,S,нс,T,нс,U,нс,V,нс,W)</Act>
+  </Rule>
+  <Rule Name="Пр141">
+    <Comment>Выводит текст о ингредиенте духов  цибетине</Comment>
+    <Condition>F63="Бобровая струя"</Condition>
+    <Act>S="Бобровая струя"</Act>
+    <Act>A="Под хвостом обладателей шикарной шубы"</Act>
+    <Act>B="расположены грушевидные мешочки. Это"</Act>
+    <Act>C="не железы, а особый, ни на что не похожий "</Act>
+    <Act>D="орган, имеющийся только у бобров, род ко-"</Act>
+    <Act>E="торых на юге Европы появился 10-12 млн"</Act>
+    <Act>F="лет назад. Нагребая лапками кучи земли на"</Act>
+    <Act>G="границах своей вотчины, бобровая семья по-"</Act>
+    <Act>H="ливает их струей пахучей жидкости, чтобы"</Act>
+    <Act>I="чужаки поняли - место занято. Считают также,"</Act>
+    <Act>J="что этой жидкостью бобры смазывают свой"</Act>
+    <Act>K="мех, чтобы он был водонепроницаемым. Об-"</Act>
+    <Act>L="разующаяся в мешочках струя представляет"</Act>
+    <Act>M="собой ярко-оранжевую жидкость, которая на"</Act>
+    <Act>N="воздухе тут же окисляется, блекнет, но не"</Act>
+    <Act>O="теряет своих главных качеств. Желтоватая"</Act>
+    <Act>P="и маслянистая струя источает едкий дегтяр-"</Act>
+    <Act>Q="ный и кожаный запах, напоминающий свежую"</Act>
+    <Act>R="ивовую кору. Стойкость его чрезвычайно ве-"</Act>
+    <Act>S1="лика."</Act>
+    <Act>T="За струю от одного бобра платили по 100-150"</Act>
+    <Act>U="рублей. Бешенная сумма по тем временам."</Act>
+    <Act>V="Бобровая струя, характеризуясь заметным"</Act>
+    <Act>W="эротическим потенциалом, успешно приме-"</Act>
+    <Act>X="няется для создания терпких, стойких и чувст-"</Act>
+    <Act>Y="венных духов. Она входит в состав только что"</Act>
+    <Act>Z="выпущенного французской фирмой Гуччи пар-"</Act>
+    <Act>A1="фюма для мужчин Gucci Envy for men."</Act>
+    <Act>ВЫВОД(S,нс,A,нс,B,нс,C,нс,D,нс,E,нс,F,нс,G,нс,H,нс,I,нс,J,нс,K,нс,L,нс,M,нс,N,нс,O,нс,P,нс,Q,нс,R,нс,S,нс,T,нс,U,нс,V,нс,W,нс,X,нс,Y,нс,Z,нс,A1)</Act>
+  </Rule>
+  <Rule Name="Пр142">
+    <Comment>Выводит текст о ингредиенте духов  бобровой струе</Comment>
+    <Condition>F62="Вещества раст. происхождения"</Condition>
+    <Act>F64=ВЫБОР("Погрузимся в мир ароматов живой природы, дарящей духам свое незабываемое благоухание.",["Цветы","Камедь и смолы","Мхи древесина и кора"])</Act>
+  </Rule>
+  <Rule Name="Пр143">
+    <Comment>Производится выбор разделов ингредиентов духов из категории вещества растительного происхождения</Comment>
+    <Condition>F64="Цветы"</Condition>
+    <Act>F65=ВЫБОР("На первом месте, конечно же, цветы.",["Роза","Жасмин","Тубероза","Иланг-иланг","Ландыш","Жимолость","Лилия","Нарцисс","Гиацинт","Померанец","Лаванда","Другие цветы","Листья ветви корни","Фиалка","Ветивер","Пачули","Базелик"])</Act>
+  </Rule>
+  <Rule Name="Пр144">
+    <Comment>Производится выбор ингредиентов из раздела цветы</Comment>
+    <Condition>F65="Роза"</Condition>
+    <Act>S="Роза"</Act>
+    <Act>A="Первым эфирным маслом, полученным"</Act>
+    <Act>B="человеком, было масло розы. Роза -"</Act>
+    <Act>C="один из древнейших цветов на земле. В"</Act>
+    <Act>D="античные времена ее выращивали во"</Act>
+    <Act>E="всех странах Восточного Средиземноморья."</Act>
+    <Act>F="Цветок дал название острову Родос, где"</Act>
+    <Act>G="в изобилии разводили розы."</Act>
+    <Act>H="В производстве духов наиболее употреб-"</Act>
+    <Act>I="ляются две разновидности розы: Rosa"</Act>
+    <Act>J="centifolia и ее гибриды, такие как грас-"</Act>
+    <Act>K="ская майская роза, культивируемая во"</Act>
+    <Act>L="Франции, Италии и Марокко, и Rosa"</Act>
+    <Act>M="domascena, или дамасская роза, вы-"</Act>
+    <Act>N="ращиваемая в Болгарии, Турции, Индии,"</Act>
+    <Act>O="Марокко и России. Говорят, что смесь"</Act>
+    <Act>P="майской розы с болгарской образует самый"</Act>
+    <Act>Q="пленительный аромат. Одной из разновид-"</Act>
+    <Act>R="ностей дамасской розы является болгарская"</Act>
+    <Act>S1="казанлыкская. Ее считают самой душистой."</Act>
+    <Act>T="Цветок состоит в среднем из 30 лепестков,"</Act>
+    <Act>U="почему ее называют тридцатилепестковой."</Act>
+    <Act>V="Пора цветения розы наступает в мае, и сбор"</Act>
+    <Act>W="лепестков роизводят, когда роза начинает"</Act>
+    <Act>X="распускаться, ранним утром до восхода"</Act>
+    <Act>Y="солнца, пока еще держится предутренняя"</Act>
+    <Act>Z="роса (в жару аромат сильнее, но менее"</Act>
+    <Act>A1="нежный и приятный). К восьми тридцати"</Act>
+    <Act>B1="утра цветок наиболее полон летучими"</Act>
+    <Act>C1="веществами. В это время в цветках со-"</Act>
+    <Act>D1="держится эфирных масел на 40% больше,"</Act>
+    <Act>E1="чем в жаркий полдень. С одного гектара"</Act>
+    <Act>G1="розовых плантаций получают иногда до"</Act>
+    <Act>H1="5000 кг лепестков."</Act>
+    <Act>I1="Сразу после сбора приступают к перера-"</Act>
+    <Act>J1="ботке лепестков. Из 1 т розовых лепестков"</Act>
+    <Act>K1="олучают всего 900 г масла. Не удиви-"</Act>
+    <Act>L1="тельно, что розовое масло очень дорогое."</Act>
+    <Act>M1="Под руками парфюмеров розы придают"</Act>
+    <Act>N1="свои цвета различными духами: афри-"</Act>
+    <Act>O1="канская роза в парфюме Paris Сен-Лорана;"</Act>
+    <Act>P1="грасская роза в парфюме Diva Унгаро,"</Act>
+    <Act>Q1="дамасская роза в парфюме Nahema Герлена."</Act>
+    <Act>ВЫВОД(S,нс,A,нс,B,нс,C,нс,D,нс,E,нс,F,нс,G,нс,H,нс,I,нс,J,нс,K,нс,L,нс,M,нс,N,нс,O,нс,P,нс,Q,нс,R,нс,S1,нс,T,нс,U,нс,V,нс,W,нс,X,нс,Y,нс,Z,нс,A1,нс,B1,нс,C1,нс,D1,нс,E1,нс,G1,нс,H1,нс,I1,нс,J1,нс,K1,нс,L1,нс,M1,нс,N1,нс,O1,нс,P1,нс,Q1)</Act>
+  </Rule>
+  <Rule Name="Пр145">
+    <Comment>Выводит текст о ингредиенте духов  розе</Comment>
+    <Condition>F65="Жасмин"</Condition>
+    <Act>S="Жасмин"</Act>
+    <Act>A="Эта царь цветов. До такой степени, что"</Act>
+    <Act>B="в Грассе говорили не жасмин, а"</Act>
+    <Act>C="цвето. На языке цветов белый жасмин"</Act>
+    <Act>D="означает: ваш первый поцелуй взвол-"</Act>
+    <Act>E="новал меня."</Act>
+    <Act>F="Жасмин произрастал первоначально в"</Act>
+    <Act>G="Индии и оазисах Аравии, где встреча-"</Act>
+    <Act>H="ется более ста видов этих ароматных"</Act>
+    <Act>I="цветов. В Прованс он попал в 60-е годы"</Act>
+    <Act>J="XVI столетия, благодаря испанским мо-"</Act>
+    <Act>K="реплавателям. В XIX веке разведение"</Act>
+    <Act>L="жасмина и добыча из него ароматичес-"</Act>
+    <Act>M="кого вещества для производства духов"</Act>
+    <Act>N="стали решающим фактором развития"</Act>
+    <Act>O="грасской парфюмерной промышленности."</Act>
+    <Act>P="Сегодня жасмин выращивают уже в Италии,"</Act>
+    <Act>Q="Марокко, Алжире и Египте. Для создания"</Act>
+    <Act>R="духов используют только те цветы, которые"</Act>
+    <Act>S1="собирают по отдельности. Происходит это"</Act>
+    <Act>T="на рассвете, в тот самый момент, когда "</Act>
+    <Act>U="встает солнце. Чтобы получить килограмм"</Act>
+    <Act>V="жасмина, нужно собрать примерно десять"</Act>
+    <Act>W="тысяч цветков, а чтобы получить полтора"</Act>
+    <Act>X="килограмма эфирного масла - тонну."</Act>
+    <Act>Y="В состав цветов жасмина входит жасмон,"</Act>
+    <Act>Z="который в соединении с индолом дает"</Act>
+    <Act>A1="пьянящий и одновременно стойкий и"</Act>
+    <Act>B1="терпкий аромат. Он производит непов-"</Act>
+    <Act>C1="торимый эффект в таких творениях, как"</Act>
+    <Act>D1="Chanel №5, Arpege Ланвина или Joy Пату."</Act>
+    <Act>E1="Из всех белых цветов именно жасмин"</Act>
+    <Act>G1="больше всего используется в парфюмерии."</Act>
+    <Act>ВЫВОД(S,нс,A,нс,B,нс,C,нс,D,нс,E,нс,F,нс,G,нс,H,нс,I,нс,J,нс,K,нс,L,нс,M,нс,N,нс,O,нс,P,нс,Q,нс,R,нс,S1,нс,T,нс,U,нс,V,нс,W,нс,X,нс,Y,нс,Z,нс,A1,нс,B1,нс,C1,нс,D1,нс,E1,нс,G1)</Act>
+  </Rule>
+  <Rule Name="Пр146">
+    <Comment>Выводит текст о ингредиенте духов  жасмине</Comment>
+    <Condition>F65="Тубероза"</Condition>
+    <Act>S="Тубероза"</Act>
+    <Act>A="Покоряющая, одуряющая и пьянящая,"</Act>
+    <Act>B="часто соединенная в духах с жасмином,"</Act>
+    <Act>C="с которым образует совершенный союз, "</Act>
+    <Act>D="тубероза произрастала в Мексике и была"</Act>
+    <Act>E="ввезена во Францию в XVI веке, затем ее"</Act>
+    <Act>F="стали разводить в Италии, Испании, Ма-"</Act>
+    <Act>G="рокко и Египте. Пора цветения - август,"</Act>
+    <Act>H="сбор продолжается до конца сентября."</Act>
+    <Act>I="Считалось, что тубероза, символ сла-"</Act>
+    <Act>J="дострастия и чувственной любви, спо-"</Act>
+    <Act>K="собна доставлять неприятности бере-"</Act>
+    <Act>L="менным женщинам."</Act>
+    <Act>M="Своим великим ароматом тубероза ярко"</Act>
+    <Act>N="заявила о себе в духах Chloe, Azzaro."</Act>
+    <Act>ВЫВОД(S,нс,A,нс,B,нс,C,нс,D,нс,E,нс,F,нс,G,нс,H,нс,I,нс,J,нс,K,нс,L,нс,M,нс,N)</Act>
+  </Rule>
+  <Rule Name="Пр147">
+    <Comment>Выводит текст о ингредиенте духов  туберозе</Comment>
+    <Condition>F65="Иланг-иланг"</Condition>
+    <Act>S="Иланг-иланг"</Act>
+    <Act>A="Став необходимым практически в боль-"</Act>
+    <Act>B="шинстве современных цветочных ком-"</Act>
+    <Act>C="позиций, цветок произрастал когда-то"</Act>
+    <Act>D="только на Филиппинах и Каморских"</Act>
+    <Act>E="островах. Слово иланг-иланг на языке"</Act>
+    <Act>F="одной из африканских народностей оз-"</Act>
+    <Act>G="начает цветок цветков. Эти в основном"</Act>
+    <Act>H="невысокие деревья могут достигать ино-"</Act>
+    <Act>I="гда и тридцати метров. У них свисающие,"</Act>
+    <Act>J="как у ивы, ветви с крупными овальными"</Act>
+    <Act>K="блестящими листьями. Цветет в сезон"</Act>
+    <Act>L="дождей гроздьями крошечных золотисто-"</Act>
+    <Act>M="желтых цветочков с душистым ароматом,"</Act>
+    <Act>N="похожим на нарциссовый и гиацинтовый."</Act>
+    <Act>O="Цветок созревает в течение двадцати дней."</Act>
+    <Act>P="Дает зеленоватые плоды."</Act>
+    <Act>Q="Впервые экстракт иланг-иланга был получен"</Act>
+    <Act>R="в 1911 году в Реюньоне, следовательно, его"</Act>
+    <Act>S1="начали использовать в парфюмерии не-"</Act>
+    <Act>T="давно по сравнению с другими цветочными"</Act>
+    <Act>U="эфирными маслами."</Act>
+    <Act>V="Сейчас деревья иланг-иланга повсеместно"</Act>
+    <Act>W="растут в тропической Азии. Цветы соби-"</Act>
+    <Act>X="рают, когда они полностью расцвели, до"</Act>
+    <Act>Y="девяти утра. Десятилетнее дерево дает от"</Act>
+    <Act>Z="10 до 15 кг цветков, но для получения ки-"</Act>
+    <Act>A1="лограмма экстракта необходимо несколько"</Act>
+    <Act>B1="сотен килограммов цветков."</Act>
+    <Act>C1="Карвен, Пуччи, Эрме, Риччи, Карден, Сен-"</Act>
+    <Act>D1="Лоран регулярно используют его в своей"</Act>
+    <Act>E1="продукции: Nocturne Карона, Balahe Лео-"</Act>
+    <Act>G1="нара, Magique французской фирмы Селин."</Act>
+    <Act>ВЫВОД(S,нс,A,нс,B,нс,C,нс,D,нс,E,нс,F,нс,G,нс,H,нс,I,нс,J,нс,K,нс,L,нс,M,нс,N,нс,O,нс,P,нс,Q,нс,R,нс,S1,нс,T,нс,U,нс,V,нс,W,нс,X,нс,Y,нс,Z,нс,A1,нс,B1,нс,C1,нс,D1,нс,E1,нс,G1)</Act>
+  </Rule>
+  <Rule Name="Пр148">
+    <Comment>Выводит текст о ингредиенте духов  иланг-иланге</Comment>
+    <Condition>F65="Ландыш"</Condition>
+    <Act>S="Ландыш"</Act>
+    <Act>A="Ниаболее распространен весенний лан-"</Act>
+    <Act>B="дыш, произрастающий в лесной и лесо-"</Act>
+    <Act>C="степной зонах Европы. Растет он также"</Act>
+    <Act>D="в Азии и Америке. Цветет в мае."</Act>
+    <Act>E="Аромат ландыша подтверждает триумф"</Act>
+    <Act>F="весны, возбуждает чувственность."</Act>
+    <Act>G="В 50-е годы нашего века французская"</Act>
+    <Act>H="парфюмерия выпустила множество духов"</Act>
+    <Act>I="с цветочными ароматами, в которых ощу-"</Act>
+    <Act>J="тимы свежие ароматы подлеска: Muguet"</Act>
+    <Act>K="joie Карона, remier Muguet Буржуа, и осо-"</Act>
+    <Act>L="бенно Diorissimo Кристиана Диора."</Act>
+    <Act>ВЫВОД(S,нс,A,нс,B,нс,C,нс,D,нс,E,нс,F,нс,G,нс,H,нс,I,нс,J,нс,K,нс,L)</Act>
+  </Rule>
+  <Rule Name="Пр149">
+    <Comment>Выводит текст о ингредиенте духов  ландыше</Comment>
+    <Condition>F65="Жимолость"</Condition>
+    <Act>S="Жимолость"</Act>
+    <Act>A="Кустарниковое растение, вечнозеленое,"</Act>
+    <Act>B="иногда с опадающими листьями. Произ-"</Act>
+    <Act>C="растает в северном и южном полушариях."</Act>
+    <Act>D="Известно около 200 видов, из которых свы-"</Act>
+    <Act>E="ше 30 видов - в России. Цветочкм белые,"</Act>
+    <Act>F="желтые, розовые или темно-пурпурные,"</Act>
+    <Act>G="расположены попарно в пазухах листьев"</Act>
+    <Act>H="или скучены в головчатые соцветия. У не-"</Act>
+    <Act>I="которыхвидов цветы очень душистые, их-то"</Act>
+    <Act>J="используют для создания ароматных ком-"</Act>
+    <Act>K="позиций духов."</Act>
+    <Act>L="Ее терпкий жасминный запах содержит"</Act>
+    <Act>M="привкус анили, который придает качество,"</Act>
+    <Act>N="прекрасно раскрывающееся в таких изыс-"</Act>
+    <Act>O="канных духах как Givenchy III, Giani Versa-"</Act>
+    <Act>P="cce или Diorella. В гамме цветочно-фрукто-"</Act>
+    <Act>Q="вых ароматов жимолость встречается в"</Act>
+    <Act>R="духах Miss Jaguar."</Act>
+    <Act>ВЫВОД(S,нс,A,нс,B,нс,C,нс,D,нс,E,нс,F,нс,G,нс,H,нс,I,нс,J,нс,K,нс,L,нс,M,нс,N,нс,O,нс,P,нс,Q,нс,R)</Act>
+  </Rule>
+  <Rule Name="Пр150">
+    <Comment>Выводит текст о ингредиенте духов  жимолости</Comment>
+    <Condition>F65="Лилия"</Condition>
+    <Act>S="Лилия"</Act>
+    <Act>A="Цветки лилии - крупные с приятным зага-"</Act>
+    <Act>B="дочным ароматом, воронковидные, ча-"</Act>
+    <Act>C="шевидные или колокольчатые, белые,"</Act>
+    <Act>D="красные, желтые или оранжевые (иногда"</Act>
+    <Act>E="с полосками или крапинками). Цветок из-"</Act>
+    <Act>F="вестен с глубокой древности. Родиной его"</Act>
+    <Act>G="являются Китай и Япония. В северном"</Act>
+    <Act>H="полушарии известно около 80 видов."</Act>
+    <Act>I="Она относительно мало использовалась"</Act>
+    <Act>J="парфюмерами до той поры, по Кошарель"</Act>
+    <Act>K="не построил аромат своего парфюма"</Act>
+    <Act>L="Anais Anais на волнующей свежести ли-"</Act>
+    <Act>M="лии со шлейфом жасмина. ириса и розы."</Act>
+    <Act>ВЫВОД(S,нс,A,нс,B,нс,C,нс,D,нс,E,нс,F,нс,G,нс,H,нс,I,нс,J,нс,K,нс,L,нс,M)</Act>
+  </Rule>
+  <Rule Name="Пр152">
+    <Comment>Выводит текст о ингредиенте духов  лилии</Comment>
+    <Condition>F65="Гиацинт"</Condition>
+    <Act>S="Гиацинт"</Act>
+    <Act>A="Цветки гиацинта, колокольчатые, си-"</Act>
+    <Act>B="ние, сиренево-голубые или белые,"</Act>
+    <Act>C="собраны в колосовидную нить. Всего"</Act>
+    <Act>D="дикорастущих гиацинтов около 30 видов:"</Act>
+    <Act>E="в Европе, Азии и Северной Африке."</Act>
+    <Act>F="В культуре известен наиболее рас-"</Act>
+    <Act>G="пространенный восточный гиацинт, родо-"</Act>
+    <Act>H="начальник садовых, с душистыми цвет-"</Act>
+    <Act>I="ками, простыми или махровыми, имею-"</Act>
+    <Act>J="щими разнообразную окраску. Родина"</Act>
+    <Act>K="восточного гиацинта - восточное Сре-"</Act>
+    <Act>L="диземноморье."</Act>
+    <Act>M="Fleurs des Fleurs Риччи источает запах"</Act>
+    <Act>N="гиацинта."</Act>
+    <Act>ВЫВОД(S,нс,A,нс,B,нс,C,нс,D,нс,E,нс,F,нс,G,нс,H,нс,I,нс,J,нс,K,нс,L,нс,M,нс,N)</Act>
+  </Rule>
+  <Rule Name="Пр153">
+    <Comment>Выводит текст о ингредиенте духов  гиацинте</Comment>
+    <Condition>F65="Померанец"</Condition>
+    <Act>S="Померанец"</Act>
+    <Act>A="Речь идет о померанцевом апельсине,"</Act>
+    <Act>B="с белыми душистыми цветами и кисло-"</Act>
+    <Act>C="горьким плодом. Родиной его являются"</Act>
+    <Act>D="Восточные Гималаи. Из Индии в X веке"</Act>
+    <Act>E="он был доставлен на Ближний Восток,"</Act>
+    <Act>F="откуда арабы ввезли его в средиземно-"</Act>
+    <Act>G="морскую область Европы и Африки."</Act>
+    <Act>H="Еще в эпоху Возрождения из листьев"</Act>
+    <Act>I="померанца получали душистую эссенцию"</Act>
+    <Act>J="пти грэн, а из цветов - эфирное масло"</Act>
+    <Act>K="нероли."</Act>
+    <Act>L="Парфюмерия отводит им большое место"</Act>
+    <Act>M="в освежающих водах. Неповторим аромат"</Act>
+    <Act>N="духов Nina Нины Риччи."</Act>
+    <Act>ВЫВОД(S,нс,A,нс,B,нс,C,нс,D,нс,E,нс,F,нс,G,нс,H,нс,I,нс,J,нс,K,нс,L,нс,M,нс,N)</Act>
+  </Rule>
+  <Rule Name="Пр151">
+    <Comment>Выводит текст о ингредиенте духов  померанце</Comment>
+    <Condition>F65="Лаванда"</Condition>
+    <Act>S="Лаванда"</Act>
+    <Act>A="Вечнозеленый пахучий кустарник вы-"</Act>
+    <Act>B="сотой до одного метра. Цветы от го-"</Act>
+    <Act>C="лубоватого до темно-фиолетовой ок-"</Act>
+    <Act>D="раски. Выращивается в коммерческих"</Act>
+    <Act>E="целях во Франции, Испании, Болгарии,"</Act>
+    <Act>F="ближнем зарубежье и Англии."</Act>
+    <Act>G="Лаванда цвеет на 2-й год в июне-июле,"</Act>
+    <Act>H="на 3-4-й год кусты дают до 1000 цвето-"</Act>
+    <Act>I="носных побегов. Все части растения со-"</Act>
+    <Act>J="держат эфирное, лавандовое масло, но"</Act>
+    <Act>K="для промышленных целей используют"</Act>
+    <Act>L="только цветки. Самое хорошее масло"</Act>
+    <Act>M="получается от цветков, собранных с"</Act>
+    <Act>N="13 до 16 часов. У английской лаванды"</Act>
+    <Act>O="аромат душистый, сладкий, похожий"</Act>
+    <Act>P="на камфору, у французской - фруктовый."</Act>
+    <Act>Q="Ярким примером употребления лаванды"</Act>
+    <Act>R="могут служить две композиции, создан-"</Act>
+    <Act>S1="ные Домом Шанель для мужчин, - туа-"</Act>
+    <Act>T="летная вода Pour Monsieur tau de toilette"</Act>
+    <Act>U="concentree и Platinum egoiste."</Act>
+    <Act>ВЫВОД(S,нс,A,нс,B,нс,C,нс,D,нс,E,нс,F,нс,G,нс,H,нс,I,нс,J,нс,K,нс,L,нс,M,нс,N,нс,O,нс,P,нс,Q,нс,R,нс,S1,нс,T,нс,U)</Act>
+  </Rule>
+  <Rule Name="Пр154">
+    <Comment>Выводит текст о ингредиенте духов  лаванде</Comment>
+    <Condition>F65="Другие цветы"</Condition>
+    <Act>S="Другие цветы"</Act>
+    <Act>A="Невозможно рассказать обо всех цветоч-"</Act>
+    <Act>B="ных ароматах земли, дарующих свою не-"</Act>
+    <Act>C="повторимость духам. Парфюмеры искусно"</Act>
+    <Act>D="используют в композиции аромат мимозы"</Act>
+    <Act>E="и лотоса, мака и магнолии. Взять хотябы"</Act>
+    <Act>F="ирис - цветок поразительной теплоты с пря-"</Act>
+    <Act>G="ными характеристиками, как в парфюме"</Act>
+    <Act>H="Chanel №19. Или волшебный шафали - ред-"</Act>
+    <Act>I="чайший индийский цветок, растущий у подно-"</Act>
+    <Act>J="жия Гималаев. Он распускается на заходе"</Act>
+    <Act>K="солнца. Специалисты фирмы Ив Роше вос-"</Act>
+    <Act>L="создали всю волшебную гамму самых нежных"</Act>
+    <Act>M="ароматов цветка в духах Shafali."</Act>
+    <Act>N="Белая, розовая и лиловая сирень представлена"</Act>
+    <Act>O="в духах Феро Jour (День) в окружении гвоздики,"</Act>
+    <Act>P="жонкиля и лилии - удивительно душистый аромат."</Act>
+    <Act>Q="Интересно, что на Земле выведено около 25 ви-"</Act>
+    <Act>R="дов дикой сирени, а культурных форм ее больше"</Act>
+    <Act>S1="тысячи."</Act>
+    <Act>ВЫВОД(S,нс,A,нс,B,нс,C,нс,D,нс,E,нс,F,нс,G,нс,H,нс,I,нс,J,нс,K,нс,L,нс,M,нс,N,нс,O,нс,P,нс,Q,нс,R,нс,S1)</Act>
+  </Rule>
+  <Rule Name="Пр155">
+    <Comment>Выводит текст о ингредиенте духов  дригих цветов</Comment>
+    <Condition>F65="Листья ветви корни"</Condition>
+    <Act>S="Листья ветви корни"</Act>
+    <Act>A="Гамма запахов, которые источают некото-"</Act>
+    <Act>B="рые листья, стебли растений или корни, не"</Act>
+    <Act>C="обладающие чарующей сладостью аромата"</Act>
+    <Act>D="летних цветов, таит редкостное обаяние и"</Act>
+    <Act>E="придает духам лесную свежесть. Как вол-"</Act>
+    <Act>F="нует воображение куст кассии со смятыми"</Act>
+    <Act>G="грозой листьями или пригоршня листьев ге-"</Act>
+    <Act>H="рани, пропитывая ладони только ей присущей"</Act>
+    <Act>I="терпкостью!"</Act>
+    <Act>ВЫВОД(S,нс,A,нс,B,нс,C,нс,D,нс,E,нс,F,нс,G,нс,H,нс,I)</Act>
+  </Rule>
+  <Rule Name="Пр156">
+    <Comment>Выводит текст о ингредиенте духов листья,ветви,  корни</Comment>
+    <Condition>F65="Фиалка"</Condition>
+    <Act>S="Фиалка"</Act>
+    <Act>A="Невероятно, но эфирное масло, получаемое"</Act>
+    <Act>B=" из листьев фиалки душистой. Этот землис-"</Act>
+    <Act>C="тый и сочный аромат парфюмеры используют"</Act>
+    <Act>D="для придания духам свежести. В естествен-"</Act>
+    <Act>E="ные и чарующие композиции введен он в ду-"</Act>
+    <Act>F="хах Jolie Madame (Прелестная мадам) Баль-"</Act>
+    <Act>G="мена, Fetes des roses (Праздники роз) Карона."</Act>
+    <Act>ВЫВОД(S,нс,A,нс,B,нс,C,нс,D,нс,E,нс,F,нс,G)</Act>
+  </Rule>
+  <Rule Name="Пр157">
+    <Comment>Выводит текст о ингредиенте духов  фиалке</Comment>
+    <Condition>F65="Ветивер"</Condition>
+    <Act>S="Ветивер"</Act>
+    <Act>A="Его широко используют в парфюмерии, из-"</Act>
+    <Act>B="влекая из корней эфирное масло глубокого,"</Act>
+    <Act>C="стойкого, лесного запаха. Разводят ветивер"</Act>
+    <Act>D="в Индии, Индонезии, на Реюньоне и Гаити."</Act>
+    <Act>E="У французских парфюмеров в наибольшем"</Act>
+    <Act>F="употреблении ветивер Бурбон. Терпкость и"</Act>
+    <Act>G="стойкость придает он таким духам, ка Parfum"</Act>
+    <Act>H="Эрме или au sauvage (Дикая вода) Диора."</Act>
+    <Act>I="Корень с острова Гаити - в центре композиции"</Act>
+    <Act>J="экзотически вибрирующей туалетной воды для"</Act>
+    <Act>K="мужчин Vetiver."</Act>
+    <Act>ВЫВОД(S,нс,A,нс,B,нс,C,нс,D,нс,E,нс,F,нс,G,нс,H,нс,I,нс,J,нс,K)</Act>
+  </Rule>
+  <Rule Name="Пр158">
+    <Comment>Выводит текст о ингредиенте духов  ветивере</Comment>
+    <Condition>F65="Пачули"</Condition>
+    <Act>S="Пачули"</Act>
+    <Act>A="Травянистый кустарник, родом из Малайзии,"</Act>
+    <Act>B="высотой до 90 см. Главный поставщик - Су-"</Act>
+    <Act>C="матра, вслед за ней - Китай."</Act>
+    <Act>D="Из листьев извлекают экстракт с тяжелым,"</Act>
+    <Act>E="землистым, теплым и резким запахом. Вве-"</Act>
+    <Act>F="дение пачули в композицию духов придает"</Act>
+    <Act>G="последним шипровый аромат, создавая ост-"</Act>
+    <Act>H="рое или перцовое благоухание своей прони-"</Act>
+    <Act>I="кающей теплотой, будь то в мужских или"</Act>
+    <Act>J="женских духах. Незабываем мощный аромат"</Act>
+    <Act>K="парфюма Habanita Молинара, включающий"</Act>
+    <Act>L="в свою палитру и запах пачули. Его влияние"</Act>
+    <Act>M="ощутимо в Chanel №5 и в Miss Dior."</Act>
+    <Act>ВЫВОД(S,нс,A,нс,B,нс,C,нс,D,нс,E,нс,F,нс,G,нс,H,нс,I,нс,J,нс,K,нс,L,нс,M)</Act>
+  </Rule>
+  <Rule Name="Пр159">
+    <Comment>Выводит текст о ингредиенте духов  пачули</Comment>
+    <Condition>F65="Базилик"</Condition>
+    <Act>S="Базилик"</Act>
+    <Act>A="Произрастает во многих жарких странах. Ро-"</Act>
+    <Act>B="дина - Индия."</Act>
+    <Act>C="Полукустарник и кустарник более ста разно-"</Act>
+    <Act>D="видностей. Самый распространенный имеет"</Act>
+    <Act>E="темно-зеленые листья и очень пахуч. Из лис-"</Act>
+    <Act>F="тьев получают базиликовое масло и вторичный"</Act>
+    <Act>G="продукт - изоевгенол. Аромат пряный, как у ани-"</Act>
+    <Act>H="са. Ярко представлен в начальной ноте духов"</Act>
+    <Act>I="Roma Uomo Лауры Бьяджотти."</Act>
+    <Act>ВЫВОД(S,нс,A,нс,B,нс,C,нс,D,нс,E,нс,F,нс,G,нс,H,нс,I)</Act>
+  </Rule>
+  <Rule Name="Пр160">
+    <Comment>Выводит текст о ингредиенте духов  базилике</Comment>
+    <Condition>F64="Камедь и смолы"</Condition>
+    <Act>F66=ВЫБОР("К самому древнему парфюмерному сырью относятся смолы, камедь и бальзамы.",["Ладан","Гальбан","Опопанакс","Мирра","Стиракс","Ладанник"])</Act>
+  </Rule>
+  <Rule Name="Пр161">
+    <Comment>Производится выбор ингредиентов духов из раздела камедь и смолы</Comment>
+    <Condition>F66="Ладан"</Condition>
+    <Act>S="Ладан"</Act>
+    <Act>A="Ладан обладает древесным, пряным, ли-"</Act>
+    <Act>B="монным запахом, похожим на камфору."</Act>
+    <Act>C="Смолу тропического дерева семейства"</Act>
+    <Act>D="бурзеровых, растущих в Восточной Аф-"</Act>
+    <Act>E="рике и на Среднем Востоке, в виде ка-"</Act>
+    <Act>F="пель шаро- или грушевидной формы со-"</Act>
+    <Act>G="бирают из надрезов коры."</Act>
+    <Act>H="Смола бледно-желтого цвета застывая"</Act>
+    <Act>I="превращается в темное и твердое вещество."</Act>
+    <Act>J="Магические ноты ладана находим в парфю-"</Act>
+    <Act>K="ме Paradoxe пьера Кардена, в парфюме"</Act>
+    <Act>L="Gianni Versacce."</Act>
+    <Act>ВЫВОД(S,нс,A,нс,B,нс,C,нс,D,нс,E,нс,F,нс,G,нс,H,нс,I,нс,J,нс,K,нс,L)</Act>
+  </Rule>
+  <Rule Name="Пр162">
+    <Comment>Выводит текст о ингредиенте духов  ладане</Comment>
+    <Condition>F66="Гальбан"</Condition>
+    <Act>S="Гальбан"</Act>
+    <Act>A="Это камедь - смола, получаемая из тра-"</Act>
+    <Act>B="вянистых растений рода ферула, жителя"</Act>
+    <Act>C="пустынных областей. Основным источни-"</Act>
+    <Act>D="ком гальбана является ferula galbaniflua,"</Act>
+    <Act>E="растущая по степным сухим склонам в го-"</Act>
+    <Act>F="рах Туркмении и Ирана. Добывается путем"</Act>
+    <Act>G="надсечки стеблей и оснований листовых"</Act>
+    <Act>H="черешков, а также из естественных наплы-"</Act>
+    <Act>I="вов, образующихся в местах, раненных на-"</Act>
+    <Act>J="секомыми. з надрезов проступает вязкими,"</Act>
+    <Act>K="красноватыми каплями с очень сильным"</Act>
+    <Act>L="бальзаминным запахом. Затвердевший галь-"</Act>
+    <Act>M="бан представляет собой беловатый конкре-"</Act>
+    <Act>N="мент, очень пахучий, со свежими и одновре-"</Act>
+    <Act>O="менно лесными животными ароматами."</Act>
+    <Act>P="Парфюм Miss Dior включает аромат гальбана."</Act>
+    <Act>ВЫВОД(S,нс,A,нс,B,нс,C,нс,D,нс,E,нс,F,нс,G,нс,H,нс,I,нс,J,нс,K,нс,L,нс,M,нс,N,нс,O,нс,P)</Act>
+  </Rule>
+  <Rule Name="Пр163">
+    <Comment>Выводит текст о ингредиенте духов  гальбане</Comment>
+    <Condition>F66="Опопанакс"</Condition>
+    <Act>S="Опопанакс"</Act>
+    <Act>A="Это род травянистого растения семейства"</Act>
+    <Act>B="зонтичных. Родиной является Иран, расп-"</Act>
+    <Act>C="ространен в Европе и Азии. Порошек корич-"</Act>
+    <Act>D="него-красного цвета, представляющий ка-"</Act>
+    <Act>E="медь, получают от корней и нижних частей"</Act>
+    <Act>F="стебля. Запах опопанакса напоминает сель-"</Act>
+    <Act>G="дерей с животным оттенком, характеризу-"</Act>
+    <Act>H="емый иногда как зловонный. Примером слу- "</Act>
+    <Act>I="жит парфюм Shalimar Герлена."</Act>
+    <Act>ВЫВОД(S,нс,A,нс,B,нс,C,нс,D,нс,E,нс,F,нс,G,нс,H,нс,I)</Act>
+  </Rule>
+  <Rule Name="Пр164">
+    <Comment>Выводит текст о ингредиенте духов опопанаксе</Comment>
+    <Condition>F66="Мирра"</Condition>
+    <Act>S="Мирра"</Act>
+    <Act>A="Ароматическая смола, вытекает из над-"</Act>
+    <Act>B="реза коры ствола низкорослого, сучкова-"</Act>
+    <Act>C="того и остроконечного кустарника Commi-"</Act>
+    <Act>D="phora myrrha, произрастающего в Африке,"</Act>
+    <Act>E="по берегам Красного моря и Индийского"</Act>
+    <Act>F="океана, в Азии и Аравии. При застывании"</Act>
+    <Act>G="смола образует ноздреватые ломкие ком-"</Act>
+    <Act>H="ки желтоватого, красноватого или бурого"</Act>
+    <Act>I="цвета, обладающие сильным специфичес-"</Act>
+    <Act>J="ким запахом и горьким вкусом. Характер-"</Act>
+    <Act>K="ный запах мирры напоминает одновременно"</Act>
+    <Act>L="лимон и розмарин. В состав мирры входят"</Act>
+    <Act>M="эфирные масло (мирол), камедь, смола"</Act>
+    <Act>N="(мирин) и незначительное количество ка-"</Act>
+    <Act>O="кого-то горького вещества, состав которо-"</Act>
+    <Act>P="го еще не поделен. Примером может слу-"</Act>
+    <Act>Q="жить Parfum d Hermes."</Act>
+    <Act>ВЫВОД(S,нс,A,нс,B,нс,C,нс,D,нс,E,нс,F,нс,G,нс,H,нс,I,нс,J,нс,K,нс,L,нс,M,нс,N,нс,O,нс,P,нс,Q)</Act>
+  </Rule>
+  <Rule Name="Пр165">
+    <Comment>Выводит текст о ингредиенте духов мирре</Comment>
+    <Condition>F66="Стиракс"</Condition>
+    <Act>S="Стиракс"</Act>
+    <Act>A="Смола стираксового дерева, родиной ко-"</Act>
+    <Act>B="торого является Лаос и Вьетнам."</Act>
+    <Act>C="Аромат у бензойной смолы тяжелый, ду-"</Act>
+    <Act>D="шистый, похожий на запах ванили. Обво-"</Act>
+    <Act>E="лакивающий эффект создает его соеди-"</Act>
+    <Act>F="нение с сандалом или гвоздикой, что на-"</Act>
+    <Act>G="иболее заметно подчеркивают в стиле ба-"</Act>
+    <Act>H="рокко, взять хотя бы Coco Шанель."</Act>
+    <Act>ВЫВОД(S,нс,A,нс,B,нс,C,нс,D,нс,E,нс,F,нс,G,нс,H)</Act>
+  </Rule>
+  <Rule Name="Пр166">
+    <Comment>Выводит текст о ингредиенте духов стираксе</Comment>
+    <Condition>F66="Ладанник"</Condition>
+    <Act>S="Ладанник"</Act>
+    <Act>A="Кустарник высотой от метра до двух, про-"</Act>
+    <Act>B="израстает во Франции, в Марокко, Испании"</Act>
+    <Act>C="и Греции. На невероятно клейких листьях"</Act>
+    <Act>D="его имеются ворсинки, которые с мая по"</Act>
+    <Act>E="июнь выделяют камедь. Бальзамин и амб-"</Act>
+    <Act>F="ровый запах ладанника высоко ценится в"</Act>
+    <Act>G="парфюмерии, в основном его используют"</Act>
+    <Act>H="для теплых и колоритных композиций"</Act>
+    <Act>I="Kenzo pour homme."</Act>
+    <Act>ВЫВОД(S,нс,A,нс,B,нс,C,нс,D,нс,E,нс,F,нс,G,нс,H,нс,I)</Act>
+  </Rule>
+  <Rule Name="Пр167">
+    <Comment>Выводит текст о ингредиенте духов ладаннике</Comment>
+    <Condition>F64="Мхи древесина и кора"</Condition>
+    <Act>F67=ВЫБОР("Природа невообразимо богата ароматами, и человек научился получать их не только от цветов и смол.",["Сандал","Кедр","Дубовый мох"])</Act>
+  </Rule>
+  <Rule Name="Пр168">
+    <Comment>Производится выбор ингредиентов духов из  разделамхи, древесина и кора</Comment>
+    <Condition>F67="Сандал"</Condition>
+    <Act>S="Сандал"</Act>
+    <Act>A="Вечнозеленое полупаразитическое дерево."</Act>
+    <Act>B="Родом из Южной Азии, но лучше всего рас-"</Act>
+    <Act>C="тет в Южной Индии на высоте от 600 до"</Act>
+    <Act>D="2400 метров над уровнем моря. К зрелому"</Act>
+    <Act>E="возрасту 40-50 лет достигает 15 метров в"</Act>
+    <Act>F="высоту. В течение первых семи лет жизни"</Act>
+    <Act>G="питается за счет других деревьев."</Act>
+    <Act>H="Благодаря тяжелому, сладкому, древес-"</Act>
+    <Act>I="ному, фруктовому аромату сандал снискал"</Act>
+    <Act>J="совершенно особую славу в парфюмерии и"</Act>
+    <Act>K="его использование очень разнообразно, он"</Act>
+    <Act>L="входит в композиции духов как для женщин,"</Act>
+    <Act>M="так и для мужчин: освежающая вода Trus-"</Act>
+    <Act>N="sardi Action, Opium."</Act>
+    <Act>ВЫВОД(S,нс,A,нс,B,нс,C,нс,D,нс,E,нс,F,нс,G,нс,H,нс,I,нс,J,нс,K,нс,L,нс,M,нс,N)</Act>
+  </Rule>
+  <Rule Name="Пр169">
+    <Comment>Выводит текст о ингредиенте духов сандале</Comment>
+    <Condition>F67="Кедр"</Condition>
+    <Act>S="Кедр"</Act>
+    <Act>A="Морозостойкое, многолетнее, вечнозеленое"</Act>
+    <Act>B="дерево."</Act>
+    <Act>C="Содержащиеся в кедровой смоле эфирные"</Act>
+    <Act>D="масла обладают изысканным ароматом и"</Act>
+    <Act>E="бактерицидным действием - воздух в кед-"</Act>
+    <Act>F="ровых лесах практически стерилен."</Act>
+    <Act>G="Характерный запах кедра, такой лесной,"</Act>
+    <Act>H="подчеркивает пряности и смягчает цветоч-"</Act>
+    <Act>I="ные и фруктовые оттенки в духах. Он при-"</Act>
+    <Act>J="сутствует в Deci-Dela, Magic noire."</Act>
+    <Act>ВЫВОД(S,нс,A,нс,B,нс,C,нс,D,нс,E,нс,F,нс,G,нс,H,нс,I,нс,J)</Act>
+  </Rule>
+  <Rule Name="Пр170">
+    <Comment>Выводит текст о ингредиенте духов кедре</Comment>
+    <Condition>F67="Дубовый мох"</Condition>
+    <Act>S="Дубовый мох"</Act>
+    <Act>A="Из всех древесных мхов в парфюмерии"</Act>
+    <Act>B="чаще всего используется дубовый. Речь"</Act>
+    <Act>C="идет о лишайнике, который собирают зи-"</Act>
+    <Act>D="мой и в начале весны в умеренных облас-"</Act>
+    <Act>E="тях. Он придает духам оттенки свежести и"</Act>
+    <Act>F="зелени, напоминающие анис. Это необходи-"</Act>
+    <Act>G="мо для большинства шипровых или зеленых"</Act>
+    <Act>H="духов с запахом свежести. Поищем его в"</Act>
+    <Act>I="Monsieur de Givenchy, Jacomo de Jacomo -"</Act>
+    <Act>J="чисто мужских духах. Вженских духах, сов-"</Act>
+    <Act>K="ременной классике Coriandre Ж. Кутюрье."</Act>
+    <Act>ВЫВОД(S,нс,A,нс,B,нс,C,нс,D,нс,E,нс,F,нс,G,нс,H,нс,I,нс,J,нс,K)</Act>
+  </Rule>
+  <Rule Name="Пр171">
+    <Comment>Выводит текст о ингредиенте духов дубовом мхе</Comment>
+    <Condition>F62="Пряности и аром. вещества"</Condition>
+    <Act>S="Фрукты"</Act>
+    <Act>A="Из фруктовых ароматов в парфюмерии ши-"</Act>
+    <Act>B="роко используются гесперидные запахи - аро-"</Act>
+    <Act>C="маты цитрусовых: лимона, апельсина, берга-"</Act>
+    <Act>D="мота, мандарина."</Act>
+    <Act>E="Лимон, родом из Юго-Восточной Азии, был"</Act>
+    <Act>F="известен древним грекам и римлянам, хотя"</Act>
+    <Act>G="и считался редкостью. Его плоды завезли"</Act>
+    <Act>H="в Европу в средние века."</Act>
+    <Act>I="Лимон может достигать в высоту 5 метров и"</Act>
+    <Act>J="давать до 1,5 тысячи плодов ежегодно. Свой-"</Act>
+    <Act>K="ства эфирных масел лимона варьируется в"</Act>
+    <Act>L="зависимости от климата, культуры и почвы."</Act>
+    <Act>M="Апельсин - дерево, достигающее высоты 10"</Act>
+    <Act>N="метров. В тропиках зрелые фрукты - зеленого"</Act>
+    <Act>O="цвета, в субтропиках и умеренном климате -"</Act>
+    <Act>P="оранжевого. Средиземноморье получило"</Act>
+    <Act>Q="апельсин от арабов примерно в I веке. Мавры"</Act>
+    <Act>R="выращивали апельсины на юге Испании."</Act>
+    <Act>S1="В настоящее время чудесные фрукты вы-"</Act>
+    <Act>T="ращивают во всем мире. Кожура апельсина"</Act>
+    <Act>U="дает сладкий и теплый аромат."</Act>
+    <Act>V="Бергамот произрастает, главным образом, в"</Act>
+    <Act>W="Южно Италии, на Сицилии и Кот д Ивуар, дос-"</Act>
+    <Act>X="тигает высоты 4,5 метра, считается гибридом"</Act>
+    <Act>Y="апельсина. Эфирное масло используется с XVI"</Act>
+    <Act>Z="века. Запах эфирного масла напоминает гнилой"</Act>
+    <Act>A1="лимон."</Act>
+    <Act>B1="Эфирное масло с гесперидным ароматом до-"</Act>
+    <Act>C1="бывают путем выжимки изцедры и кожицы цит-"</Act>
+    <Act>D1="русовых. Прекрасно использованы цитрусовые"</Act>
+    <Act>E1="ароматы в Eau de Rochas с лимонной све-"</Act>
+    <Act>G1="жестью или Cabochard Гре, или Paradoxe Кар-"</Act>
+    <Act>H1="дена. Прекрасно использованы цитрусовые"</Act>
+    <Act>I1="ароматы."</Act>
+    <Act>ВЫВОД(S,нс,A,нс,B,нс,C,нс,D,нс,E,нс,F,нс,G,нс,H,нс,I,нс,J,нс,K,нс,L,нс,M,нс,N,нс,O,нс,P,нс,Q,нс,R,нс,S,нс,T,нс,U,нс,V,нс,W,нс,X,нс,Y,нс,Z,нс,A1,нс,B1,нс,C1,нс,D1,нс,E1,нс,G1,нс,H1,нс,I1)</Act>
+  </Rule>
+</BZ>

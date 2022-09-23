@@ -1,0 +1,87 @@
+<?xml version="1.0"?>
+<BZ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Name="test" Version="1.14" Author="test" CreateDate="24.12.2014 16:44:31" UpdateDate="30.01.2015 19:24:04">
+  <Comment />
+  <Rule Name="Тест графических фнукций">
+    <Act>РисСтрелка(0,0,100,100,"Red")</Act>
+    <Act>РИСЛИНИЯ(110,110,200,200,"Red")</Act>
+    <Act>РИСПРЯМОУГ(0,110,100,100,"Red")</Act>
+    <Act>РИСЭЛЛИПС(100,0,100,100,"Red")</Act>
+    <Act>НАДПИСЬ("Test",0,0,"Arial",12,"Black")</Act>
+    <Act>РИСТОЧКА(50,50,"Green")</Act>
+    <Act>РИСКРУГ(250,50,50,"Red")</Act>
+    <Act>РИСМНОГОУГ(10,10,10,100,100,100,100,10,"@Red")</Act>
+    <Act>РИСЛОМЛИН(10,10,10,100,100,100,100,10,"Red")</Act>
+    <Act>РИСДУГА(0,0,100,100,0,270,"Red")</Act>
+    <Act>тестФигур=1</Act>
+    <Enable>true</Enable>
+    <Priority>50</Priority>
+  </Rule>
+  <Rule Name="Тест СК">
+    <Act>СК(100,100)</Act>
+    <Act>РИСКРУГ(0,0,50,"Red")</Act>
+    <Act>ТестСК=1</Act>
+    <Enable>true</Enable>
+    <Priority>50</Priority>
+  </Rule>
+  <Variable xsi:type="NoType" Name="тестФигур" Goal="true">
+    <Goal>True</Goal>
+    <Comment />
+    <StartValue />
+    <Opredelena>false</Opredelena>
+  </Variable>
+  <Variable xsi:type="NoType" Name="ТестСК" Goal="true">
+    <Goal>True</Goal>
+    <Comment />
+    <StartValue />
+    <Opredelena>false</Opredelena>
+  </Variable>
+  <Group>
+    <Name>Новые БЗ</Name>
+    <Reference>gl:Новые БЗ</Reference>
+    <UserElement>true</UserElement>
+    <Elements>
+      <ElementInfo xsi:type="KNBModuleInfo">
+        <Name>Расчет площади пересечения прямоугольников</Name>
+        <Reference>gl:Новые БЗ:Расчет площади пересечения прямоугольников</Reference>
+        <UserElement>true</UserElement>
+        <Folder>1e2b8e9f-b095-471a-aa16-86e52692d2df</Folder>
+        <Crypt>false</Crypt>
+        <ContentBase>
+          <Base>
+            <Name>Расчет площади пересечения прямоугольников</Name>
+            <FromPath>C:\Users\Maksim\Documents\ExPRO 3\GlobalStorage\1e2b8e9f-b095-471a-aa16-86e52692d2df\Расчет площади пересечения прямоугольников</FromPath>
+          </Base>
+          <Help>
+            <Name>help.html</Name>
+            <FromPath>C:\Users\Maksim\Documents\ExPRO 3\GlobalStorage\1e2b8e9f-b095-471a-aa16-86e52692d2df\help.html</FromPath>
+          </Help>
+          <Content />
+        </ContentBase>
+      </ElementInfo>
+      <ElementInfo xsi:type="KNBModuleInfo">
+        <Name>testTabl</Name>
+        <Reference>gl:Новые БЗ:testTabl</Reference>
+        <UserElement>true</UserElement>
+        <Folder>98a5c031-f14e-4d1e-82c9-35543d0e9760</Folder>
+        <Crypt>false</Crypt>
+        <ContentBase>
+          <Base>
+            <Name>testTabl</Name>
+            <FromPath>C:\Users\Maksim\Documents\ExPRO 3\GlobalStorage\98a5c031-f14e-4d1e-82c9-35543d0e9760\testTabl</FromPath>
+          </Base>
+          <Help>
+            <Name>help.html</Name>
+            <FromPath>C:\Users\Maksim\Documents\ExPRO 3\GlobalStorage\98a5c031-f14e-4d1e-82c9-35543d0e9760\help.html</FromPath>
+          </Help>
+          <Content />
+        </ContentBase>
+      </ElementInfo>
+      <ElementInfo xsi:type="GroupInfo">
+        <Name>Системные</Name>
+        <Reference>gl:Новые БЗ:Системные</Reference>
+        <UserElement>true</UserElement>
+        <Elements />
+      </ElementInfo>
+    </Elements>
+  </Group>
+</BZ>

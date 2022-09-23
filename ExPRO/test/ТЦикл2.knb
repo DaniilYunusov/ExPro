@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<BZ Name="" Author="Юрин А.М.">
+  <Variable Name="Y">
+    <Goal />
+  </Variable>
+  <Variable Name="n">
+    <Type>double</Type>
+    <StartValue>1</StartValue>
+  </Variable>
+  <Rule Name="Пр1">
+    <Act>ПОКА(n&lt;4)</Act>
+    <Act>ИЗМ(n,1)</Act>
+    <Act>Y=n</Act>
+    <Act>ВЫВОД(Y)</Act>
+    <Act>ВЫХОД</Act>
+  </Rule>
+  <Rule Name="Пр2">
+    <Condition>n=4</Condition>
+    <Act>Y="Конец цикла"</Act>
+    <Act>ВЫВОД(Y)</Act>
+  </Rule>
+</BZ>

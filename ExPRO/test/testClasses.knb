@@ -1,0 +1,356 @@
+<?xml version="1.0"?>
+<BZ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Name="TestClasses" Author="Dem" CreateDate="08.09.2008 21:39:18" UpdateDate="17.05.2009 16:31:34">
+  <Comment>Тестовый пример работы с классами</Comment>
+  <Rule Name="Правило2">
+    <Act>Треуг2.a=2</Act>
+    <Act>Треуг2.b=2</Act>
+    <Act>Треуг2.alfa=2</Act>
+    <Comment />
+    <Enable>true</Enable>
+    <Priority>100</Priority>
+  </Rule>
+  <Rule Name="Правило1">
+    <Act>Треуг1=Треугольник</Act>
+    <Act>Треуг2=Треуг1</Act>
+    <Act>ВЫВОД(Треуг1.SF)</Act>
+    <Act>ВЫВОД(Треуг1.Площадь)</Act>
+    <Act>Треуг1.a=Треуг1.a+2</Act>
+    <Act>ВЫВОД(Треуг1.SF)</Act>
+    <Act>ВЫВОД(Треуг1.Площадь)</Act>
+    <Act>Треуг1.a=Треуг1.a+2</Act>
+    <Act>ВЫВОД(Треуг1.SF)</Act>
+    <Act>ВЫВОД(Треуг1.Площадь)</Act>
+    <Comment />
+    <Enable>true</Enable>
+    <Priority>50</Priority>
+  </Rule>
+  <Rule Name="Правило3">
+    <Act>Цил1=Цилиндр</Act>
+    <Act>Цил1.Высота=4</Act>
+    <Act>Цил1.R=1</Act>
+    <Act>ВЫВОД(Цил1.ПлощадьПов)</Act>
+    <Act>ВЫВОД(Цил1.Обьём)</Act>
+    <Comment />
+    <Enable>true</Enable>
+    <Priority>25</Priority>
+  </Rule>
+  <Rule Name="Правило4">
+    <Act>P=ParentClass</Act>
+    <Act>Write("Parent: ",P.P1,", ",P.P)</Act>
+    <Act>P=ClassC1</Act>
+    <Act>Write("ClassC1: ",P.P1,", ",P.P2,", ",P.P)</Act>
+    <Act>P=Children</Act>
+    <Act>Write("Children: ",P.P1,", ",P.P2,", ",P.P3,", ",P.P)</Act>
+    <Enable>true</Enable>
+    <Priority>12.5</Priority>
+  </Rule>
+  <Variable Name="Треуг1" Goal="true">
+    <Goal>True</Goal>
+    <Comment />
+    <StartValue />
+    <Type>NoType</Type>
+  </Variable>
+  <Variable Name="Alfa" Goal="false">
+    <Goal>False</Goal>
+    <Comment />
+    <StartValue />
+    <Type>NoType</Type>
+  </Variable>
+  <Variable Name="Цил1" Goal="true">
+    <Goal>True</Goal>
+    <Comment />
+    <StartValue />
+    <Type>NoType</Type>
+  </Variable>
+  <Variable Name="AA" Goal="false">
+    <Goal>False</Goal>
+    <Comment />
+    <StartValue />
+    <Type>NoType</Type>
+  </Variable>
+  <Variable Name="S" Goal="false">
+    <Goal>False</Goal>
+    <Comment />
+    <StartValue />
+    <Type>NoType</Type>
+  </Variable>
+  <Variable Name="B" Goal="false">
+    <Goal>False</Goal>
+    <Comment />
+    <StartValue />
+    <Type>NoType</Type>
+  </Variable>
+  <Variable Name="A" Goal="false">
+    <Goal>False</Goal>
+    <Comment />
+    <StartValue />
+    <Type>NoType</Type>
+  </Variable>
+  <Variable Name="Треуг2" Goal="false">
+    <Goal>False</Goal>
+    <Comment />
+    <StartValue />
+    <Type>NoType</Type>
+  </Variable>
+  <Variable Name="P" Goal="true">
+    <Goal>True</Goal>
+    <Comment />
+    <StartValue />
+    <Type>NoType</Type>
+  </Variable>
+  <BZ Name="Classes" Author="Dem" CreateDate="17.05.2009 16:13:47" UpdateDate="17.05.2009 16:13:47">
+    <Comment />
+    <Obj Name="OldParentClass">
+      <Comment />
+      <BaseClass />
+      <Property Name="P" Goal="false">
+        <Goal>False</Goal>
+        <Comment />
+        <StartValue>0</StartValue>
+        <Type>NoType</Type>
+        <Modifiers>Public</Modifiers>
+      </Property>
+    </Obj>
+  </BZ>
+  <Obj Name="Цилиндр">
+    <Comment />
+    <Rule Name="Правило1">
+      <Act>ПлощадьБок=Основание.ДлОкр*Высота</Act>
+      <Comment />
+      <Enable>true</Enable>
+      <Priority>100</Priority>
+    </Rule>
+    <Rule Name="Правило2">
+      <Act>Основание=Круг</Act>
+      <Act>Основание.R=R</Act>
+      <Comment />
+      <Enable>true</Enable>
+      <Priority>50</Priority>
+    </Rule>
+    <Rule Name="Правило3">
+      <Act>Основание.R=R</Act>
+      <Comment />
+      <Enable>true</Enable>
+      <Priority>25</Priority>
+    </Rule>
+    <Rule Name="Правило4">
+      <Act>ПлощадьПов=ПлощадьБок+2*Основание.Площадь</Act>
+      <Comment />
+      <Enable>true</Enable>
+      <Priority>12.5</Priority>
+    </Rule>
+    <Rule Name="Правило5">
+      <Act>Обьём=Основание.Площадь*Высота</Act>
+      <Comment />
+      <Enable>true</Enable>
+      <Priority>6.25</Priority>
+    </Rule>
+    <Property Name="Основание" Goal="true">
+      <Goal>True</Goal>
+      <Comment />
+      <StartValue />
+      <Type>NoType</Type>
+      <Modifiers>Public</Modifiers>
+    </Property>
+    <Property Name="R" Goal="true">
+      <Goal>True</Goal>
+      <Comment />
+      <StartValue />
+      <Type>NoType</Type>
+      <Modifiers>Public</Modifiers>
+    </Property>
+    <Property Name="ПлощадьБок" Goal="true">
+      <Goal>True</Goal>
+      <Comment />
+      <StartValue />
+      <Type>NoType</Type>
+      <Modifiers>Public</Modifiers>
+    </Property>
+    <Property Name="ПлощадьПов" Goal="true">
+      <Goal>True</Goal>
+      <Comment />
+      <StartValue />
+      <Type>NoType</Type>
+      <Modifiers>Public</Modifiers>
+    </Property>
+    <Property Name="Обьём" Goal="true">
+      <Goal>True</Goal>
+      <Comment />
+      <StartValue />
+      <Type>NoType</Type>
+      <Modifiers>Public</Modifiers>
+    </Property>
+    <Property Name="Высота" Goal="true">
+      <Goal>True</Goal>
+      <Comment />
+      <StartValue />
+      <Type>NoType</Type>
+      <Modifiers>Public</Modifiers>
+    </Property>
+  </Obj>
+  <Obj Name="Круг">
+    <Comment />
+    <Rule Name="Правило1">
+      <Act>Площадь=PI()*R*R</Act>
+      <Comment />
+      <Enable>true</Enable>
+      <Priority>100</Priority>
+    </Rule>
+    <Rule Name="Правило2">
+      <Act>ДлОкр=2*PI()*R</Act>
+      <Comment />
+      <Enable>true</Enable>
+      <Priority>50</Priority>
+    </Rule>
+    <Property Name="Площадь" Goal="true">
+      <Goal>True</Goal>
+      <Comment />
+      <StartValue />
+      <Type>NoType</Type>
+      <Modifiers>Public</Modifiers>
+    </Property>
+    <Property Name="R" Goal="true">
+      <Goal>True</Goal>
+      <Comment />
+      <StartValue />
+      <Type>NoType</Type>
+      <Modifiers>Public</Modifiers>
+    </Property>
+    <Property Name="ДлОкр" Goal="true">
+      <Goal>True</Goal>
+      <Comment />
+      <StartValue />
+      <Type>NoType</Type>
+      <Modifiers>Public</Modifiers>
+    </Property>
+  </Obj>
+  <Obj Name="Треугольник">
+    <Comment />
+    <Rule Name="Правило1">
+      <Act>S=a*b*sin(alfa)/2</Act>
+      <Enable>true</Enable>
+      <Priority>50</Priority>
+    </Rule>
+    <Property Name="a" Goal="true">
+      <Goal>True</Goal>
+      <Comment />
+      <StartValue />
+      <Type>NoType</Type>
+      <Modifiers>Public</Modifiers>
+    </Property>
+    <Property Name="b" Goal="true">
+      <Goal>True</Goal>
+      <Comment />
+      <StartValue />
+      <Type>NoType</Type>
+      <Modifiers>Public</Modifiers>
+    </Property>
+    <Property Name="S" Goal="true">
+      <Goal>True</Goal>
+      <Comment />
+      <StartValue />
+      <Type>NoType</Type>
+      <Modifiers>Public</Modifiers>
+    </Property>
+    <Property Name="alfa" Goal="true">
+      <Goal>True</Goal>
+      <Comment />
+      <StartValue />
+      <Type>NoType</Type>
+      <Modifiers>Public</Modifiers>
+    </Property>
+    <Property Name="SF" Goal="true">
+      <Goal>True</Goal>
+      <Comment />
+      <StartValue>a*b*sin(alfa)/2</StartValue>
+      <Type>FunctionalVariable</Type>
+      <Modifiers>Public</Modifiers>
+    </Property>
+    <Property Name="Площадь" Goal="true">
+      <Goal>True</Goal>
+      <Comment />
+      <StartValue>ПЕРЕСЧИТАТЬ(S)</StartValue>
+      <Type>FunctionalVariable</Type>
+      <Modifiers>Public</Modifiers>
+    </Property>
+  </Obj>
+  <Obj Name="ParentClass">
+    <Comment />
+    <Rule Name="Правило1">
+      <Act>P1=3</Act>
+      <Enable>true</Enable>
+      <Priority>50</Priority>
+    </Rule>
+    <BaseClass>Classes.OldParentClass</BaseClass>
+    <Property Name="P1" Goal="false">
+      <Goal>False</Goal>
+      <Comment />
+      <StartValue />
+      <Type>NoType</Type>
+      <Modifiers>Public</Modifiers>
+    </Property>
+    <Property Name="P" Goal="false">
+      <Goal>False</Goal>
+      <Comment />
+      <StartValue>P1</StartValue>
+      <Type>NoType</Type>
+      <Modifiers>Public</Modifiers>
+    </Property>
+  </Obj>
+  <Obj Name="ClassC1">
+    <Comment />
+    <Rule Name="Правило1">
+      <Act>P1=2</Act>
+      <Act>P2=4</Act>
+      <Enable>true</Enable>
+      <Priority>50</Priority>
+    </Rule>
+    <BaseClass>ParentClass</BaseClass>
+    <Property Name="P2" Goal="false">
+      <Goal>False</Goal>
+      <Comment />
+      <StartValue />
+      <Type>NoType</Type>
+      <Modifiers>Public</Modifiers>
+    </Property>
+    <Property Name="P" Goal="false">
+      <Goal>False</Goal>
+      <Comment />
+      <StartValue>P1+P2</StartValue>
+      <Type>NoType</Type>
+      <Modifiers>Public</Modifiers>
+    </Property>
+  </Obj>
+  <Obj Name="Children">
+    <Comment />
+    <Rule Name="Правило2">
+      <Act>P1=5</Act>
+      <Act>P2=6</Act>
+      <Act>P3=7</Act>
+      <Enable>true</Enable>
+      <Priority>52</Priority>
+    </Rule>
+    <BaseClass>TestClasses.ClassC1</BaseClass>
+    <Property Name="P3" Goal="false">
+      <Goal>False</Goal>
+      <Comment />
+      <StartValue />
+      <Type>NoType</Type>
+      <Modifiers>Public</Modifiers>
+    </Property>
+    <Property Name="P1" Goal="false">
+      <Goal>False</Goal>
+      <Comment />
+      <StartValue />
+      <Type>NoType</Type>
+      <Modifiers>Public</Modifiers>
+    </Property>
+    <Property Name="P" Goal="false">
+      <Goal>False</Goal>
+      <Comment />
+      <StartValue>P1+P2+P3</StartValue>
+      <Type>NoType</Type>
+      <Modifiers>Public</Modifiers>
+    </Property>
+  </Obj>
+</BZ>

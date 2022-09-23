@@ -1,0 +1,64 @@
+﻿<?xml version="1.0"?>
+<BZ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Name="тест функции" Version="1.14" Author="тест" CreateDate="05.08.2012 18:50:24" UpdateDate="05.08.2012 22:49:57">
+  <Comment />
+  <Rule Name="Правило1">
+    <Act>фактор=Факториал(3)</Act>
+    <Act>ВЫВОД(фактор)</Act>
+    <Act>тестовыйВывод("тест1","тест2")</Act>
+    <Act>тестовыйВывод("тест1",)</Act>
+    <Enable>true</Enable>
+    <Priority>50</Priority>
+  </Rule>
+  <Variable xsi:type="NoType" Name="фактор" Goal="true">
+    <Goal>True</Goal>
+    <Comment />
+    <StartValue />
+    <Opredelena>false</Opredelena>
+  </Variable>
+  <Functions>
+    <Name>Факториал</Name>
+    <LocalVariables xsi:type="NoType" Name="факт" Goal="false">
+      <Goal>False</Goal>
+      <Comment />
+      <StartValue />
+      <Opredelena>false</Opredelena>
+    </LocalVariables>
+    <Args>0</Args>
+    <Act>ЕСЛ(факт<1)</Act>
+    <Act>Возврат(факт*Факториал(факт-1))</Act>
+    <Act>ВЫХОД</Act>
+    <Act>ВЕРНУТЬСЯ(1)</Act>
+  </Functions>
+  <Functions>
+    <Name>тестовыйВывод</Name>
+    <LocalVariables xsi:type="StringVariable" Name="строка" Goal="false">
+      <Goal>False</Goal>
+      <Comment />
+      <StartValue />
+      <Value xsi:type="xsd:string" />
+      <Opredelena>false</Opredelena>
+    </LocalVariables>
+    <Args>0</Args>
+    <Act>ВЫВОД(строка)</Act>
+  </Functions>
+  <Functions>
+    <Name>тестовыйВывод</Name>
+    <LocalVariables xsi:type="StringVariable" Name="строка1" Goal="false">
+      <Goal>False</Goal>
+      <Comment />
+      <StartValue />
+      <Value xsi:type="xsd:string" />
+      <Opredelena>false</Opredelena>
+    </LocalVariables>
+    <LocalVariables xsi:type="StringVariable" Name="строка2" Goal="false">
+      <Goal>False</Goal>
+      <Comment />
+      <StartValue />
+      <Value xsi:type="xsd:string" />
+      <Opredelena>false</Opredelena>
+    </LocalVariables>
+    <Args>0</Args>
+    <Args>1</Args>
+    <Act>ВЫВОД(строка1," ",строка2)</Act>
+  </Functions>
+</BZ>

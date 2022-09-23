@@ -1,0 +1,89 @@
+<?xml version="1.0"?>
+<BZ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Name="TestDraw" Author="Dem" CreateDate="23.10.2008 19:49:29" UpdateDate="06.02.2009 18:20:28">
+  <Comment>ky</Comment>
+  <Variable Name="JJJ" Goal="false">
+    <Goal>False</Goal>
+    <Comment />
+    <StartValue />
+    <Type>NoType</Type>
+  </Variable>
+  <Variable Name="B" Goal="false">
+    <Goal>False</Goal>
+    <Comment />
+    <StartValue>A+ВВОД("B")</StartValue>
+    <Type>NoType</Type>
+  </Variable>
+  <Variable Name="Z" Goal="false">
+    <Goal>False</Goal>
+    <Comment />
+    <StartValue />
+    <Type>NoType</Type>
+  </Variable>
+  <Variable Name="N" Goal="true">
+    <Goal>True</Goal>
+    <Comment />
+    <StartValue />
+    <Type>NoType</Type>
+  </Variable>
+  <Variable Name="S" Goal="false">
+    <Goal>False</Goal>
+    <Comment />
+    <StartValue />
+    <Type>NoType</Type>
+  </Variable>
+  <Variable Name="g" Goal="false">
+    <Goal>False</Goal>
+    <Comment />
+    <StartValue />
+    <Type>NoType</Type>
+  </Variable>
+  <Variable Name="A" Goal="false">
+    <Goal>False</Goal>
+    <Comment />
+    <StartValue />
+    <Type>NoType</Type>
+  </Variable>
+  <Rule Name="q1">
+    <Act>g=0</Act>
+    <Act>S=[0,2*(1+3),[1,2,3,4],2,"\"ty\""]</Act>
+    <Act>S=S+B</Act>
+    <Act>Z=S</Act>
+    <Act>Write("Z = ",Z)</Act>
+    <Act>JJJ=2/g</Act>
+    <Act>Write("JJJ = ",JJJ)</Act>
+    <Act>S=S+Select("bla",["a","b","c"])</Act>
+    <Act>S=S+ЭЛЕМСП(6,S)*30</Act>
+    <Comment />
+    <Enable>true</Enable>
+    <Priority>100</Priority>
+  </Rule>
+  <Rule Name="q2">
+    <Condition>S&gt;=10</Condition>
+    <Act>N=S</Act>
+    <Act>ВЫВОД("N = ",N)</Act>
+    <Act>DrawRectangle(10,10,400,400,"Green")</Act>
+    <Act>DrawLine(10,10,400,400,"Red")</Act>
+    <Act>DrawEllipse(10,100,210,400,"Blue")</Act>
+    <Act>DrawText("Hi :)",100,100,"Tahoma",12,"Black")</Act>
+    <Comment />
+    <Enable>true</Enable>
+    <Priority>50</Priority>
+  </Rule>
+  <Rule Name="q3">
+    <Act>S=S+g</Act>
+    <Act>g=g+1</Act>
+    <Act>N</Act>
+    <Comment />
+    <Enable>true</Enable>
+    <Priority>25</Priority>
+  </Rule>
+  <Rule Name="q4">
+    <Act>A=17</Act>
+    <Act>While(A&lt;20)</Act>
+    <Act>A=A+1</Act>
+    <Act>End</Act>
+    <Comment />
+    <Enable>true</Enable>
+    <Priority>12.5</Priority>
+  </Rule>
+</BZ>

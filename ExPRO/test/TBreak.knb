@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+<BZ Name="TBreak" Author="Deman" CreateDate="02.12.2008 22:36:04" UpdateDate="02.12.2008 22:39:47">
+  <Variable Name="i" />
+  <Variable Name="Eng">
+    <Goal />
+  </Variable>
+  <Variable Name="Ru">
+    <Goal />
+  </Variable>
+  <Rule Name="Правило1">
+    <Comment>
+    </Comment>
+    <Act>i=0</Act>
+    <Act>While(i&lt;10)</Act>
+    <Act>i=i+1</Act>
+    <Act>Break(i&gt;5)</Act>
+    <Act>End</Act>
+    <Act>Write(i)</Act>
+    <Act>Eng=1</Act>
+  </Rule>
+  <Rule Name="Правило2">
+    <Comment>
+    </Comment>
+    <Act>i=0</Act>
+    <Act>ПОКА(i&lt;10)</Act>
+    <Act>i=i+1</Act>
+    <Act>ПРЕРВАТЬ(i&gt;5)</Act>
+    <Act>ВЫХОД</Act>
+    <Act>ВЫВОД(i)</Act>
+    <Act>Ru=1</Act>
+  </Rule>
+</BZ>

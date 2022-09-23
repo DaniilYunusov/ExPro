@@ -1,0 +1,63 @@
+<?xml version="1.0"?>
+<BZ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Name="ПлощадьСлФигуры" Version="1.14" Author="Юрин А.М." CreateDate="29.12.2012 15:42:08" UpdateDate="05.01.2013 13:00:32">
+  <Comment>Построение и расчет площади сложной фигуры</Comment>
+  <Rule Name="Правило1">
+    <Act>ВВОДБЛ("Параметры фигуры",Xo,Yo,R1,H)</Act>
+    <Act>РИСКРУГ(Xo,Yo,R1,"blue")</Act>
+    <Act>РИСПРЯМОУГ(Xo-R1,Yo,2*R1,H,"green")</Act>
+    <Act>R=R1</Act>
+    <Act>S=ТКольцо1.ПлощадьКруга(R)</Act>
+    <Act>//S=120</Act>
+    <Act>Sf=2*R1*H+S/2</Act>
+    <Act>ВЫВОД("Площадь сложной фигуры Sf= ",Sf)</Act>
+    <Enable>true</Enable>
+    <Priority>50</Priority>
+  </Rule>
+  <Variable xsi:type="NoType" Name="S" Goal="false">
+    <Goal>False</Goal>
+    <Comment />
+    <StartValue />
+    <Opredelena>false</Opredelena>
+  </Variable>
+  <Variable xsi:type="NoType" Name="Sf" Goal="true">
+    <Goal>True</Goal>
+    <Comment />
+    <StartValue />
+    <Opredelena>false</Opredelena>
+  </Variable>
+  <Variable xsi:type="NoType" Name="Xo" Goal="false">
+    <Goal>False</Goal>
+    <Comment />
+    <StartValue />
+    <Opredelena>false</Opredelena>
+  </Variable>
+  <Variable xsi:type="NoType" Name="Yo" Goal="false">
+    <Goal>False</Goal>
+    <Comment />
+    <StartValue />
+    <Opredelena>false</Opredelena>
+  </Variable>
+  <Variable xsi:type="NoType" Name="H" Goal="false">
+    <Goal>False</Goal>
+    <Comment />
+    <StartValue />
+    <Opredelena>false</Opredelena>
+  </Variable>
+  <Variable xsi:type="Number" Name="R1" Goal="false">
+    <Goal>False</Goal>
+    <Comment />
+    <StartValue />
+    <Opredelena>false</Opredelena>
+  </Variable>
+  <Variable xsi:type="Number" Name="R" Goal="false">
+    <Goal>False</Goal>
+    <Comment />
+    <StartValue />
+    <Opredelena>false</Opredelena>
+  </Variable>
+  <ReferenceToModule>
+    <Name>ТКольцо1</Name>
+    <Path>ТКольцо1.knb</Path>
+    <Password />
+  </ReferenceToModule>
+</BZ>

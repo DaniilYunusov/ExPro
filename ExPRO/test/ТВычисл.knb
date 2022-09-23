@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+<BZ Name="Тест: Вычисление значения переменных" Author="Юрин А.М.">
+  <Variable Name="Z">
+    <Goal />
+  </Variable>
+  <Variable Name="X" />
+  <Variable Name="Y" />
+  <Variable Name="Z1">
+    <Goal />
+  </Variable>
+  <Variable Name="M">
+    <Goal />
+  </Variable>
+  <Variable Name="Mi">
+    <Type>double</Type>
+  </Variable>
+  <Variable Name="Mj">
+    <Type>double</Type>
+  </Variable>
+  <Rule Name="Пр1">
+    <Act>Z=(X+34)/(45-Y)</Act>
+    <Act>ВЫВОД("Z=",Z)</Act>
+  </Rule>
+  <Rule Name="Пр2">
+    <Act>X=6</Act>
+    <Act>Y=5</Act>
+  </Rule>
+  <Rule Name="Пр4">
+    <Act>Z1=5*(X+Y)</Act>
+  </Rule>
+  <Rule Name="Пр5">
+    <Act>M=Mi+Mj</Act>
+    <Act>ВЫВОД("M=",M)</Act>
+  </Rule>
+  <Rule Name="Пр6">
+    <Act>Mi=5</Act>
+    <Act>Mj=25</Act>
+  </Rule>
+</BZ>

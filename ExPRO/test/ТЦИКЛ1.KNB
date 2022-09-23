@@ -1,0 +1,38 @@
+<?xml version="1.0"?>
+<BZ Name="Цикл с функцией ПОКА" Author="Юрин">
+  <Variable Name="Q">
+    <Goal />
+  </Variable>
+  <Variable Name="L" />
+  <Variable Name="i">
+    <Type>double</Type>
+    <StartValue>1</StartValue>
+  </Variable>
+  <Variable Name="Y" />
+  <Variable Name="n">
+    <Type>double</Type>
+    <StartValue>1</StartValue>
+  </Variable>
+  <Variable Name="M">
+    <Goal />
+  </Variable>
+  <Rule Name="Пр1">
+    <Act>ПОКА(n&lt;4)</Act>
+    <Act>ИЗМ(n,1)</Act>
+    <Act>Y=n</Act>
+    <Act>ВЫВОД(Y)</Act>
+    <Act>ВЫХОД</Act>
+    <Act>ВЫВОД("Цикл закончен")</Act>
+  </Rule>
+  <Rule Name="Пр3">
+    <Act>ПОКА(i&lt;3)</Act>
+    <Act>ИЗМ(i,1)</Act>
+    <Act>M=ЭЛЕМСП(i,L)</Act>
+    <Act>ВЫХОД</Act>
+    <Act>Q=M</Act>
+    <Act>ВЫВОД(Q)</Act>
+  </Rule>
+  <Rule Name="Пр4">
+    <Act>L=[5,10,15,20]</Act>
+  </Rule>
+</BZ>

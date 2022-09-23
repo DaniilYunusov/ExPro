@@ -1,0 +1,1442 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>directNetwork</name>
+    </assembly>
+    <members>
+        <member name="T:directNetwork.layer">
+            <remark>
+            Класс слой нейронной сети прямого распространения
+            </remark>
+        </member>
+        <member name="F:directNetwork.layer.neirons">
+            <summary>
+            Нейроны слоя сети
+            </summary>
+        </member>
+        <member name="F:directNetwork.layer.last">
+            <summary>
+            Указывает является ли данный слой последним
+            </summary>
+        </member>
+        <member name="F:directNetwork.layer.speed">
+            <summary>
+            Определяет скорость обучения данного слоя
+            </summary>
+        </member>
+        <member name="F:directNetwork.layer.parent">
+            <summary>
+            Указатель на сеть к которой принадлежит данынй слой
+            </summary>
+        </member>
+        <member name="F:directNetwork.layer.realsForPrevLayer">
+            <summary>
+            Значение эталонных выходов для предыдущего слоя
+            </summary>
+        </member>
+        <member name="F:directNetwork.layer.inputs">
+            <summary>
+            Входы слоя
+            </summary>
+        </member>
+        <member name="F:directNetwork.layer.outputs">
+            <summary>
+            Выходы слоя
+            </summary>
+        </member>
+        <member name="F:directNetwork.layer.centers">
+            <summary>
+            Число входов слоя
+            </summary>
+        </member>
+        <member name="M:directNetwork.layer.#ctor(directNetwork.layer,directNetwork.network)">
+            <summary>
+            Конструктор копирующий данный слой
+            </summary>
+            <param name="copy">слой с которого делается копия</param>
+            <param name="parent">сеть в которой создается новый слой</param>
+        </member>
+        <member name="M:directNetwork.layer.getOutputs">
+            <summary>
+            Возвращает выходы слоя
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:directNetwork.layer.setReal(System.Collections.Generic.List{System.Double})">
+            <summary>
+            Устанавливает эталонные значения,
+            значения которые мы бы хотели выидеть на выходе
+            сети при данном входе
+            </summary>
+            <param name="reals"></param>
+        </member>
+        <member name="M:directNetwork.layer.cerror">
+            <summary>
+            Суммарная ошибка по всем нейронам слоя,
+            значение отличия того что получили, от того что
+            хотели видеть
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:directNetwork.layer.#ctor(System.Int32,System.Int32,System.Boolean,directNetwork.network)">
+            <summary>
+            Создает новый слой сети
+            </summary>
+            <param name="enters">Количество входов</param>
+            <param name="count">Количество нейронов</param>
+            <param name="last">Является ли последним слоем сети</param>
+            <param name="parent">Сеть в которой создается слой</param>
+        </member>
+        <member name="M:directNetwork.layer.randomize">
+            <summary>
+            Сбросить все весовые коэффициенты нейронов 
+            слоя на случайные
+            </summary>
+        </member>
+        <member name="M:directNetwork.layer.process">
+            <summary>
+            Запустить процесс слоя, 
+            высчитатать выход слоя по его входу
+            </summary>
+        </member>
+        <member name="M:directNetwork.layer.errors">
+            <summary>
+            Вычисление ошибок выхода
+            (отличие того что хотели получить, от того что получили)
+            и вычисление адаптивного шага обучения для данного слоя
+            и вычисление эталонного значения для предыдущих слоев
+            </summary>
+        </member>
+        <member name="M:directNetwork.layer.correct">
+            <summary>
+            Запуск коррекции весов нейронов данног слоя
+            </summary>
+        </member>
+        <member name="M:directNetwork.layer.neironsWeight(System.Int32)">
+            <summary>
+            Получить веса нейронов
+            </summary>
+            <param name="neironNumber">номер нейрона</param>
+            <returns>Список синаптических весов нейрона</returns>
+        </member>
+        <member name="M:directNetwork.layer.getPorog(System.Int32)">
+            <summary>
+            Пороговое значение по номеру нейрону
+            </summary>
+            <param name="neironNumber">номер нейрона</param>
+            <returns>порого активации нейрона</returns>
+        </member>
+        <member name="M:directNetwork.layer.setPorog(System.Int32,System.Double)">
+            <summary>
+            Установить значение порога для данного нейрона
+            </summary>
+            <param name="neironNumber">номер нейрона</param>
+            <param name="value">значение порога активации нейрона</param>
+        </member>
+        <member name="P:directNetwork.layer.couts">
+            <summary>
+            Возвращает количество нейронов сети
+            </summary>
+        </member>
+        <member name="P:directNetwork.layer.Last">
+            <summary>
+            Возвращает или устанавливает является ли данный слой последним
+            </summary>
+        </member>
+        <member name="P:directNetwork.layer.Inputs">
+            <summary>
+            Врзвращает или задает входы слоя
+            </summary>
+        </member>
+        <member name="P:directNetwork.layer.Preals">
+            <summary>
+            Возвращает значение для постановки 
+            эталонов для предущего слоя сети
+            </summary>
+        </member>
+        <member name="P:directNetwork.layer.Speed">
+            <summary>
+            Возвращает или задает скорость обучения слоя
+            </summary>
+        </member>
+        <member name="T:directNetwork.Properties.Resources">
+            <summary>
+              Класс ресурса со строгой типизацией для поиска локализованных строк и т.д.
+            </summary>
+        </member>
+        <member name="P:directNetwork.Properties.Resources.ResourceManager">
+            <summary>
+              Возвращает кэшированный экземпляр ResourceManager, использованный этим классом.
+            </summary>
+        </member>
+        <member name="P:directNetwork.Properties.Resources.Culture">
+            <summary>
+              Перезаписывает свойство CurrentUICulture текущего потока для всех
+              обращений к ресурсу с помощью этого класса ресурса со строгой типизацией.
+            </summary>
+        </member>
+        <member name="T:directNetwork.utils">
+            <remark>
+            Простые утилиты для работы
+            </remark>
+        </member>
+        <member name="F:directNetwork.utils.rnd">
+            <summary>
+            Рандом для генерации
+            </summary>
+        </member>
+        <member name="M:directNetwork.utils.rand(System.Double,System.Double)">
+            <summary>
+            Генерирвоать случайное число с плавающей точкой
+            </summary>
+            <param name="min">нижняя граница</param>
+            <param name="max">верхняя граница</param>
+            <returns>случайное число</returns>
+        </member>
+        <member name="M:directNetwork.utils.irand(System.Int32,System.Int32)">
+            <summary>
+            Генерировать случайное целое число
+            </summary>
+            <param name="min">нижняя граница</param>
+            <param name="max">верхняя граница</param>
+            <returns>случайное число</returns>
+        </member>
+        <member name="T:directNetwork.shellGui">
+            <remarks>
+            Класс отвечающий за визуальное редактирвоание 
+            сети прямого распространения, графический интерфейс
+            </remarks>
+        </member>
+        <member name="F:directNetwork.shellGui.SYNC_ALL">
+            <summary>
+            синхронизировать все
+            </summary>
+        </member>
+        <member name="F:directNetwork.shellGui.SYNC_NET_OPTIONS_VALUES">
+            <summary>
+            настройки сети синхронизировать
+            </summary>
+        </member>
+        <member name="F:directNetwork.shellGui.SYNC_STEPS_RADIO">
+            <summary>
+            синк включенных полей со значениями
+            </summary>
+        </member>
+        <member name="F:directNetwork.shellGui.SYNC_SCHEME">
+            <summary>
+            синхронизировать схему спец типов
+            </summary>
+        </member>
+        <member name="F:directNetwork.shellGui.SYNC_SCHEME_LIST">
+            <summary>
+            синхронизировать схему спец типов, список входоы/выходов
+            </summary>
+        </member>
+        <member name="F:directNetwork.shellGui.SYNC_SCHEME_HIDE">
+            <summary>
+            скрыть настройки элемента схемы
+            </summary>
+        </member>
+        <member name="F:directNetwork.shellGui.SYNC_INPUTS">
+            <summary>
+            заготовить список входов сети
+            </summary>
+        </member>
+        <member name="F:directNetwork.shellGui.SYNC_LAYERS">
+            <summary>
+            список слоев заготовить
+            </summary>
+        </member>
+        <member name="F:directNetwork.shellGui.SYNC_EXAMPLES">
+            <summary>
+            список индексов примеров заготовить
+            </summary>
+        </member>
+        <member name="F:directNetwork.shellGui.DIRECTION_TO_SHELL">
+            <summary>
+            Направление из сети в шелл
+            </summary>
+        </member>
+        <member name="F:directNetwork.shellGui.DIRECTION_TO_NET">
+            <summary>
+            Напрвление из шелла в сеть
+            </summary>
+        </member>
+        <member name="F:directNetwork.shellGui.parent">
+            <summary>
+            Оболочка с которой визуально работаем
+            </summary>
+        </member>
+        <member name="M:directNetwork.shellGui.#ctor(directNetwork.netShell)">
+            <summary>
+            Создание графического редактора
+            </summary>
+            <param name="parent"></param>
+        </member>
+        <member name="M:directNetwork.shellGui.showGUI">
+            <summary>
+            Показать редактор
+            </summary>
+        </member>
+        <member name="M:directNetwork.shellGui.hideGUI">
+            <summary>
+            Скрыть редактор
+            </summary>
+        </member>
+        <member name="M:directNetwork.shellGui.sync(System.Boolean,System.Int32)">
+            <summary>
+            Синхронизация сети с шеллом
+            </summary>
+            <param name="direction">что с чем синхронизирвоать изи констант брать</param>
+            <param name="type">тип синхронизации в константах</param>
+        </member>
+        <member name="M:directNetwork.shellGui.reChangeRadioSteps(System.Object,System.EventArgs)">
+            <summary>
+            Событие переключения типа шага
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:directNetwork.shellGui.acceptNet">
+            <summary>
+            Применить изменения в шелле к сети
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:directNetwork.shellGui.DataDelete_Click(System.Object,System.EventArgs)">
+            <summary>
+            Событие удаления элемента из схемы преобразований
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:directNetwork.shellGui.AddEnter_Click(System.Object,System.EventArgs)">
+            <summary>
+            Добавить схему преобразований вход
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:directNetwork.shellGui.AddOutput_Click(System.Object,System.EventArgs)">
+            <summary>
+            Добавить в схему преобразований выход
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:directNetwork.shellGui.schemeEdit(System.Boolean,System.Int32)">
+            <summary>
+            Вывести редактор схемы нужного типа
+            </summary>
+            <param name="type"></param>
+            <param name="num"></param>
+        </member>
+        <member name="M:directNetwork.shellGui.listEnters_SelectedIndexChanged(System.Object,System.EventArgs)">
+            <summary>
+            Выделяем вход схемы преобразований
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:directNetwork.shellGui.listOutputs_SelectedIndexChanged(System.Object,System.EventArgs)">
+            <summary>
+            Выделяем выход схемы преобразований
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:directNetwork.shellGui.dataType_SelectedIndexChanged(System.Object,System.EventArgs)">
+            <summary>
+            Изменение типа элемента схемы
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:directNetwork.shellGui.rechangeDataValue(System.String,System.Int32)">
+            <summary>
+            Изменение значения элемента схемы
+            </summary>
+            <param name="text">новое значение</param>
+            <param name="num">номер элемента схемы</param>
+        </member>
+        <member name="M:directNetwork.shellGui.LimitTypeValueMin_TextChanged(System.Object,System.EventArgs)">
+            <summary>
+            Изменение нижней границы ограниченного отрезка
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:directNetwork.shellGui.LimitTypeValueMax_TextChanged(System.Object,System.EventArgs)">
+            <summary>
+            Изменение верхней границы ограниченного отрезка
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:directNetwork.shellGui.MaxEnumValue_TextChanged(System.Object,System.EventArgs)">
+            <summary>
+            Изменение верхней гранциы перечисляемого типа
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:directNetwork.shellGui.button3_Click(System.Object,System.EventArgs)">
+            <summary>
+            Добавить слой в сеть
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:directNetwork.shellGui.topoDelLastLayer_Click(System.Object,System.EventArgs)">
+            <summary>
+            Метод/событие удаляет последний слой сети
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:directNetwork.shellGui.topoLayers_SelectedIndexChanged(System.Object,System.EventArgs)">
+            <summary>
+            Метод/событие при выборе слоя создает список нейронов данного слоя
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:directNetwork.shellGui.topoNeirons_SelectedIndexChanged(System.Object,System.EventArgs)">
+            <summary>
+            Метод/событие при выборе нейрона заполнить список весовых коэффициентов
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:directNetwork.shellGui.topoWeight_SelectedIndexChanged(System.Object,System.EventArgs)">
+            <summary>
+            событие на выделение веса для редактирвоания
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:directNetwork.shellGui.topoWeightValue_TextChanged(System.Object,System.EventArgs)">
+            <summary>
+            Изменить вес итема
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:directNetwork.shellGui.listEntersProcess_SelectedIndexChanged(System.Object,System.EventArgs)">
+            <summary>
+            Выбор входа сети
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:directNetwork.shellGui.listOutputsProcess_SelectedIndexChanged(System.Object,System.EventArgs)">
+            <summary>
+            Выбор выхода сети
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:directNetwork.shellGui.ProcessInputValue_TextChanged(System.Object,System.EventArgs)">
+            <summary>
+            При валидном вводу задать значение входа
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:directNetwork.shellGui.button1_Click(System.Object,System.EventArgs)">
+            <summary>
+            Запустить процесс сети и заполнить выходы
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:directNetwork.shellGui.checkBox1_CheckedChanged(System.Object,System.EventArgs)">
+            <summary>
+            Поставить использовать или не использовать схему
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:directNetwork.shellGui.eduAdd_Click(System.Object,System.EventArgs)">
+            <summary>
+            Добавить пример обучения
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:directNetwork.shellGui.EduSelect_SelectedIndexChanged(System.Object,System.EventArgs)">
+            <summary>
+            Выбор нужного примера обучения
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:directNetwork.shellGui.eduOutputsList_SelectedIndexChanged(System.Object,System.EventArgs)">
+            <summary>
+            Выбор выхода для редактирования
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:directNetwork.shellGui.eduEntersList_SelectedIndexChanged(System.Object,System.EventArgs)">
+            <summary>
+            Выбор выхода для редактирования
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:directNetwork.shellGui.EduValue_TextChanged(System.Object,System.EventArgs)">
+            <summary>
+            Редактировать значение
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:directNetwork.shellGui.eduDeleteExample_Click(System.Object,System.EventArgs)">
+            <summary>
+            Удалить выборку из примеров
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:directNetwork.shellGui.eduProcess_Click(System.Object,System.EventArgs)">
+            <summary>
+            Обучить сеть по заданным выборкам
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:directNetwork.shellGui.saveNetAs">
+            <summary>
+            Сохранить сеть по вводу пользователя пути
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:directNetwork.shellGui.saveAs_Click(System.Object,System.EventArgs)">
+            <summary>
+            Сохарнить как кнопка
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:directNetwork.shellGui.saveNet_Click(System.Object,System.EventArgs)">
+            <summary>
+            Сохранить сеть по старому пути
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:directNetwork.shellGui.openNet_Click(System.Object,System.EventArgs)">
+            <summary>
+            Открыть сеть по заданному пути
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:directNetwork.shellGui.shellGui_FormClosing(System.Object,System.Windows.Forms.FormClosingEventArgs)">
+            <summary>
+            Закрытие формы не влечет ее уничтожение
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:directNetwork.shellGui.saveAsExamples_Click(System.Object,System.EventArgs)">
+            <summary>
+            Соххранить обучающую выборку
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:directNetwork.shellGui.openExamples_Click(System.Object,System.EventArgs)">
+            <summary>
+            Открыть обучающую выборку
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="F:directNetwork.shellGui.lastTabSelected">
+            <summary>
+            Последняя выбранная вкладка
+            </summary>
+        </member>
+        <member name="M:directNetwork.shellGui.tabControl1_TabIndexChanged(System.Object,System.EventArgs)">
+            <summary>
+            Перевыбор таба настроек
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="F:directNetwork.shellGui.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:directNetwork.shellGui.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:directNetwork.shellGui.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="T:directNetwork.neiron">
+            <remark>
+            Нейрон сети прмого распространения
+            </remark>
+        </member>
+        <member name="F:directNetwork.neiron.sinaps">
+            Параметры сети
+            <summary>
+            Список синаптических весов нейрона 
+            </summary>
+        </member>
+        <member name="F:directNetwork.neiron.porog">
+            <summary>
+            Порог активации нейрона
+            </summary>
+        </member>
+        <member name="F:directNetwork.neiron.parent">
+            <summary>
+            Слой, в котором создан данный нейрон
+            </summary>
+        </member>
+        <member name="F:directNetwork.neiron.sumout">
+            Вычисления сети
+            <summary>
+            сумма, промежуточное действие необходимое дальше и для расчетов ошибок
+            </summary>
+        </member>
+        <member name="F:directNetwork.neiron.outputs">
+            <summary>
+            Выходное значение нейрона
+            </summary>
+        </member>
+        <member name="F:directNetwork.neiron.real">
+            <summary>
+            Эталонное значение для нейрона
+            для нейронов последнего слоя это то что мы хотим видеть
+            дляскрытых вычисляемое значение
+            </summary>
+        </member>
+        <member name="F:directNetwork.neiron.err">
+            <summary>
+            Ошибка выхода, отличие выходного значения от желаемого
+            </summary>
+        </member>
+        <member name="F:directNetwork.neiron.sig_1">
+            <summary>
+            Значение производной сигмоидальной функции от сумматора
+            </summary>
+        </member>
+        <member name="F:directNetwork.neiron.last_cor">
+            <summary>
+            Список последних поправок, сделанных для весовых коэффициентов и порога данного нейрона
+            </summary>
+        </member>
+        <member name="M:directNetwork.neiron.#ctor(System.Int32,directNetwork.layer)">
+            <summary>
+            Создает нейрон
+            </summary>
+            <param name="count">Количество входов нейрона</param>
+            <param name="parent">Слой в котором создается нейрон</param>
+        </member>
+        <member name="M:directNetwork.neiron.#ctor(directNetwork.neiron,directNetwork.layer)">
+            <summary>
+            Копирование нейрона
+            </summary>
+            <param name="copy">Нейрон с которого копируем</param>
+            <param name="parent">Слой в котором создаем данный нейрон</param>
+        </member>
+        <member name="M:directNetwork.neiron.randomize">
+            <summary>
+            Задает весовые коффициенты и порог данного нейрона случайными числами
+            </summary>
+        </member>
+        <member name="M:directNetwork.neiron.getOutput">
+            <summary>
+            Получить выход нейрона
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:directNetwork.neiron.process">
+            <summary>
+            Запустить процесс получения выхода нейрона по входу
+            </summary>
+        </member>
+        <member name="M:directNetwork.neiron.error">
+            <summary>
+            Вычисляет ошибку выхода нейрона и первую производную сигмоиды от сумматора
+            </summary>
+        </member>
+        <member name="M:directNetwork.neiron.real_prev">
+            <summary>
+            Получить список, который в сумме будет использоваться как эталонное значение для предыдущих слоев
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:directNetwork.neiron.correct(System.Double,System.Double)">
+            <summary>
+            Корректирвка весов с заданной скорость и импульсом
+            </summary>
+            <param name="speed">Шаг обучения</param>
+            <param name="impulse">Импульс, доля от предущей поправки веса</param>
+        </member>
+        <member name="M:directNetwork.neiron.sigmoid(System.Double,System.Double,System.Int32)">
+            <summary>
+            Рассчитать значение сигмоидной функции
+            </summary>
+            <param name="k">Коэффициент сигмоиды</param>
+            <param name="x">Входное значение</param>
+            <param name="rise">Порядок производной</param>
+            <returns>Значение функции в тчоке x</returns>
+        </member>
+        <member name="P:directNetwork.neiron.Real">
+            <summary>
+            Получить или задать эталонное значение данного нейрона
+            </summary>
+        </member>
+        <member name="P:directNetwork.neiron.Err">
+            <summary>
+            Получить ошибку выхода данного нейрона
+            </summary>
+        </member>
+        <member name="P:directNetwork.neiron.Sinaps">
+            <summary>
+            Получить/задать синаптические веса нейрона
+            </summary>
+        </member>
+        <member name="P:directNetwork.neiron.Porog">
+            <summary>
+            Получить/задать пороговое значение нейрона
+            </summary>
+        </member>
+        <member name="P:directNetwork.neiron.Sig_1">
+            <summary>
+            Полусить значение первой производной сигмоидальной функции от сумматора
+            </summary>
+        </member>
+        <member name="T:directNetwork.Data">
+            <remark>
+            Класс предназначенный для пред/пост обработки данных
+            с которыми рабоатет нейронаня сеть
+            </remark>
+        </member>
+        <member name="M:directNetwork.Data.bsegmentDir(System.Double)">
+            <summary>
+            Преобразовать из ограниченного отрезка в бесконечный
+            </summary>
+            <param name="x">Точка на ограниченном отрезке</param>
+            <returns>Точка на бесконечном отрезке</returns>
+        </member>
+        <member name="M:directNetwork.Data.bsegmentRev(System.Double)">
+            <summary>
+            Преобразовать из бесконечного отрезка в ограниченный
+            </summary>
+            <param name="t">Точка на бесконечном отрезке</param>
+            <returns>Точка на ограниченном отрезке</returns>
+        </member>
+        <member name="M:directNetwork.Data.segmentDir(System.Double,System.Double,System.Double)">
+            <summary>
+            Прямое преобразование из сегмента [a, b] в [-1;1]
+            </summary>
+            <param name="x">Точка на отрезке [a;b]</param>
+            <param name="a">Нижняя граница отрезка</param>
+            <param name="b">Верзняя граница отрезка</param>
+            <returns>Соответствующая точка на отрезке [-1;1]</returns>
+        </member>
+        <member name="M:directNetwork.Data.segmentRev(System.Double,System.Double,System.Double)">
+            <summary>
+            Преобразование из [-1;1] в [a;b]
+            </summary>
+            <param name="t">точка на [-1;1]</param>
+            <param name="a">нижняя граница отрезка</param>
+            <param name="b">верхняя граница отрезка</param>
+            <returns>точка на [a;b]</returns>
+        </member>
+        <member name="M:directNetwork.Data.enumCount(System.Int32)">
+            <summary>
+            Возвращает количество элементов, потребющихся для кодирвоания 
+            перечисляемого типа
+            </summary>
+            <param name="max">предельное значение</param>
+            <returns>количество элементов для кодирования</returns>
+        </member>
+        <member name="M:directNetwork.Data.enumDir(System.Int32,System.Int32)">
+            <summary>
+            Преобразование текущего перечисляемого значения в список значений
+            подаваемых на вход сети
+            </summary>
+            <param name="cur">текущее значение</param>
+            <param name="max">максимамльное значение</param>
+            <returns>список значений на вход сети</returns>
+        </member>
+        <member name="M:directNetwork.Data.enumRev(System.Collections.Generic.List{System.Double})">
+            <summary>
+            Преобразовать из двоичного списка значений, полученных на выходе сети
+            в перечисляемый тип
+            </summary>
+            <param name="cur">текущий список значений</param>
+            <returns>текущее перечисляемое значение</returns>
+        </member>
+        <member name="T:directNetwork.network">
+            <remark>
+            Сеть прямого распространения
+            </remark>
+        </member>
+        <member name="F:directNetwork.network.sig_k">
+            <summary>
+            Параметр сигмоиды, является общим для всей сети
+            </summary>
+        </member>
+        <member name="F:directNetwork.network.impulse">
+            <summary>
+            Импульс обучения, доля использования предыдущей коррекции
+            </summary>
+        </member>
+        <member name="F:directNetwork.network.adaptive">
+            <summary>
+            Указывает использовать ли адаптивный шаг
+            </summary>
+        </member>
+        <member name="F:directNetwork.network.mabs">
+            <summary>
+            Максимальное значение адаптивного шага обучения, если -1 то неограниченно
+            кроме того в случае статичного шага, сам шаг
+            </summary>
+        </member>
+        <member name="F:directNetwork.network.enters">
+            <summary>
+            Количество входов сети
+            </summary>
+        </member>
+        <member name="F:directNetwork.network.layers">
+            <summary>
+            Слои сети
+            </summary>
+        </member>
+        <member name="M:directNetwork.network.#ctor(System.Double,System.Double,System.Boolean,System.Double)">
+            <summary>
+            Создать сеть прямого распространения
+            </summary>
+            <param name="sig_k">параметр сигмоиды</param>
+            <param name="impulse">импульс обучения, доля использования предыдущей коррекции</param>
+            <param name="adaptive">адаптивный шаг или нет</param>
+            <param name="mabs">значение шага или ограничение адаптивного или -1</param>
+        </member>
+        <member name="M:directNetwork.network.#ctor(directNetwork.network)">
+            <summary>
+            Копирует сеть
+            </summary>
+            <param name="copy">сеть с корой создаем копию</param>
+        </member>
+        <member name="M:directNetwork.network.setReal(System.Collections.Generic.List{System.Double})">
+            <summary>
+            Ставит эталоные значения сети, то что мы бы хотели видеть на выходе
+            при данном входе
+            </summary>
+            <param name="reals">Список выходов нейронов</param>
+        </member>
+        <member name="M:directNetwork.network.process">
+            <summary>
+            Запустит сеть, получить выход сети по заданному входу
+            </summary>
+        </member>
+        <member name="M:directNetwork.network.correct">
+            <summary>
+            Запустить коррекцию весовых коэффициентов
+            </summary>
+        </member>
+        <member name="M:directNetwork.network.cerror">
+            <summary>
+            Ошибка сети, отличие желаемого выхода от действительного
+            </summary>
+            <returns>значение ошибки</returns>
+        </member>
+        <member name="M:directNetwork.network.addLayer(System.Int32)">
+            <summary>
+            Добавить новый слой
+            </summary>
+            <param name="count">количество нейронов</param>
+        </member>
+        <member name="M:directNetwork.network.deleteLayer">
+            <summary>
+            Удалить последний слой
+            </summary>
+        </member>
+        <member name="M:directNetwork.network.randomize">
+            <summary>
+            Присвоить всем весам и порогам нейронов сети слуайные значения
+            </summary>
+        </member>
+        <member name="M:directNetwork.network.neironsCount(System.Int32)">
+            <summary>
+            Получить количество нейронов заданного слоя
+            </summary>
+            <param name="num">номер слоя</param>
+            <returns>количество нейронов слоя</returns>
+        </member>
+        <member name="M:directNetwork.network.neironsWeight(System.Int32,System.Int32)">
+            <summary>
+            Получить список весовых коэффициентов нейрона из заданной сети
+            </summary>
+            <param name="layerNumber">номер слоя</param>
+            <param name="neironNumber">номер нейрона</param>
+            <returns>список весов</returns>
+        </member>
+        <member name="M:directNetwork.network.setNeironWeight(System.Int32,System.Int32,System.Int32,System.Double)">
+            <summary>
+            Установить вес нейрона
+            </summary>
+            <param name="layerNumber">номер слоя</param>
+            <param name="neironNumber">номер нейрона</param>
+            <param name="weightNumber">номер веса</param>
+            <param name="weight">значение веса</param>
+        </member>
+        <member name="M:directNetwork.network.neironsPorog(System.Int32,System.Int32)">
+            <summary>
+            Получить порог нейрона
+            </summary>
+            <param name="LayerNumber">номер слоя</param>
+            <param name="neironNumber">номер нейрона</param>
+            <returns>значение порога активации нейрона</returns>
+        </member>
+        <member name="M:directNetwork.network.setNeironPorog(System.Int32,System.Int32,System.Double)">
+            <summary>
+            Установить значение порога
+            </summary>
+            <param name="LayerNumber">номер слоя</param>
+            <param name="neironNumber">номер нейрона</param>
+            <param name="porog">значение порога</param>
+        </member>
+        <member name="P:directNetwork.network.Enters">
+            <summary>
+            Задает либо получает количество входов сети
+            </summary>
+        </member>
+        <member name="P:directNetwork.network.clayers">
+            <summary>
+            Получает количество слоев сети
+            </summary>
+        </member>
+        <member name="P:directNetwork.network.Sig_k">
+            <summary>
+            Получает, либо задает параметр сигмоиды сети
+            </summary>
+        </member>
+        <member name="P:directNetwork.network.Impulse">
+            <summary>
+            Получает, либо задает импульс обучения, доля использования предыдущей коррекции
+            </summary>
+        </member>
+        <member name="P:directNetwork.network.Mabs">
+            <summary>
+            Получает, либо задает шаг/ограничение адаптивного шага/-1 - неограниченный
+            </summary>
+        </member>
+        <member name="P:directNetwork.network.Adaptive">
+            <summary>
+            Получает либо задает адаптивный ли шаг
+            </summary>
+        </member>
+        <member name="P:directNetwork.network.Inputs">
+            <summary>
+            Получает либо задает входные данные сети
+            </summary>
+        </member>
+        <member name="P:directNetwork.network.Outputs">
+            <summary>
+            Получает выходные данные сети
+            </summary>
+        </member>
+        <member name="T:directNetwork.netShell">
+            <remark>
+            Оболочка для управления сетью прямого распространения
+            </remark>
+        </member>
+        <member name="F:directNetwork.netShell.TYPE_ENUM">
+            <summary>
+            Перечисляемы тип
+            </summary>
+        </member>
+        <member name="F:directNetwork.netShell.TYPE_RANGE_SEGMENT">
+            <summary>
+            Тип отрезок [a;b]
+            </summary>
+        </member>
+        <member name="F:directNetwork.netShell.TYPE_RANGE_INFINITE">
+            <summary>
+            Тип бесконечный интервал
+            </summary>
+        </member>
+        <member name="F:directNetwork.netShell.TYPE_REAL">
+            <summary>
+            Обычное значенение
+            </summary>
+        </member>
+        <member name="F:directNetwork.netShell.net">
+             Компоненты
+            
+            <summary>
+            Сеть прямого рапространения
+            </summary>
+        </member>
+        <member name="F:directNetwork.netShell.specialIn">
+            <summary>
+            Схема преобразований входов нейронной сети
+            </summary>
+        </member>
+        <member name="F:directNetwork.netShell.specialOut">
+            <summary>
+            Схема преобразований выходов сети
+            </summary>
+        </member>
+        <member name="F:directNetwork.netShell.error">
+            <summary>
+            Допустимая ошибка выходов сети
+            </summary>
+        </member>
+        <member name="F:directNetwork.netShell.maxEpoch">
+            <summary>
+            Ограничение по количеству эпох обучения
+            </summary>
+        </member>
+        <member name="F:directNetwork.netShell.eduInners">
+            <summary>
+            Список входных данных для обучения
+            </summary>
+        </member>
+        <member name="F:directNetwork.netShell.eduOutputs">
+            <summary>
+            Список эталонных значений, соответствующий входным данным обучения
+            </summary>
+        </member>
+        <member name="F:directNetwork.netShell.staticStep">
+            <summary>
+            Значение шага обучения
+            </summary>
+        </member>
+        <member name="F:directNetwork.netShell.absStep">
+            <summary>
+            Ограничение адаптивного шага обучения
+            </summary>
+        </member>
+        <member name="F:directNetwork.netShell.infiniteStep">
+            <summary>
+            Указывает существует ли ограничение на адаптивный шаг
+            </summary>
+        </member>
+        <member name="F:directNetwork.netShell.scheme">
+            <summary>
+            Указывает использовать ли схему преобразований входов и выходов сети
+            </summary>
+        </member>
+        <member name="F:directNetwork.netShell.gui">
+            <summary>
+            Форма для визуального редактирования настроек сети
+            </summary>
+        </member>
+        <member name="F:directNetwork.netShell.lastEpoch">
+            <summary>
+            Количество эпох, за которое была обучена сеть в последний раз
+            </summary>
+        </member>
+        <member name="F:directNetwork.netShell.lastNetPath">
+            <summary>
+            Путь по которому в последний раз сохраняли или открыкали сеть
+            </summary>
+        </member>
+        <member name="M:directNetwork.netShell.init">
+            <summary>
+            Инициализировать оболочку для работы с сетью прямого распространения
+            </summary>
+            <returns>оболочка работы с сетью прямого распространения</returns>
+        </member>
+        <member name="M:directNetwork.netShell.#ctor">
+            <summary>
+            Создать оболочку для работы с сетью прямого распространения
+            </summary>
+        </member>
+        <member name="M:directNetwork.netShell.netShellCopy(directNetwork.netShell)">
+            <summary>
+            Копировать оболочку для работы с сетью прямого распространения
+            </summary>
+            <param name="copy">оболочка с которой копируем</param>
+        </member>
+        <member name="M:directNetwork.netShell.#ctor(directNetwork.netShell)">
+            <summary>
+            Конструктор копирования оболочки для работы с сетю прямого распространения
+            </summary>
+            <param name="copy">оболочка с которой копируем</param>
+        </member>
+        <member name="M:directNetwork.netShell.Gui(System.Boolean)">
+            <summary>
+            Показывает или скрывает графический интерфейс редактора сети
+            </summary>
+            <param name="show">указывает показать или скрыть редактор</param>
+        </member>
+        <member name="M:directNetwork.netShell.addLastLayer(System.Int32)">
+            <summary>
+            Добавить слой новый последний слой в сеть
+            </summary>
+            <param name="ncount"></param>
+        </member>
+        <member name="M:directNetwork.netShell.delLastLayer">
+            <summary>
+            Удлаить последний слой из сети
+            </summary>
+        </member>
+        <member name="M:directNetwork.netShell.weightRandomize">
+            <summary>
+            Задать всем весам сеи случайные значения
+            </summary>
+        </member>
+        <member name="M:directNetwork.netShell.countNeirons(System.Int32)">
+            <summary>
+            Получучить количество нейроноа слоя сети
+            либо количество входов сети в случае 0 слоя
+            </summary>
+            <param name="num">номер слоя</param>
+            <returns>количество нейронов</returns>
+        </member>
+        <member name="M:directNetwork.netShell.getWeightList(System.Int32,System.Int32)">
+            <summary>
+            Получить список весов нейрона, 0 - порог
+            </summary>
+            <param name="layerNumber">номер слоя</param>
+            <param name="neironNumber">номер нейрона</param>
+            <returns>список весов и порогов нейрона</returns>
+        </member>
+        <member name="M:directNetwork.netShell.setWeight(System.Int32,System.Int32,System.Int32,System.Double)">
+            <summary>
+            Задать вес или порог(если 0 номер веса) нейрона
+            </summary>
+            <param name="layerNumber">номер слоя</param>
+            <param name="neironNumber">номер нейрона</param>
+            <param name="weightNumber">номер веса</param>
+            <param name="val">значение веса или порога</param>
+        </member>
+        <member name="M:directNetwork.netShell.clearLayers">
+            <summary>
+            Удалить все слои сети
+            </summary>
+        </member>
+        <member name="M:directNetwork.netShell.addEnum(System.Boolean,System.Int32,System.Int32)">
+            <summary>
+            Добавить перечисляемы тип в схему преобразований
+            </summary>
+            <param name="type">указывает добавить ли в схему входов</param>
+            <param name="num">номер входа/выхода</param>
+            <param name="max">максимальное значение перечисления</param>
+        </member>
+        <member name="M:directNetwork.netShell.addRange(System.Boolean,System.Int32,System.Double,System.Double)">
+            <summary>
+            Добавить преобразование в ограниченный отрезок
+            </summary>
+            <param name="type">указывает добавить ли в схему входа</param>
+            <param name="num">номер входа/выхода</param>
+            <param name="min">нижняя границы отрезка</param>
+            <param name="max">верхняя гранциа отрезка</param>
+        </member>
+        <member name="M:directNetwork.netShell.addInfineRange(System.Boolean,System.Int32)">
+            <summary>
+            Добавить в схему неограниченный интервал
+            </summary>
+            <param name="type">указывает добавить ли в схему входов</param>
+            <param name="num">номер входа/выхода</param>
+        </member>
+        <member name="M:directNetwork.netShell.addRealType(System.Boolean,System.Int32)">
+            <summary>
+            Добавить обычный тип в схему
+            </summary>
+            <param name="type">указывает добавить ли в схему входов</param>
+            <param name="num">номер входа/выхода</param>
+        </member>
+        <member name="M:directNetwork.netShell.modify(System.Boolean,System.Boolean,System.Collections.Generic.List{System.Double})">
+            <summary>
+            Преобразовать вход/выход в соответствии со схемой
+            </summary>
+            <param name="type">указывает преобразовать ли вход</param>
+            <param name="direction">указывает сделать ли прямое преобразование</param>
+            <param name="inner">список входов</param>
+            <returns>список входов после преобразования</returns>
+        </member>
+        <member name="M:directNetwork.netShell.process(System.Collections.Generic.List{System.Double})">
+            <summary>
+            Запустить получения выхода сети по зпднному входу
+            </summary>
+            <param name="inner"></param>
+            <returns></returns>
+        </member>
+        <member name="M:directNetwork.netShell.addExample(System.Collections.Generic.List{System.Double},System.Collections.Generic.List{System.Double})">
+            <summary>
+            Добавить пример для обучения
+            </summary>
+            <param name="inners">Список входов сети</param>
+            <param name="outputs">Список выходов сети</param>
+        </member>
+        <member name="M:directNetwork.netShell.clearExamples">
+            <summary>
+            Удалить все примеры
+            </summary>
+        </member>
+        <member name="M:directNetwork.netShell.countExamples">
+            <summary>
+            Получить количество примеров для обучения
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:directNetwork.netShell.getExample(System.Boolean,System.Int32)">
+            <summary>
+            Поулчить список входов или выходов примеров
+            </summary>
+            <param name="type">задает получить ли списки входов примеров</param>
+            <param name="number">номер прмера</param>
+            <returns>список входов/выходов примера</returns>
+        </member>
+        <member name="M:directNetwork.netShell.delExample(System.Int32)">
+            <summary>
+            Удалить пример с заданным номером
+            </summary>
+            <param name="num">номер примера</param>
+        </member>
+        <member name="M:directNetwork.netShell.teach">
+            <summary>
+            Обучить сеть по сохраненным примерам
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:directNetwork.netShell.saveNet(System.IO.Stream)">
+            <summary>
+            Сохранить сеть
+            формат файла сети:
+            1. Настройки
+            Адаптивный шаг                  (bool)
+            Бесконечный шаг                 (bool)
+            Абсолютное ограничение по шагу  (double)
+            Параметр сигмоиды               (double)
+            Импульс                         (double)
+            Использовать схему              (bool)
+            Ошибка обучения                 (double)
+            максимум эпох                   (int)
+            2. Сеть
+            Количество слоев
+            Количество нейронов 1
+            Количество весов 1
+            Порог
+            Вес 1
+            Вес 2
+            .....
+            Количество весов 2
+            Порог
+            Вес 1
+            Вес 2
+            .....
+            Количество нейронов 2
+            Количество весов 1
+            Количество весов 1
+            Порог
+            Вес 1
+            Вес 2
+            .....
+            Количество весов 2
+            Порог
+            Вес 1
+            Вес 2
+            .....
+            
+            3. Схема
+            Количество входов
+            Количество элементов 1
+            Элемент 1
+            Элемент 2
+            .....
+            Количество элементов 2
+            Элемент 1
+            Элемент 2
+            .....
+            Количество выходов
+            Количество элементов 1
+            Элемент 1
+            Элемент 2
+            .....
+            Количество элементов 2
+            Элемент 1
+            Элемент 2
+            .....
+            
+            </summary>
+            <param name="path">открытый поток файла для сохранения сети</param>
+        </member>
+        <member name="M:directNetwork.netShell.loadNet(System.IO.Stream)">
+            <summary>
+            Загрузить из файла сохраненного по схеме выше
+            </summary>
+            <param name="path">Открытый поток файла для загрузки сети</param>
+        </member>
+        <member name="M:directNetwork.netShell.saveNetLast">
+            <summary>
+            Сохранить файл по последнему пути
+            </summary>
+            <returns>Возвращает есть ли по какому пути сохранять</returns>
+        </member>
+        <member name="M:directNetwork.netShell.loadNetLast">
+            <summary>
+            Загрузить сеть по последнему пути
+            </summary>
+            <returns>Возвращает есть ли путь по которому можно загрузить сеть</returns>
+        </member>
+        <member name="M:directNetwork.netShell.oneExample(System.String,System.Xml.XmlDocument,System.Collections.Generic.List{System.Collections.Generic.List{System.Double}})">
+            <summary>
+            Перевести в xml один из списков обучения
+            </summary>
+            <param name="elementName">Имя xml элемента</param>
+            <param name="doc">xml документ в котором создается список</param>
+            <param name="list">Список входов или выходов примеров обучения</param>
+            <returns>xml элемент с заданным списком</returns>
+        </member>
+        <member name="M:directNetwork.netShell.exampleElements">
+            <summary>
+            Перевести в xml обучающие выборки
+            </summary>
+            <returns>xml элемент со спискми примеров обучения</returns>
+        </member>
+        <member name="M:directNetwork.netShell.oneExample(System.Collections.Generic.List{System.Collections.Generic.List{System.Double}},System.Xml.XmlElement)">
+            <summary>
+            Загрузить из xml в один списков(входы или выходы) примеров обучения
+            </summary>
+            <param name="list">Список входов или выходов примеров обучения</param>
+            <param name="element">xml элемент с данными о списке обучения</param>
+        </member>
+        <member name="M:directNetwork.netShell.exampleElements(System.Xml.XmlElement)">
+            <summary>
+            Загрузить обучающие примеры из элементы
+            </summary>
+            <param name="examples">xml элемент содержащий примеры обучения</param>
+        </member>
+        <member name="M:directNetwork.netShell.openExamples(System.IO.Stream)">
+            <summary>
+            Открыть примеры
+            </summary>
+            <param name="path">Открытый файл поток для открытия примеров</param>
+        </member>
+        <member name="M:directNetwork.netShell.saveExamples(System.IO.Stream)">
+            <summary>
+            Сохранить выборку обучения
+            </summary>
+            <param name="path">Открытый файл поток для сохранения примеров</param>
+        </member>
+        <member name="M:directNetwork.netShell.dictionaryEncode(System.Collections.Generic.Dictionary{System.Int32,System.Collections.Generic.List{System.Double}})">
+            <summary>
+            Преобразовать словарь схемы преобразований в xml
+            </summary>
+            <param name="dictionary">словать схемы входов или выходов</param>
+            <returns>xml элемент с заданным словарем</returns>
+        </member>
+        <member name="M:directNetwork.netShell.dictionaryDecode(System.Xml.XmlElement)">
+            <summary>
+            Преобразовать xml в словарь схемы
+            </summary>
+            <param name="element">xml с контентом словаря схемы</param>
+            <returns>словать схемы выходов или входов сети</returns>
+        </member>
+        <member name="P:directNetwork.netShell.SpecialIn">
+            <summary>
+            Получить или задать схему преобразований входов сети
+            </summary>
+        </member>
+        <member name="P:directNetwork.netShell.SpecialOut">
+            <summary>
+            Получает, либо задает схему преобразований выходов сети
+            </summary>
+        </member>
+        <member name="P:directNetwork.netShell.Scheme">
+            <summary>
+            Задает или получает параметр указывающий использовать ил схему преобразований входов и выходов сети
+            </summary>
+        </member>
+        <member name="P:directNetwork.netShell.FormGui">
+            <summary>
+            Получает форму для визуального редактирования сети
+            </summary>
+        </member>
+        <member name="P:directNetwork.netShell.LastEpoch">
+            <summary>
+            Получает либо задает количество эпох за которое была обучена сеть в последний раз
+            </summary>
+        </member>
+        <member name="P:directNetwork.netShell.LastNetPath">
+            <summary>
+            Получить или задать путь по которому в последний раз открывали или сохраняли сеть
+            </summary>
+        </member>
+        <member name="P:directNetwork.netShell.Sigmoid">
+            <summary>
+            Задает или получает значение параметра сигмоидальной функции
+            </summary>
+        </member>
+        <member name="P:directNetwork.netShell.AdaptiveStep">
+            <summary>
+            Задает или получает использовать или адаптивный шаг
+            </summary>
+        </member>
+        <member name="P:directNetwork.netShell.Step">
+            <summary>
+            Задает или получае значение статического шага
+            </summary>
+        </member>
+        <member name="P:directNetwork.netShell.MaxStep">
+            <summary>
+            Задает или получает ограничение адаптивного шага
+            </summary>
+        </member>
+        <member name="P:directNetwork.netShell.Impulse">
+            <summary>
+            Задает или получает импульс(долю предыдущей коррекции)
+            </summary>
+        </member>
+        <member name="P:directNetwork.netShell.InfiniteStep">
+            <summary>
+            Задает или получает будет ли адаптивный шаг неограниченным
+            </summary>
+        </member>
+        <member name="P:directNetwork.netShell.countInputsAll">
+            <summary>
+            Получает общее количество входов сети
+            </summary>
+        </member>
+        <member name="P:directNetwork.netShell.countInputs">
+            <summary>
+            Получает количество входов сети с учетом схемы
+            </summary>
+        </member>
+        <member name="P:directNetwork.netShell.countOutputs">
+            <summary>
+            Получает количество выходов сети с учетом схемы
+            </summary>
+        </member>
+        <member name="P:directNetwork.netShell.countLayers">
+            <summary>
+            Получает количество слоев с учетом входного распределительного
+            </summary>
+        </member>
+        <member name="P:directNetwork.netShell.EducateError">
+            <summary>
+            Задает ии получает ошибку обучения
+            </summary>
+        </member>
+        <member name="P:directNetwork.netShell.MaxEpoch">
+            <summary>
+            Задает или получает ограничение по количеству эпох обучения
+            </summary>
+        </member>
+        <member name="P:directNetwork.netShell.networkTopo">
+            <summary>
+            Сохранить загрузить топологию сети в xml
+            </summary>
+        </member>
+    </members>
+</doc>

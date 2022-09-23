@@ -1,0 +1,46 @@
+<?xml version="1.0"?>
+<BZ Name="qq" Author="q" CreateDate="06.11.2008 21:42:23" UpdateDate="06.11.2008 21:45:00">
+  <Comment>q</Comment>
+  <Variable Name="X">
+    <Goal />
+  </Variable>
+  <Variable Name="Y" />
+  <Table Name="T" ColCount="2">
+    <Comment>КуКу</Comment>
+    <Width>100%</Width>
+    <WidthColum>
+      <twc>50%</twc>
+      <twc>50%</twc>
+    </WidthColum>
+    <Headers>
+      <h>X</h>
+      <h>Y</h>
+    </Headers>
+    <tr>
+      <td>11111</td>
+      <td>22222</td>
+    </tr>
+    <tr>
+      <td>33333</td>
+      <td>33333</td>
+    </tr>
+  </Table>
+  <Rule Name="Правило1">
+    <Comment>
+    </Comment>
+    <Act>X=100</Act>
+    <Act>Y=500</Act>
+    <Act>//Write(ЧТЕНИЕ("c:\wer.wer"))</Act>
+    <Act>Write(X)</Act>
+    <Act>Write(Y)</Act>
+    <Act>Write("&lt;b&gt;")</Act>
+    <Act>Write(X,Y)</Act>
+    <Act>Write(T)</Act>
+    <Act>ВСТАВКА_РИС("knb/img.jpg")</Act>
+    <Act>Write("&lt;img src=\"knb/img.jpg\"&gt;")</Act>
+    <Act>Write("&lt;a href=\"http://www.google.com\"&gt;Google&lt;/a&gt;")</Act>
+    <Act>Write("&lt;/b&gt;")</Act>
+    <Act>Write("X=#X")</Act>
+    <Act>Write("Y=#Y")</Act>
+  </Rule>
+</BZ>

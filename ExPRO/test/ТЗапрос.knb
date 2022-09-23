@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<BZ Name="Тест на работу с запросами SQL" Author="Юрин А.М.">
+  <Variable Name="Кол_хлеб">
+    <Goal />
+  </Variable>
+  <Variable Name="Стоим">
+    <Type>double</Type>
+    <Goal />
+  </Variable>
+  <Rule Name="Запрос">
+    <Comment>
+    </Comment>
+    <Act>Кол_хлеб=ЗАПРОС("Склады.mdb","SELECT Количество FROM Склад WHERE Товар="Хлеб" AND Количество&gt;10")</Act>
+  </Rule>
+  <Rule Name="Стоимость товара">
+    <Comment>
+    </Comment>
+    <Act>Стоим=ЭЛЕМТАБ(Кол_хлеб,0,0)*800+ЭЛЕМТАБ(Кол_хлеб,1,0)*800</Act>
+    <Act>ВЫВОД("Стоимость товара=",Стоим)</Act>
+  </Rule>
+</BZ>

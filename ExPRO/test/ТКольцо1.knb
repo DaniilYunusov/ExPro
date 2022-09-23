@@ -1,0 +1,115 @@
+<?xml version="1.0"?>
+<BZ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Name="Площадь кольца" Version="1.14" Author="Юрин А.М." CreateDate="21.10.2010 18:08:43" UpdateDate="06.01.2013 14:58:03">
+  <Comment />
+  <Rule Name="Правило1">
+    <Act>ВВОДБЛ("Кольцо",Xo,Yo,r,h)</Act>
+    <Act>R1=r</Act>
+    <Act>Sk1=ПлощадьКруга(R1)</Act>
+    <Act>R2=r+h</Act>
+    <Act>Sk2=ПлощадьКруга(R2)</Act>
+    <Act>//ВЫВОД(Sk2,"",Sk1)</Act>
+    <Act>Sk=Sk2-Sk1</Act>
+    <Act>ВЫВОД("Sk= ",Sk)</Act>
+    <Act>РИСКРУГ(Xo,Yo,R2,"green")</Act>
+    <Act>РИСКРУГ(Xo,Yo,R1,"red")</Act>
+    <Enable>true</Enable>
+    <Priority>50</Priority>
+  </Rule>
+  <Variable xsi:type="NoType" Name="Xo" Goal="false">
+    <Goal>False</Goal>
+    <Comment />
+    <StartValue />
+    <Opredelena>false</Opredelena>
+  </Variable>
+  <Variable xsi:type="NoType" Name="Yo" Goal="false">
+    <Goal>False</Goal>
+    <Comment />
+    <StartValue />
+    <Opredelena>false</Opredelena>
+  </Variable>
+  <Variable xsi:type="NoType" Name="r" Goal="false">
+    <Goal>False</Goal>
+    <Comment />
+    <StartValue />
+    <Opredelena>false</Opredelena>
+  </Variable>
+  <Variable xsi:type="NoType" Name="h" Goal="false">
+    <Goal>False</Goal>
+    <Comment />
+    <StartValue />
+    <Opredelena>false</Opredelena>
+  </Variable>
+  <Variable xsi:type="NoType" Name="Rн" Goal="false">
+    <Goal>False</Goal>
+    <Comment />
+    <StartValue />
+    <Opredelena>false</Opredelena>
+  </Variable>
+  <Variable xsi:type="NoType" Name="Sk2" Goal="false">
+    <Goal>False</Goal>
+    <Comment />
+    <StartValue />
+    <Opredelena>false</Opredelena>
+  </Variable>
+  <Variable xsi:type="NoType" Name="Sk1" Goal="false">
+    <Goal>False</Goal>
+    <Comment />
+    <StartValue />
+    <Opredelena>false</Opredelena>
+  </Variable>
+  <Variable xsi:type="NoType" Name="Sk" Goal="true">
+    <Goal>True</Goal>
+    <Comment />
+    <StartValue />
+    <Opredelena>false</Opredelena>
+  </Variable>
+  <Variable xsi:type="NoType" Name="Xr" Goal="false">
+    <Goal>False</Goal>
+    <Comment />
+    <StartValue />
+    <Opredelena>false</Opredelena>
+  </Variable>
+  <Variable xsi:type="NoType" Name="Yr" Goal="false">
+    <Goal>False</Goal>
+    <Comment />
+    <StartValue />
+    <Opredelena>false</Opredelena>
+  </Variable>
+  <Variable xsi:type="NoType" Name="S" Goal="false">
+    <Goal>False</Goal>
+    <Comment />
+    <StartValue />
+    <Opredelena>false</Opredelena>
+  </Variable>
+  <Variable xsi:type="NoType" Name="R1" Goal="false">
+    <Goal>False</Goal>
+    <Comment />
+    <StartValue />
+    <Opredelena>false</Opredelena>
+  </Variable>
+  <Variable xsi:type="NoType" Name="R2" Goal="false">
+    <Goal>False</Goal>
+    <Comment />
+    <StartValue />
+    <Opredelena>false</Opredelena>
+  </Variable>
+  <Functions>
+    <Name>ПлощадьКруга</Name>
+    <LocalVariables xsi:type="NoType" Name="R" Goal="false">
+      <Goal>False</Goal>
+      <Comment />
+      <StartValue />
+      <Opredelena>false</Opredelena>
+    </LocalVariables>
+    <LocalVariables xsi:type="NoType" Name="S" Goal="false">
+      <Goal>False</Goal>
+      <Comment />
+      <StartValue />
+      <Opredelena>false</Opredelena>
+    </LocalVariables>
+    <Args>0</Args>
+    <Act>S=PI()*R*R</Act>
+    <Act>Возврат(S)</Act>
+    <Comment>Расчет площади круга</Comment>
+  </Functions>
+</BZ>

@@ -1,0 +1,303 @@
+﻿<?xml version="1.0"?>
+<GlobalStorage xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Groups>
+    <GroupInfo>
+      <Name>Формальные науки</Name>
+      <Reference>gl:formSci</Reference>
+      <UserElement>true</UserElement>
+      <Elements>
+        <ElementInfo xsi:type="GroupInfo">
+          <Name>логика</Name>
+          <Reference>gl:formSci:logic</Reference>
+          <UserElement>true</UserElement>
+          <Elements />
+        </ElementInfo>
+        <ElementInfo xsi:type="GroupInfo">
+          <Name>математика</Name>
+          <Reference>gl:formSci:mathematic</Reference>
+          <UserElement>true</UserElement>
+          <Elements />
+        </ElementInfo>
+        <ElementInfo xsi:type="GroupInfo">
+          <Name>информатика</Name>
+          <Reference>gl:formSci:informatic</Reference>
+          <UserElement>true</UserElement>
+          <Elements />
+        </ElementInfo>
+      </Elements>
+    </GroupInfo>
+                       
+    <GroupInfo>
+      <Name>Общественные науки</Name>
+      <Reference>gl:SocialSci</Reference>
+      <UserElement>true</UserElement>
+      <Elements>
+        <ElementInfo xsi:type="GroupInfo">
+          <Name>антропология</Name>
+          <Reference>gl:SocialSci:anthropology</Reference>
+          <UserElement>true</UserElement>
+          <Elements />
+        </ElementInfo>
+        <ElementInfo xsi:type="GroupInfo">
+          <Name>история</Name>
+          <Reference>gl:SocialSci:history</Reference>
+          <UserElement>true</UserElement>
+          <Elements />
+        </ElementInfo>
+        <ElementInfo xsi:type="GroupInfo">
+          <Name>социология</Name>
+          <Reference>gl:SocialSci:sociology</Reference>
+          <UserElement>true</UserElement>
+          <Elements />
+        </ElementInfo>
+        <ElementInfo xsi:type="GroupInfo">
+          <Name>право</Name>
+          <Reference>gl:SocialSci:right</Reference>
+          <UserElement>true</UserElement>
+          <Elements />
+        </ElementInfo>
+        <ElementInfo xsi:type="GroupInfo">
+          <Name>политология</Name>
+          <Reference>gl:SocialSci:politicalSci</Reference>
+          <UserElement>true</UserElement>
+          <Elements />
+        </ElementInfo>
+        <ElementInfo xsi:type="GroupInfo">
+          <Name>культурология</Name>
+          <Reference>gl:SocialSci:Cultural</Reference>
+          <UserElement>true</UserElement>
+          <Elements />
+        </ElementInfo>
+        <ElementInfo xsi:type="GroupInfo">
+          <Name>экономика</Name>
+          <Reference>gl:SocialSci:economy</Reference>
+          <UserElement>true</UserElement>
+          <Elements />
+        </ElementInfo>
+      </Elements>
+    </GroupInfo>                
+                    
+    <GroupInfo>
+      <Name>Гуманитарные науки</Name>
+      <Reference>gl:Humanities</Reference>
+      <UserElement>true</UserElement>
+      <Elements>
+        <ElementInfo xsi:type="GroupInfo">
+          <Name>лингвистика</Name>
+          <Reference>gl:Humanities:linguistics</Reference>
+          <UserElement>true</UserElement>
+          <Elements />
+        </ElementInfo>
+        <ElementInfo xsi:type="GroupInfo">
+          <Name>психология</Name>
+          <Reference>gl:Humanities:psychology</Reference>
+          <UserElement>true</UserElement>
+          <Elements />
+        </ElementInfo>
+        <ElementInfo xsi:type="GroupInfo">
+          <Name>литературоведение</Name>
+          <Reference>gl:Humanities:literaryCriticism</Reference>
+          <UserElement>true</UserElement>
+          <Elements />
+        </ElementInfo>
+        <ElementInfo xsi:type="GroupInfo">
+          <Name>искусствоведение</Name>
+          <Reference>gl:Humanities:ArtCriticism</Reference>
+          <UserElement>true</UserElement>
+          <Elements />
+        </ElementInfo>
+        <ElementInfo xsi:type="GroupInfo">
+          <Name>педагогика</Name>
+          <Reference>gl:Humanities:pedagogy</Reference>
+          <UserElement>true</UserElement>
+          <Elements />
+        </ElementInfo>
+        <ElementInfo xsi:type="GroupInfo">
+          <Name>этика</Name>
+          <Reference>gl:Humanities:ethics</Reference>
+          <UserElement>true</UserElement>
+          <Elements />
+        </ElementInfo>
+        <ElementInfo xsi:type="GroupInfo">
+          <Name>эстетика</Name>
+          <Reference>gl:Humanities:aesthetics</Reference>
+          <UserElement>true</UserElement>
+          <Elements />
+        </ElementInfo>
+        <ElementInfo xsi:type="GroupInfo">
+          <Name>журналистика</Name>
+          <Reference>gl:Humanities:journalism</Reference>
+          <UserElement>true</UserElement>
+          <Elements />
+        </ElementInfo>
+        <ElementInfo xsi:type="GroupInfo">
+          <Name>филология</Name>
+          <Reference>gl:Humanities:philology</Reference>
+          <UserElement>true</UserElement>
+          <Elements />
+        </ElementInfo>
+      </Elements>
+    </GroupInfo>                            
+
+    <GroupInfo>
+      <Name>Естественные (эмпирические) науки</Name>
+      <Reference>gl:NaturalSci</Reference>
+      <UserElement>true</UserElement>
+      <Elements>
+        <ElementInfo xsi:type="GroupInfo">
+          <Name>антропология</Name>
+          <Reference>gl:NaturalSci:anthropology</Reference>
+          <UserElement>true</UserElement>
+          <Elements />
+        </ElementInfo>
+        <ElementInfo xsi:type="GroupInfo">
+          <Name>астрономия</Name>
+          <Reference>gl:NaturalSci:astronomy</Reference>
+          <UserElement>true</UserElement>
+          <Elements />
+        </ElementInfo>
+        <ElementInfo xsi:type="GroupInfo">
+          <Name>биология</Name>
+          <Reference>gl:NaturalSci:biology</Reference>
+          <UserElement>true</UserElement>
+          <Elements />
+        </ElementInfo>
+        <ElementInfo xsi:type="GroupInfo">
+          <Name>ветеринария</Name>
+          <Reference>gl:NaturalSci:veterinarySci</Reference>
+          <UserElement>true</UserElement>
+          <Elements />
+        </ElementInfo>
+        <ElementInfo xsi:type="GroupInfo">
+          <Name>география</Name>
+          <Reference>gl:NaturalSci:geography</Reference>
+          <UserElement>true</UserElement>
+          <Elements />
+        </ElementInfo>
+        <ElementInfo xsi:type="GroupInfo">
+          <Name>геология</Name>
+          <Reference>gl:NaturalSci:geology</Reference>
+          <UserElement>true</UserElement>
+          <Elements />
+        </ElementInfo>
+        <ElementInfo xsi:type="GroupInfo">
+          <Name>медицина</Name>
+          <Reference>gl:NaturalSci:medicine</Reference>
+          <UserElement>true</UserElement>
+          <Elements />
+        </ElementInfo>
+        <ElementInfo xsi:type="GroupInfo">
+          <Name>метеорология</Name>
+          <Reference>gl:NaturalSci:meteorology</Reference>
+          <UserElement>true</UserElement>
+          <Elements />
+        </ElementInfo>
+        <ElementInfo xsi:type="GroupInfo">
+          <Name>океанология</Name>
+          <Reference>gl:NaturalSci:oceanology</Reference>
+          <UserElement>true</UserElement>
+          <Elements />
+        </ElementInfo>
+        <ElementInfo xsi:type="GroupInfo">
+          <Name>физика</Name>
+          <Reference>gl:NaturalSci:physics</Reference>
+          <UserElement>true</UserElement>
+          <Elements />
+        </ElementInfo>
+        <ElementInfo xsi:type="GroupInfo">
+          <Name>химия</Name>
+          <Reference>gl:NaturalSci:chemistry</Reference>
+          <UserElement>true</UserElement>
+          <Elements />
+        </ElementInfo>
+      </Elements>
+    </GroupInfo>
+    
+    <GroupInfo>
+      <Name>Технические науки</Name>
+      <Reference>gl:Engineering</Reference>
+      <UserElement>true</UserElement>
+      <Elements>
+        <ElementInfo xsi:type="GroupInfo">
+          <Name>архитектура</Name>
+          <Reference>gl:Engineering:architecture</Reference>
+          <UserElement>true</UserElement>
+          <Elements />
+        </ElementInfo>
+        <ElementInfo xsi:type="GroupInfo">
+          <Name>биотехнология</Name>
+          <Reference>gl:Engineering:biotechnology</Reference>
+          <UserElement>true</UserElement>
+          <Elements />
+        </ElementInfo>
+        <ElementInfo xsi:type="GroupInfo">
+          <Name>информатика</Name>
+          <Reference>gl:Engineering:informatics</Reference>
+          <UserElement>true</UserElement>
+          <Elements />
+        </ElementInfo>
+        <ElementInfo xsi:type="GroupInfo">
+          <Name>кибернетика</Name>
+          <Reference>gl:Engineering:cybernetics</Reference>
+          <UserElement>true</UserElement>
+          <Elements />
+        </ElementInfo>
+        <ElementInfo xsi:type="GroupInfo">
+          <Name>кораблестроение</Name>
+          <Reference>gl:Engineering:shipbuilding</Reference>
+          <UserElement>true</UserElement>
+          <Elements />
+        </ElementInfo>
+        <ElementInfo xsi:type="GroupInfo">
+          <Name>космонавтика</Name>
+          <Reference>gl:Engineering:aerospace</Reference>
+          <UserElement>true</UserElement>
+          <Elements />
+        </ElementInfo>
+        <ElementInfo xsi:type="GroupInfo">
+          <Name>материаловедение</Name>
+          <Reference>gl:Engineering:Materials</Reference>
+          <UserElement>true</UserElement>
+          <Elements />
+        </ElementInfo>
+        <ElementInfo xsi:type="GroupInfo">
+          <Name>механика</Name>
+          <Reference>gl:Engineering:mechanics</Reference>
+          <UserElement>true</UserElement>
+          <Elements />
+        </ElementInfo>
+        <ElementInfo xsi:type="GroupInfo">
+          <Name>системотехника</Name>
+          <Reference>gl:Engineering:systemsEngineering</Reference>
+          <UserElement>true</UserElement>
+          <Elements />
+        </ElementInfo>
+        <ElementInfo xsi:type="GroupInfo">
+          <Name>строительство</Name>
+          <Reference>gl:Engineering:construction</Reference>
+          <UserElement>true</UserElement>
+          <Elements />
+        </ElementInfo>
+        <ElementInfo xsi:type="GroupInfo">
+          <Name>химическая технология</Name>
+          <Reference>gl:Engineering:chemistry</Reference>
+          <UserElement>true</UserElement>
+          <Elements />
+        </ElementInfo>
+        <ElementInfo xsi:type="GroupInfo">
+          <Name>электротехника</Name>
+          <Reference>gl:Engineering:electricalEngineering</Reference>
+          <UserElement>true</UserElement>
+          <Elements />
+        </ElementInfo>
+        <ElementInfo xsi:type="GroupInfo">
+          <Name>энергетика</Name>
+          <Reference>gl:Engineering:energetics</Reference>
+          <UserElement>true</UserElement>
+          <Elements />
+        </ElementInfo>
+      </Elements>
+    </GroupInfo>
+    
+  </Groups>
+</GlobalStorage>

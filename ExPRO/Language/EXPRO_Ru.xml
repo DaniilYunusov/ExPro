@@ -1,0 +1,357 @@
+<?xml version="1.0"?>
+<Language Name="Русский">
+  <In TextKey="Enter group" Text="Выберите группу" />
+  <In TextKey="AddToStorageQuestion" Text="Добавить базу в библиотеку?" />
+  <In TextKey="_nmRule" Text="Правило" />
+  <In TextKey="p" Text="Переменная" />
+  <In TextKey="File" Text="Файл" />
+  <In TextKey="Edit" Text="Правка" />
+  <In TextKey="View" Text="Вид" />
+  <In TextKey="Options" Text="Настройки" />
+  <In TextKey="New" Text="Создать базу знаний" />
+  <In TextKey="save" Text="Сохранить" />
+  <In TextKey="Save As" Text="Сохранить как" />
+  <In TextKey="open" Text="Открыть" />
+  <In TextKey="close" Text="Закрыть" />
+  <In TextKey="Exit" Text="Выход" />
+  <In TextKey="Languages" Text="Языки" />
+  <In TextKey="Rules" Text="Правила" />
+  <In TextKey="Functions" Text="Функции" />
+  <In TextKey="FunctionsCount:" Text="Количество функций:" />
+  <In TextKey="New Function" Text="Новая функция" />
+  <In TextKey="Use Rule" Text="Использовать правило" />
+  <In TextKey="Change Order" Text="Сортировка:" />
+  <In TextKey="New Rule" Text="Новое правило" />
+  <In TextKey="Remove Rule" Text="Удалить" />
+  <In TextKey="Name Rule" Text="Название" />
+  <In TextKey="Comment Rule" Text="Коментарий" />
+  <In TextKey="Rule" Text="Правило" />
+  <In TextKey="IF" Text="ЕСЛИ" />
+  <In TextKey="THEN" Text="ТО" />
+  <In TextKey="Function" Text="Функция" />
+  <In TextKey="Is Arg" Text="Является аргументом" />
+  <In TextKey="Comment Function" Text="Пояснение к функции" />
+  <In TextKey="BODY" Text="Тело" />
+  <In TextKey="Name Function" Text="Имя функции" />
+  <In TextKey="Remove Function" Text="Удалить функцию" />
+  <In TextKey="Variables" Text="Переменные" />
+  <In TextKey="Goals" Text="Цели" />
+  <In TextKey="Preview" Text="Просмотр базы" />
+  <In TextKey="Info" Text="Общие сведения" />
+  <In TextKey="New Knowledge Base" Text="Создать новую базу знаний" />
+  <In TextKey="Open" Text="Открыть базу знаний" />
+  <In TextKey="Close" Text="Закрыть" />
+  <In TextKey="Save" Text="Сохранить изменения" />
+  <In TextKey="Run" Text="Решить" />
+  <In TextKey="Help" Text="Справка" />
+  <In TextKey="NewBZ" Text="Новая база знаний" />
+  <In TextKey="Name BZ" Text="Задача" />
+  <In TextKey="Author" Text="Автор" />
+  <In TextKey="Comment BZ" Text="Комментарий" />
+  <In TextKey="Description BZ" Text="Описание задачи" />
+  <In TextKey="VariablesF" Text="Переменные" />
+  <In TextKey="LVariables" Text="Список переменных" />
+  <In TextKey="NameVar" Text="Имя переменной" />
+  <In TextKey="VarComment" Text="Коментарий к переменной" />
+  <In TextKey="Type" Text="Тип переменной" />
+  <In TextKey="StartValue" Text="Начальное значение" />
+  <In TextKey="NewVar" Text="Новая переменная" />
+  <In TextKey="RemoveVar" Text="Удалить переменную" />
+  <In TextKey="GoalsF" Text="Цели" />
+  <In TextKey="GoalsVar" Text="Список целевых переменных" />
+  <In TextKey="OtherVar" Text="Остальные переменные" />
+  <In TextKey="NoType" Text="Без типа" />
+  <In TextKey="Number" Text="Число" />
+  <In TextKey="FunctionalVariable" Text="Функциональная переменная" />
+  <In TextKey="Formula" Text="Формула" />
+  <In TextKey="StringVariable" Text="Строка" />
+  <In TextKey="Boolean" Text="Логический тип" />
+  <In TextKey="List" Text="Список" />
+  <In TextKey="TableVariable" Text="Таблица" />
+  <In TextKey="FoundVar" Text="Найдена новая переменная" />
+  <In TextKey="Found Variable" Text="Новая переменная" />
+  <In TextKey="Add?" Text="Добавить?" />
+  <In TextKey="Incorrect variable" Text="Неверное имя переменной" />
+  <In TextKey="Incorrect expression" Text="Неверное выражение" />
+  <In TextKey="Variable not found" Text="Найдена не объявленная переменная" />
+  <In TextKey="Function not found" Text="Не существует функции" />
+  <In TextKey="Variable not definite" Text="Переменная не определенна" />
+  <In TextKey="Solution" Text="Решение" />
+  <In TextKey="Go" Text="Выполнить" />
+  <In TextKey="in" Text="в" />
+  <In TextKey="Stop" Text="Остановить" />
+  <In TextKey="Explanation" Text="Обьяснение" />
+  <In TextKey="GoalName" Text="Цель" />
+  <In TextKey="Goals not found" Text="Цель не задана" />
+  <In TextKey="GoalComment" Text="Описание" />
+  <In TextKey="SaveCapBZ" Text="ExPRO" />
+  <In TextKey="SaveChangeBZ" Text="Сохранить изменения?" />
+  <In TextKey="MLV was stopped" Text="Решение остановленно" />
+  <In TextKey="Not found end string" Text="Не все строки закрыты" />
+  <In TextKey="count open list = {0} in {1} in Rule {2}" Text="Ошибка в скобках у списка разность между открытием скобок и их закрытием = {0}\r\n в выражении {1}\r\n в правиле {2}" />
+  <In TextKey="List error []" Text="Ошибка в скобках у списка" />
+  <In TextKey="count open skob = {0} in {1} in Rule {2}" Text="Ошибка в скобках разность между открытием скобок и их закрытием = {0}\r\n в выражении {1}\r\n в правиле {2}" />
+  <In TextKey="{0} in {1} in Rule {2}" Text="{0}\r\n в выражении {1}\r\n в правиле {2}" />
+  <In TextKey="SkobException error" Text="Ошибка в скобках" />
+  <In TextKey="in Rule" Text="в правиле " />
+  <In TextKey="Inlegal operation with NULL:" Text="Одна из частей обрашается в NULL в подвыражении: " />
+  <In TextKey="Inlegal operation with NULL" Text="Не коректная операция с NULL" />
+  <In TextKey="InCorrectFunction:" Text="Не верная функция: " />
+  <In TextKey="InCorrectFunction" Text="Не верная функция" />
+  <In TextKey="Compare" Text="Ошибка сравнения" />
+  <In TextKey="Division" Text="Ошибка деления" />
+  <In TextKey="Multiply" Text="Ошибка умножения" />
+  <In TextKey="Subtraction" Text="Ошибка разности" />
+  <In TextKey="Addition" Text="Ошибка сложения" />
+  <In TextKey="Fields Name_Author" Text="Введите имя базы, автора и категорию" />
+  <In TextKey="Explan" Text="Объяснение" />
+  <In TextKey="lablExpl" Text="Дерево объяснения" />
+  <In TextKey="Find" Text="Поиск" />
+  <In TextKey="Variable" Text="Переменная" />
+  <In TextKey="Value" Text="Значение" />
+  <In TextKey="Company: " Text="Производитель: " />
+  <In TextKey="Description" Text="Программа для создания ЭС" />
+  <In TextKey="Version" Text="Версия" />
+  <In TextKey="CreateExplanation" Text="Формировать объяснение" />
+  <In TextKey="About" Text="О программе" />
+  <In TextKey="Change history" Text="История изменений" />
+  <In TextKey="StHelp" Text="Вызов справки" />
+  <In TextKey="PreviewCodeFile" Text="Просмотр файла" />
+  <In TextKey="Print" Text="Печать" />
+  <In TextKey="PageSetup" Text="Параметры страницы" />
+  <In TextKey="Print Preview" Text="Предварительный просмотр" />
+  <In TextKey="InitStVal" Text="Инициализация стартовым значением" />
+  <In TextKey="Undo" Text="Отменить" />
+  <In TextKey="Redo" Text="Повторить" />
+  <In TextKey="Can not open KNB" Text="Невозможно открыть базу" />
+  <In TextKey="doc XML" Text="Документ в XML" />
+  <In TextKey="old KNB" Text="Старые файлы KNB" />
+  <In TextKey="List is empty" Text="Список выбора пуст" />
+  <In TextKey="SelectForm" Text="ВЫБОР" />
+  <In TextKey="SelectList" Text="Выбор" />
+  <In TextKey="Input" Text="ВВОД" />
+  <In TextKey="BZ(Name)" Text="База знаний" />
+  <In TextKey="BZStruct" Text="Структура базы знаний" />
+  <In TextKey="RuleCount:" Text="Количество правил" />
+  <In TextKey="VarCount:" Text="Количество переменных" />
+  <In TextKey="Options ..." Text="Настройки ..." />
+  <In TextKey="Options: Fonts" Text="Настройки: Шрифты" />
+  <In TextKey="Groups" Text="Предметные области" />
+  <In TextKey="Group" Text="Группа" />
+  <In TextKey="root" Text="Предметные_области" />
+  <In TextKey="FunDraw" Text="ФУНКЦИИ РИСОВАНИЯ" />
+  <In TextKey="FunIO" Text="ФУНКЦИИ ВВОДА-ВЫВОДА" />
+  <In TextKey="FunMath" Text="ВЫЧИСЛИТЕЛЬНЫЕ ФУНКЦИИ" />
+  <In TextKey="FunSis" Text="ФУНКЦИИ УПРАВЛЕНИЯ" />
+  <In TextKey="FunStrAndList" Text="ФУНКЦИИ РАБОТЫ СО СПИСКАМИ И СТРОКАМИ" />
+  <In TextKey="FunTabl" Text="ФУНКЦИИ РАБОТЫ С ТАБЛИЦАМИ" />
+  <In TextKey="FunNetworks" Text="ФУНКЦИИ РАБОТЫ С СЕТЬЮ" />
+  <In TextKey="FunFormula" Text="ФУНКЦИИ РАБОТЫ С ФОРМУЛАМИ" />
+  <In TextKey="NewGroup" Text="Добавить новую группу" />
+  <In TextKey="RemoveGroupOrBZ" Text="Удалить группу или базу" />
+  <In TextKey="AddOpenBaseInGroup" Text="Добавить открытую базу в группу" />
+  <In TextKey="PatternDoc" Text="Шаблон" />
+  <In TextKey="PatternsDoc" Text="Шаблоны" />
+  <In TextKey="PatternsDocHTML" Text="Шаблоны документов в HTML" />
+  <In TextKey="NotVariables" Text="Ни одна задача не решалась и не чего записать в документ!" />
+  <In TextKey="DocHTML" Text="Документ в HTML" />
+  <In TextKey="CreateDoc" Text="Создание документа" />
+  <In TextKey="SelPatternDoc" Text="Выбор шаблона" />
+  <In TextKey="SelFile" Text="Выбор документа для записи" />
+  <In TextKey="Documents" Text="Документ" />
+  <In TextKey="CreatePatternDoc" Text="Создание шаблона" />
+  <In TextKey="EditPatternDoc" Text="Редактирование шаболна" />
+  <In TextKey="AddTable" Text="Добавить таблицу" />
+  <In TextKey="AddFunction" Text="Добавить функцию" />
+  <In TextKey="Add" Text="Добавить" />
+  <In TextKey="CreateTable" Text="Формировать таблицу" />
+  <In TextKey="EditTable" Text="Конструктор таблицы" />
+  <In TextKey="EditDataTable" Text="Заполнение таблицы" />
+  <In TextKey="StatVar" Text="Статистика о переменной" />
+  <In TextKey="VarUseInRules" Text="Переменная используется в правилах:" />
+  <In TextKey="VarDefInRules" Text="Переменная определяется в правилах:" />
+  <In TextKey="HelpVar" Text="В помощь!" />
+  <In TextKey="HelpVarText" Text="Это окно предназначено для описания переменной. Здесь вы можете задать имя, тип переменной, информацию о переменной и начальное значение переменной. Если вы обьявляете переменную как без типа то ваша переменная может принимать значения любого известного типа. Если будет задано начальное значение переменной, то это значение будет задано до поиска основной цели при решении. Вы можете задавать начальное значения, используя функции системы и обьвленные вами переменные, если вы так делаете, то начальное значение будет искаться так же как и при поски цели, используя механизм логического вывода." />
+  <In TextKey="Knowledge Base" Text="База знаний" />
+  <In TextKey="ShowScheme" Text="Дерево целей" />
+  <In TextKey="RightPanel" Text="Панель справа" />
+  <In TextKey="Find:" Text="Поиск: " />
+  <In TextKey="FindText" Text="Искать" />
+  <In TextKey="Search" Text="Поиск" />
+  <In TextKey="CancelSearch" Text="Отменить поиск" />
+  <In TextKey="FormSch" Text="Дерево целей" />
+  <In TextKey="Scheme" Text="Схема" />
+  <In TextKey="NameTable" Text="Имя таблицы" />
+  <In TextKey="CommentTable" Text="Информация о таблице" />
+  <In TextKey="TableStruct" Text="Структура таблицы" />
+  <In TextKey="Width" Text="Ширина колонки" />
+  <In TextKey="AddColumn" Text="Добавить колонку" />
+  <In TextKey="RemoveColumn" Text="Удалить колонку" />
+  <In TextKey="HeaderText" Text="Имя колонки" />
+  <In TextKey="DataTable" Text="Данные таблицы" />
+  <In TextKey="RemoveTable" Text="Удалить таблицу" />
+  <In TextKey="Change Rule?" Text="Изменения в правиле не были потверждены. Подтвердить?" />
+  <In TextKey="Change Function?" Text="Изменения в функции не были потверждены. Подтвердить?" />
+  <In TextKey="Change Properties?" Text="Изменения в свойствах класса не были подтвердены. Подтвердить?" />
+  <In TextKey="Change Variable?" Text="Изменения в переменной не были потверждены. Подтвердить?" />
+  <In TextKey="Change Table?" Text="Изменения в таблице не были потверждены. Подтвердить?" />
+  <In TextKey="AddBase" Text="Добавить подбазу" />
+  <In TextKey="addFileToBase" Text="Добавить файл в базу" />
+  <In TextKey="FontPrev" Text="Изменить шрифт" />
+  <In TextKey="KNB" Text="База знаний" />
+  <In TextKey="SaveRezult" Text="Сохранить" />
+  <In TextKey="GraphWin" Text="Графическое окно" />
+  <In TextKey="SaveImage" Text="Сохранить изображение" />
+  <In TextKey="Clear" Text="Очистить" />
+  <In TextKey="All Files (*.*)|*.*|" Text="Все файлы (*.*)|*.*|" />
+  <In TextKey="DOC_Word|*.doc; *.xml; *.htm; *.html; *.mht; *.mhtml; *.dot; *.rtf; *.txt|" Text="Документы Word|*.doc; *.xml; *.htm; *.html; *.mht; *.mhtml; *.dot; *.rtf; *.txt|" />
+  <In TextKey="DOC_Excel|*.xls; *.xl; *.xlt; *.csv; *.txt" Text="Документы Excel|*.xls; *.xl; *.xlt; *.csv; *.txt" />
+  <In TextKey="Cancel" Text="Отмена" />
+  <In TextKey="ExternalSubBases" Text="Внешние модули" />
+  <In TextKey="SubBases" Text="Внутренние модули" />
+  <In TextKey="SubBase" Text="Модуль" />
+  <In TextKey="Modules" Text="Модули" />
+  <In TextKey="ModulesCount:" Text="Количество модулей:" />
+  <In TextKey="New Module" Text="Новый модуль" />
+  <In TextKey="UseDefault" Text="Поумолчанию" />
+  <In TextKey="SaveChange" Text="OK" />
+  <In TextKey="MainFont" Text="Основной шрифт" />
+  <In TextKey="CondFont" Text="Шрифт в условной части правила" />
+  <In TextKey="ActFont" Text="Шрифт действий" />
+  <In TextKey="IfFont" Text="Шрифт ЕСЛИ" />
+  <In TextKey="ThenFont" Text="Шрифт ТО" />
+  <In TextKey="ListRuleFont" Text="Шрифт дерева базы знаний" />
+  <In TextKey="ChangeFont" Text="Изменить шрифт" />
+  <In TextKey="Browse" Text="Обзор..." />
+  <In TextKey="BZEditor" Text="Редактор базы знаний" />
+  <In TextKey="About {0}" Text="О системе {0}" />
+  <In TextKey="Tables" Text="Таблицы" />
+  <In TextKey="TableCount:" Text="Количество таблиц:" />
+  <In TextKey="New Table" Text="Новая таблица" />
+  <In TextKey="table" Text="Таблица" />
+  <In TextKey="ru-RU" Text="Русские" />
+  <In TextKey="en-US" Text="Английские" />
+  <In TextKey="Conditions" Text="Условия" />
+  <In TextKey="Acts" Text="Действия" />
+  <In TextKey="CreateDate" Text="Дата создания" />
+  <In TextKey="UpdateDate" Text="Дата последнего изменения" />
+  <In TextKey="type" Text="Ошибка в типе переменной" />
+  <In TextKey="NoRule" Text="" />
+  <In TextKey="ExportBase" Text="Экспорт" />
+  <In TextKey="ImportGroups" Text="Импорт" />
+  <In TextKey="Examples" Text="Примеры" />
+  <In TextKey="Tests" Text="Тесты" />
+  <In TextKey="RecentFiles" Text="Последнии файлы" />
+  <In TextKey="RecentBases" Text="Последнии базы" />
+  <In TextKey="Priority" Text="Приоритет" />
+  <In TextKey="NoSort" Text="без сортировки" />
+  <In TextKey="SortName" Text="по имени" />
+  <In TextKey="SortPriority" Text="по приоритету" />
+  <In TextKey="Modifiers" Text="Доступ" />
+  <In TextKey="Name" Text="Имя" />
+  <In TextKey="ClassInfo" Text="Описание класса" />
+  <In TextKey="NameClass" Text="Имя" />
+  <In TextKey="ShowProperties" Text="Показать свойства" />
+  <In TextKey="Properties" Text="Свойства" />
+  <In TextKey="Comment" Text="Комментарий" />
+  <In TextKey="RemoveClass" Text="Удалить класс" />
+  <In TextKey="class" Text="Класс" />
+  <In TextKey="NotNeedPassword" Text="Пароль не требуется" />
+  <In TextKey="NeedPassword" Text="Введите пароль" />
+  <In TextKey="HasPassword" Text="Пароль введён" />
+  <In TextKey="Incorrect Name Base" Text="Некорректное имя базы" />
+  <In TextKey="Incorrect Password" Text="Пароль должен содержать не менее 6 символов" />
+  <In TextKey="NewFolderQ" Text="Введите имя новой папки" />
+  <In TextKey="ReferenceForm" Text="Ссылка на модуль" />
+  <In TextKey="PathToModule:" Text="Путь или ссылка:" />
+  <In TextKey="WithName:" Text="Псевдоним:" />
+  <In TextKey="Password:" Text="Пароль:" />
+  <In TextKey="GetGroupsForm" Text="Выберите предметную область..." />
+  <In TextKey="AddGroup" Text="Добавить предметную область" />
+  <In TextKey="AddRootGroup" Text="Добавить корневую предметную область" />
+  <In TextKey="RemoveGroup" Text="Удалить предметную область" />
+  <In TextKey="GetElementForm" Text="Модули ExPRO" />
+  <In TextKey="RemoveElement" Text="Удалить" />
+  <In TextKey="AddForm" Text="Сохранение базы в хранилище..." />
+  <In TextKey="NewFolder" Text="Новая папка" />
+  <In TextKey="AddContentTitle" Text="Добавить содержимое..." />
+  <In TextKey="AddContent" Text="Добавить" />
+  <In TextKey="AddBaseInGroup" Text="Добавить базу в предметную область" />
+  <In TextKey="ContentBase" Text="Содержимое базы" />
+  <In TextKey="HelpBase" Text="Справочная информация по базе" />
+  <In TextKey="CryptBase" Text="Зашивровать базу" />
+  <In TextKey="SaveAsUserBase" Text="Сохранить как базу пользователя" />
+  <In TextKey="AddBaseToGlobalStorage" Text="Добавить базу в глобальоне хранилище" />
+  <In TextKey="References" Text="Подключение внешних модулей знаний:" />
+  <In TextKey="AddModule" Text="Файл" />
+  <In TextKey="AddModuleFromStorage" Text="Библиотека" />
+  <In TextKey="RemoveModule" Text="Удаление модуля" />
+  <In TextKey="NameColumn" Text="Имя модуля" />
+  <In TextKey="Password" Text="Пароль" />
+  <In TextKey="Path" Text="Путь или ссылка на модуль" />
+  <In TextKey="BaseClass" Text="Базовый класс" />
+  <In TextKey="Networks" Text="Нейронные сети" />
+  <In TextKey="Direct Networks" Text="Сети прямого распространения" />
+  <In TextKey="DirectNetworksCount:" Text="Количество ИНС прямого распространения:" />
+  <In TextKey="New Direct Network" Text="Новая ИНС" />
+  <In TextKey="Classes" Text="Классы" />
+  <In TextKey="ClassCount:" Text="Количество классов:" />
+  <In TextKey="New Class" Text="Новый класс" />
+  <In TextKey="AddClass" Text="Добавить класс" />
+  <In TextKey="Add Network" Text="Добавить сеть" />
+  <In TextKey="Add Direct Network" Text="Добавить сеть прямого распространения" />
+  <In TextKey="Network Info" Text="Информация о сети" />
+  <In TextKey="Network Name" Text="Имя сети" />
+  <In TextKey="Open Network Editor" Text="Открыть редактор сети" />
+  <In TextKey="Save Change" Text="Сохранить изменения" />
+  <In TextKey="Remove Network" Text="Удалить сеть" />
+
+  <In TextKey="Templates" Text="Шаблоны" />
+  <In TextKey="Template" Text="Шаблон" />
+  <In TextKey="New Template" Text="Создать шаблон" />
+  <In TextKey="TemplatesCount:" Text="Количество шаблонов: " />
+  <In TextKey="Name Template" Text="Наименование" />
+  <In TextKey="Comment Template" Text="Комментарий" />
+  <In TextKey="Body Template" Text="Текст шаблона" />
+  <In TextKey="Remove Template" Text="Удалить шаблон" />
+  <In TextKey="This name is already in use" Text="Данное имя уже используется" />
+  <In TextKey="Change Template?" Text="Сохранить изменения в шаблоне?" />
+
+  <In TextKey="Forms" Text="Формы" />
+  <In TextKey="Form" Text="Форма" />
+  <In TextKey="New Form" Text="Создать форму" />
+  <In TextKey="FormsCount:" Text="Количество форм: " />
+  <In TextKey="Name Form" Text="Наименование" />
+  <In TextKey="Comment Form" Text="Комментарий" />
+  <In TextKey="Remove Form" Text="Удалить форму" />
+  <In TextKey="Change Form?" Text="Сохранить изменения в форме?" />
+  <In TextKey="Elements Form" Text="Элементы формы" />
+  <In TextKey="Properties Form" Text="Свойства" />
+  
+  <In TextKey="formElementOK" Text="Кнопка OK" />
+  <In TextKey="formElementLabel" Text="Надпись" />
+  <In TextKey="formElementTextBox" Text="Ввод строки" />
+  <In TextKey="formElementText" Text="Ввод текста" />
+  <In TextKey="formElementSelect" Text="Выбор" />
+
+  <In TextKey="formPropertyName" Text="Имя в блоке" />
+  <In TextKey="formPropertyText" Text="Текст" />
+  <In TextKey="formPropertyKeys" Text="Варианты" />
+  <In TextKey="formPropertyRemove" Text="Удалить" />
+
+  <In TextKey="CurrentKNBFolder" Text="Папка базы знаний" />
+
+  <In TextKey="Strategy" Text="Стратегия" />
+  <In TextKey="VariableUseBackward" Text="Поиск значения переменной обратным выводом" />
+
+  <In TextKey="isRelease" Text="Версия для использования" />
+
+  <Out TextKey="Без типа" Text="NoType" />
+  <Out TextKey="Число" Text="Number" />
+  <Out TextKey="Формула" Text="Formula" />
+  <Out TextKey="Строка" Text="StringVariable" />
+  <Out TextKey="Логический тип" Text="Boolean" />
+  <Out TextKey="Список" Text="List" />
+  <Out TextKey="Таблица" Text="TableVariable" />
+  <Out TextKey="Функциональная переменная" Text="FunctionalVariable" />
+</Language>

@@ -1,0 +1,781 @@
+<?xml version="1.0"?>
+<BZ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Name="Сборка компьютера" Version="1.14" Author="Вагизова Зульфия  гр.997" IsRelease="false" CreateDate="02.05.2021 18:19:42" UpdateDate="02.05.2021 18:23:10">
+  <Comment>указанием итоговой суммы. </Comment>
+  <Rule Name="выбкомп">
+    <Act>Комп=ВЫБОР("Сборка компьютера",["Выбор типовой конфигурации","Выбор отдельных комплектующих","Комплектация"])</Act>
+    <Act>стоим=0</Act>
+    <Enable>true</Enable>
+    <Priority>50</Priority>
+  </Rule>
+  <Rule Name="выбкомплек">
+    <Condition>Комп="Выбор типовой конфигурации"</Condition>
+    <Act>конфигурация=ВЫБОР("Выбор конфигурации",["Типовая конфигурация 1","Типовая конфигурация 2"])</Act>
+    <Enable>true</Enable>
+    <Priority>50</Priority>
+  </Rule>
+  <Rule Name="комплект1">
+    <Condition>конфигурация="Типовая конфигурация 1"</Condition>
+    <Act>ВЫВОД("Процессор")</Act>
+    <Act>ВЫВОД("Celeron 1000 RAM 128Mb SDRAM PC133 HDD 20Gb (IDE) CDD LG 52x         9834р.")</Act>
+    <Act>ВЫВОД("Корпус")</Act>
+    <Act>ВЫВОД("Корпус MiddleTower Microtech Marathon 250W P4 ATX          1 059 руб")</Act>
+    <Act>ВЫВОД("Материнская плата")</Act>
+    <Act>ВЫВОД("Skt.A MicroStar MS-6380E KT3 Ultra VIA-KT333 3 DDR UDMA 133  AGP4x  Audio AC97, ATX    3 139 руб")</Act>
+    <Act>ВЫВОД("Память")</Act>
+    <Act>ВЫВОД("DIMM 512 Mb 168pin  SDRAM  PC133   SEC   2 119 руб")</Act>
+    <Act>ВЫВОД("Винчестер")</Act>
+    <Act>ВЫВОД("HDD IDE 40.0Gb  WD400BB  UltraDMA     100 Mb/s     7200rpm      3 257 руб")</Act>
+    <Act>ВЫВОД("Монитор")</Act>
+    <Act>ВЫВОД("17   SAMSUNG  SyncMaster 765MB  0.20mm DynaFlat 1280x1024-75Hz (1600x1200-68Hz  max)    7 847 руб")</Act>
+    <Act>ВЫВОД("CD-ROM")</Act>
+    <Act>ВЫВОД("CD-ROM Drive IDE 52x Speed  ASUS CD-S520        1 168 руб")</Act>
+    <Act>ВЫВОД("Клавиатура")</Act>
+    <Act>ВЫВОД("Клавиатура Win95  CHERRY         1 010 руб")</Act>
+    <Act>ВЫВОД("Мышь")</Act>
+    <Act>ВЫВОД("Мышь  Genius Easy Plus Mouse 3-button   PS/2        115 руб")</Act>
+    <Act>ВЫВОД("Итоговая сумма  29548")</Act>
+    <Act>итог=29548</Act>
+    <Enable>true</Enable>
+    <Priority>50</Priority>
+  </Rule>
+  <Rule Name="комплект2">
+    <Condition>конфигурация="Типовая конфигурация 2"</Condition>
+    <Act>ВЫВОД("Процессор")</Act>
+    <Act>ВЫВОД("Pentium 4 1600E, RAM 128Mb DDR PC2100, HDD 20Gb (IDE), CDD LG 52x   14 295 руб")</Act>
+    <Act>ВЫВОД("Корпус")</Act>
+    <Act>ВЫВОД("Корпус MiddleTower  Codegen  ATX      1 767 руб")</Act>
+    <Act>ВЫВОД("Материнская плата")</Act>
+    <Act>ВЫВОД("Skt.478(P4) MicroStar MS-6526GL i845GL, 2 DDR, Video, Audio AC97, USB2.0, mATX    2 941 руб")</Act>
+    <Act>ВЫВОД("Память")</Act>
+    <Act>ВЫВОД("DIMM 256 Mb  DDR  PC2100 (266MHz)         2 668 руб")</Act>
+    <Act>ВЫВОД("Винчестер")</Act>
+    <Act>ВЫВОД("HDD IDE 41.1Gb, IBM  IC35L040AVER07         UltraDMA 100Mb/s      7200rpm         3 257 руб")</Act>
+    <Act>ВЫВОД("Монитор")</Act>
+    <Act>ВЫВОД("15   SONY MultiScan CPD-E100   0.24mm, ТСО-99, 1024x768-88Hz (1280x1024-65Hz max)     8 084 руб")</Act>
+    <Act>ВЫВОД("CD-ROM")</Act>
+    <Act>ВЫВОД("CD-ROM Drive IDE 52x Speed MicroStar MS-8152    OEM     823 руб")</Act>
+    <Act>ВЫВОД("Клавиатура")</Act>
+    <Act>ВЫВОД("Клавиатура Win95  Mitsumi  PS/2       306 руб")</Act>
+    <Act>ВЫВОД("Мышь")</Act>
+    <Act>ВЫВОД("Мышь  3-button  Arowana Wheel   PS/2       133 руб")</Act>
+    <Act>ВЫВОД("Итоговая сумма  34274")</Act>
+    <Act>итог=34274</Act>
+    <Act />
+    <Enable>true</Enable>
+    <Priority>50</Priority>
+  </Rule>
+  <Rule Name="выбкорпуса">
+    <Condition>Комп="Комплектация"</Condition>
+    <Act>Корпус=ВЫБОР("Выбор корпуса",["MiddleTower Mic.Castle 250W   1 020 руб","MiddleTower In-Win S500           2 198 руб","MiddleTower  ASUS FK-600       3 550 руб","BigTower In-Win Q500 300W     3 471 руб"])</Act>
+    <Enable>true</Enable>
+    <Priority>50</Priority>
+  </Rule>
+  <Rule Name="выбкорп">
+    <Condition>Комп="Выбор отдельных комплектующих"</Condition>
+    <Act>Корп1=ВЫБОР("Выбор корпуса",["MiddleTower Mic.Castle 250W   1 020 руб","MiddleTower In-Win S500           2 198 руб","MiddleTower  ASUS FK-600       3 550 руб","BigTower In-Win Q500 300W     3 471 руб","Далее"])</Act>
+    <Enable>true</Enable>
+    <Priority>50</Priority>
+  </Rule>
+  <Rule Name="выбматпл(для mATX)">
+    <Condition>Корпус="MiddleTower Mic.Castle 250W   1 020 руб"</Condition>
+    <Act>стоим=стоим+1020</Act>
+    <Act>мплата=ВЫБОР("Выбор мат.платы",["Skt.A MicroStar MS-6378X mATX     2 237 руб","Skt.478(P4) DFI PM12-EL mATX      2 629 руб","Skt.A MicroStar MS-6378XL mATX   2 316 руб","Skt.478(P4) Intel D845GLAD             2 981 руб"])</Act>
+    <Enable>true</Enable>
+    <Priority>50</Priority>
+  </Rule>
+  <Rule Name="выбматпл1(для ATX)">
+    <Condition>Корпус="MiddleTower In-Win S500           2 198 руб"</Condition>
+    <Act>стоим=стоим+2198</Act>
+    <Act>мплата=ВЫБОР("Выбор мат.платы",["Skt.478(P4) Intel D845GBVL ATX     4 080 руб","Skt.A MicroStar MS-6380E ATX        3 139 руб","Skt.A DFI AD75  VIA-KT333 ATX       2 747 руб","Skt.A DFI AD77  VIA-KT400 ATX       2 941 руб"])</Act>
+    <Enable>true</Enable>
+    <Priority>50</Priority>
+  </Rule>
+  <Rule Name="выбматпл2(для ATX)">
+    <Condition>Корпус="MiddleTower  ASUS FK-600       3 550 руб"</Condition>
+    <Act>стоим=стоим+3550</Act>
+    <Act>мплата=ВЫБОР("Выбор мат.платы",["Skt.478(P4) Intel D845GBVL ATX     4 080 руб","Skt.A MicroStar MS-6380E ATX        3 139 руб","Skt.A DFI AD75  VIA-KT333 ATX       2 747 руб","Skt.A DFI AD77  VIA-KT400 ATX       2 941 руб"])</Act>
+    <Enable>true</Enable>
+    <Priority>50</Priority>
+  </Rule>
+  <Rule Name="выбматпл3(для ATX)">
+    <Condition>Корпус="BigTower In-Win Q500 300W     3 471 руб"</Condition>
+    <Act>стоим=стоим+3471</Act>
+    <Act>мплата=ВЫБОР("Выбор мат.платы",["Skt.478(P4) Intel D845GBVL ATX     4 080 руб","Skt.A MicroStar MS-6380E ATX        3 139 руб","Skt.A DFI AD75  VIA-KT333 ATX       2 747 руб","Skt.A DFI AD77  VIA-KT400 ATX       2 941 руб"])</Act>
+    <Enable>true</Enable>
+    <Priority>50</Priority>
+  </Rule>
+  <Rule Name="выбмпл1">
+    <Condition>Корп1="MiddleTower Mic.Castle 250W   1 020 руб"</Condition>
+    <Act>стоим=стоим+1020</Act>
+    <Act>матплата=ВЫБОР("Выбор мат.платы",["Skt.A MicroStar MS-6378X mATX     2 237 руб","Skt.478(P4) DFI PM12-EL mATX      2 629 руб","Skt.A MicroStar MS-6380E ATX        3 139 руб","Skt.A DFI AD75  VIA-KT333 ATX       2 747 руб","Далее"])</Act>
+    <Enable>true</Enable>
+    <Priority>50</Priority>
+  </Rule>
+  <Rule Name="выбмпл2">
+    <Condition>Корп1="MiddleTower In-Win S500           2 198 руб"</Condition>
+    <Act>стоим=стоим+2198</Act>
+    <Act>матплата=ВЫБОР("Выбор мат.платы",["Skt.A MicroStar MS-6378X mATX     2 237 руб","Skt.478(P4) DFI PM12-EL mATX      2 629 руб","Skt.A MicroStar MS-6380E ATX        3 139 руб","Skt.A DFI AD75  VIA-KT333 ATX       2 747 руб","Далее"])</Act>
+    <Enable>true</Enable>
+    <Priority>50</Priority>
+  </Rule>
+  <Rule Name="выбмпл3">
+    <Condition>Корп1="MiddleTower  ASUS FK-600       3 550 руб"</Condition>
+    <Act>стоим=стоим+3550</Act>
+    <Act>матплата=ВЫБОР("Выбор мат.платы",["Skt.A MicroStar MS-6378X mATX     2 237 руб","Skt.478(P4) DFI PM12-EL mATX      2 629 руб","Skt.A MicroStar MS-6380E ATX        3 139 руб","Skt.A DFI AD75  VIA-KT333 ATX       2 747 руб","Далее"])</Act>
+    <Enable>true</Enable>
+    <Priority>50</Priority>
+  </Rule>
+  <Rule Name="выбмпл4">
+    <Condition>Корп1="BigTower In-Win Q500 300W     3 471 руб"</Condition>
+    <Act>стоим=стоим+3471</Act>
+    <Act>матплата=ВЫБОР("Выбор мат.платы",["Skt.A MicroStar MS-6378X mATX     2 237 руб","Skt.478(P4) DFI PM12-EL mATX      2 629 руб","Skt.A MicroStar MS-6380E ATX        3 139 руб","Skt.A DFI AD75  VIA-KT333 ATX       2 747 руб","Далее"])</Act>
+    <Enable>true</Enable>
+    <Priority>50</Priority>
+  </Rule>
+  <Rule Name="выбмпл5">
+    <Condition>Корп1="Далее"</Condition>
+    <Act>матплата=ВЫБОР("Выбор мат.платы",["Skt.A MicroStar MS-6378X mATX     2 237 руб","Skt.478(P4) DFI PM12-EL mATX      2 629 руб","Skt.A MicroStar MS-6380E ATX        3 139 руб","Skt.A DFI AD75  VIA-KT333 ATX       2 747 руб","Далее"])</Act>
+    <Enable>true</Enable>
+    <Priority>50</Priority>
+  </Rule>
+  <Rule Name="выбпроц1(AMD)">
+    <Condition>мплата="Skt.A MicroStar MS-6378X mATX     2 237 руб"</Condition>
+    <Act>стоим=стоим+2237</Act>
+    <Act>процессор=ВЫБОР("Выбор процессора",["K7 D 900 AMD Duron             1 020 руб","K7 A 1700+ AMD Athlon XP    2 198 руб","K7 A  2000+ AMD Athlon XP   3 198 руб","K7 A 2000 AMD Athlon MP      8 005 руб"])</Act>
+    <Enable>true</Enable>
+    <Priority>50</Priority>
+  </Rule>
+  <Rule Name="выбпроц2(AMD)">
+    <Condition>мплата="Skt.A MicroStar MS-6380E ATX        3 139 руб"</Condition>
+    <Act>стоим=стоим+3139</Act>
+    <Act>процессор=ВЫБОР("Выбор процессора",["K7 D 900 AMD Duron             1 020 руб","K7 A 1700+ AMD Athlon XP    2 198 руб","K7 A  2000+ AMD Athlon XP   3 198 руб","K7 A 2000 AMD Athlon MP      8 005 руб"])</Act>
+    <Enable>true</Enable>
+    <Priority>50</Priority>
+  </Rule>
+  <Rule Name="выбпроц3(AMD)">
+    <Condition>мплата="Skt.A DFI AD75  VIA-KT333 ATX       2 747 руб"</Condition>
+    <Act>стоим=стоим+2747</Act>
+    <Act>процессор=ВЫБОР("Выбор процессора",["K7 D 900 AMD Duron             1 020 руб","K7 A 1700+ AMD Athlon XP    2 198 руб","K7 A  2000+ AMD Athlon XP   3 198 руб","K7 A 2000 AMD Athlon MP      8 005 руб"])</Act>
+    <Comment>выбор процессора AMD для мат.платы </Comment>
+    <Enable>true</Enable>
+    <Priority>50</Priority>
+  </Rule>
+  <Rule Name="выбпроц1(INTEL)">
+    <Condition>мплата="Skt.478(P4) DFI PM12-EL mATX      2 629 руб"</Condition>
+    <Act>стоим=стоим+2629</Act>
+    <Act>процессор=ВЫБОР("Выбор процессора",["Intel Pentium 4 1600A 512 Kb  6 119 руб","Intel Pentium 4 1700E 256 Kb  4 846 руб","Intel Pentium 4 2000A 512 Kb  6 435 руб","Intel Pentium 4 1800A 512 Kb  5 530 руб"])</Act>
+    <Comment>выбор процессора AMD для мат.платы </Comment>
+    <Enable>true</Enable>
+    <Priority>50</Priority>
+  </Rule>
+  <Rule Name="выбпроц2(INTEL)">
+    <Condition>мплата="Skt.A MicroStar MS-6378XL mATX   2 316 руб"</Condition>
+    <Act>стоим=стоим+2316</Act>
+    <Act>процессор=ВЫБОР("Выбор процессора",["Intel Pentium 4 1600A 512 Kb  6 119 руб","Intel Pentium 4 1700E 256 Kb  4 846 руб","Intel Pentium 4 2000A 512 Kb  6 435 руб","Intel Pentium 4 1800A 512 Kb  5 530 руб"])</Act>
+    <Comment>выбор процессора AMD для мат.платы </Comment>
+    <Enable>true</Enable>
+    <Priority>50</Priority>
+  </Rule>
+  <Rule Name="выбпроц3(INTEL)">
+    <Condition>мплата="Skt.478(P4) Intel D845GLAD             2 981 руб"</Condition>
+    <Act>стоим=стоим+2981</Act>
+    <Act>процессор=ВЫБОР("Выбор процессора",["Intel Pentium 4 1600A 512 Kb  6 119 руб","Intel Pentium 4 1700E 256 Kb  4 846 руб","Intel Pentium 4 2000A 512 Kb  6 435 руб","Intel Pentium 4 1800A 512 Kb  5 530 руб"])</Act>
+    <Enable>true</Enable>
+    <Priority>50</Priority>
+  </Rule>
+  <Rule Name="выбпроц4(INTEL)">
+    <Condition>мплата="Skt.478(P4) Intel D845GBVL ATX     4 080 руб"</Condition>
+    <Act>стоим=стоим+4080</Act>
+    <Act>процессор=ВЫБОР("Выбор процессора",["Intel Pentium 4 1600A 512 Kb  6 119 руб","Intel Pentium 4 1700E 256 Kb  4 846 руб","Intel Pentium 4 2000A 512 Kb  6 435 руб","Intel Pentium 4 1800A 512 Kb  5 530 руб"])</Act>
+    <Enable>true</Enable>
+    <Priority>50</Priority>
+  </Rule>
+  <Rule Name="выбпроц5(INTEL)">
+    <Condition>мплата="Skt.A DFI AD77  VIA-KT400 ATX       2 941 руб"</Condition>
+    <Act>стоим=стоим+2941</Act>
+    <Act>процессор=ВЫБОР("Выбор процессора",["Intel Pentium 4 1600A 512 Kb  6 119 руб","Intel Pentium 4 1700E 256 Kb  4 846 руб","Intel Pentium 4 2000A 512 Kb  6 435 руб","Intel Pentium 4 1800A 512 Kb  5 530 руб"])</Act>
+    <Enable>true</Enable>
+    <Priority>50</Priority>
+  </Rule>
+  <Rule Name="выбпроц">
+    <Condition>а=1</Condition>
+    <Act>процессор=ВЫБОР("Выбор процессора",["K7 D 900 AMD Duron             1 020 руб","K7 A 1700+ AMD Athlon XP    2 198 руб","Intel Pentium 4 1600A 512 Kb  6 119 руб","Intel Pentium 4 1700E 256 Kb  4 846 руб","Далее"])</Act>
+    <Enable>true</Enable>
+    <Priority>50</Priority>
+  </Rule>
+  <Rule Name="стоимпроцессора1">
+    <Condition>процессор="K7 D 900 AMD Duron             1 020 руб"</Condition>
+    <Act>стоим=стоим+1020</Act>
+    <Act>с=1</Act>
+    <Enable>true</Enable>
+    <Priority>50</Priority>
+  </Rule>
+  <Rule Name="стоимпроцессора2">
+    <Condition>процессор="K7 A 1700+ AMD Athlon XP    2 198 руб"</Condition>
+    <Act>стоим=стоим+2198</Act>
+    <Act>с=1</Act>
+    <Enable>true</Enable>
+    <Priority>50</Priority>
+  </Rule>
+  <Rule Name="стоимпроцессора3">
+    <Condition>процессор="K7 A  2000+ AMD Athlon XP   3 198 руб"</Condition>
+    <Act>стоим=стоим+3198</Act>
+    <Act>с=1</Act>
+    <Enable>true</Enable>
+    <Priority>50</Priority>
+  </Rule>
+  <Rule Name="стоимпроцессора4">
+    <Condition>процессор="K7 A 2000 AMD Athlon MP      8 005 руб"</Condition>
+    <Act>стоим=стоим+8005</Act>
+    <Act>с=1</Act>
+    <Enable>true</Enable>
+    <Priority>50</Priority>
+  </Rule>
+  <Rule Name="стоимпроцессора5">
+    <Condition>процессор="Intel Pentium 4 1600A 512 Kb  6 119 руб"</Condition>
+    <Act>стоим=стоим+6119</Act>
+    <Act>с=1</Act>
+    <Enable>true</Enable>
+    <Priority>50</Priority>
+  </Rule>
+  <Rule Name="стоимпроцессора6">
+    <Condition>процессор="Intel Pentium 4 1700E 256 Kb  4 846 руб"</Condition>
+    <Act>стоим=стоим+4846</Act>
+    <Act>с=1</Act>
+    <Enable>true</Enable>
+    <Priority>50</Priority>
+  </Rule>
+  <Rule Name="стоимпроцессора7">
+    <Condition>процессор="Intel Pentium 4 2000A 512 Kb  6 435 руб"</Condition>
+    <Act>стоим=стоим+6435</Act>
+    <Act>с=1</Act>
+    <Enable>true</Enable>
+    <Priority>50</Priority>
+  </Rule>
+  <Rule Name="стоимпроцессора8">
+    <Condition>процессор="Intel Pentium 4 1800A 512 Kb  5 530 руб"</Condition>
+    <Act>стоим=стоим+5530</Act>
+    <Act>с=1</Act>
+    <Enable>true</Enable>
+    <Priority>50</Priority>
+  </Rule>
+  <Rule Name="стоимпроцессора9">
+    <Condition>процессор="Далее"</Condition>
+    <Act>стоим=стоим+0</Act>
+    <Act>с=1</Act>
+    <Enable>true</Enable>
+    <Priority>50</Priority>
+  </Rule>
+  <Rule Name="стоимматпл1">
+    <Condition>матплата="Skt.A MicroStar MS-6378X mATX     2 237 руб"</Condition>
+    <Act>стоим=стоим+2237</Act>
+    <Act>а=1</Act>
+    <Enable>true</Enable>
+    <Priority>50</Priority>
+  </Rule>
+  <Rule Name="стоимматпл2">
+    <Condition>матплата="Skt.478(P4) DFI PM12-EL mATX      2 629 руб"</Condition>
+    <Act>стоим=стоим+2629</Act>
+    <Act>а=1</Act>
+    <Enable>true</Enable>
+    <Priority>50</Priority>
+  </Rule>
+  <Rule Name="стоимматпл3">
+    <Condition>матплата="Skt.A MicroStar MS-6380E ATX        3 139 руб"</Condition>
+    <Act>стоим=стоим+3139</Act>
+    <Act>а=1</Act>
+    <Enable>true</Enable>
+    <Priority>50</Priority>
+  </Rule>
+  <Rule Name="стоимматпл4">
+    <Condition>матплата="Skt.A DFI AD75  VIA-KT333 ATX       2 747 руб"</Condition>
+    <Act>стоим=стоим+2747</Act>
+    <Act>а=1</Act>
+    <Enable>true</Enable>
+    <Priority>50</Priority>
+  </Rule>
+  <Rule Name="стоимматпл5">
+    <Condition>матплата="Далее"</Condition>
+    <Act>а=1</Act>
+    <Enable>true</Enable>
+    <Priority>50</Priority>
+  </Rule>
+  <Rule Name="выбпамяти">
+    <Condition>с=1</Condition>
+    <Act>память=ВЫБОР("Выбор модуля памяти",["DIMM 256 Mb  DDR  PC2100 (266MHz)   2 668 руб","DIMM 256 Mb  DDR  PC2700 (333MHz)   3 020 руб","DIMM 512 Mb  DDR  PC2100 (266MHz)   5 886 руб","DIMM 512 Mb  DDR  PC2700 (333MHz)   6 159 руб","Далее"])</Act>
+    <Enable>true</Enable>
+    <Priority>50</Priority>
+  </Rule>
+  <Rule Name="стоимпамяти1">
+    <Condition>память="DIMM 256 Mb  DDR  PC2100 (266MHz)   2 668 руб"</Condition>
+    <Act>стоим=стоим+2668</Act>
+    <Act>в=1</Act>
+    <Enable>true</Enable>
+    <Priority>50</Priority>
+  </Rule>
+  <Rule Name="стоимпамяти2">
+    <Condition>память="DIMM 256 Mb  DDR  PC2700 (333MHz)   3 020 руб"</Condition>
+    <Act>стоим=стоим+3020</Act>
+    <Act>в=1</Act>
+    <Enable>true</Enable>
+    <Priority>50</Priority>
+  </Rule>
+  <Rule Name="стоимпамяти3">
+    <Condition>память="DIMM 512 Mb  DDR  PC2100 (266MHz)   5 886 руб"</Condition>
+    <Act>стоим=стоим+5886</Act>
+    <Act>в=1</Act>
+    <Enable>true</Enable>
+    <Priority>50</Priority>
+  </Rule>
+  <Rule Name="стоимпамяти4">
+    <Condition>память="DIMM 512 Mb  DDR  PC2700 (333MHz)   6 159 руб"</Condition>
+    <Act>стоим=стоим+6159</Act>
+    <Act>в=1</Act>
+    <Enable>true</Enable>
+    <Priority>50</Priority>
+  </Rule>
+  <Rule Name="стоимпамяти5">
+    <Condition>память="Далее"</Condition>
+    <Act>стоим=стоим+0</Act>
+    <Act>в=1</Act>
+    <Enable>true</Enable>
+    <Priority>50</Priority>
+  </Rule>
+  <Rule Name="выбмонит">
+    <Condition>в=1</Condition>
+    <Act>монитор=ВЫБОР("выбор монитора",["15  LG StudioWorks 575E   4 961 руб","17   SAMSUNG  SyncMaster 763MB  7 258 руб","19   SONY MultiScan CPD-E430   16 990 руб","24   SONY MultiScan GDM-FW900   16 887 руб","Далее"])</Act>
+    <Enable>true</Enable>
+    <Priority>50</Priority>
+  </Rule>
+  <Rule Name="стоиммонит1">
+    <Condition>монитор="15  LG StudioWorks 575E   4 961 руб"</Condition>
+    <Act>стоим=стоим+4961</Act>
+    <Act>р=1</Act>
+    <Enable>true</Enable>
+    <Priority>50</Priority>
+  </Rule>
+  <Rule Name="стоиммонит2">
+    <Condition>монитор="17   SAMSUNG  SyncMaster 763MB  7 258 руб"</Condition>
+    <Act>стоим=стоим+7258</Act>
+    <Act>р=1</Act>
+    <Enable>true</Enable>
+    <Priority>50</Priority>
+  </Rule>
+  <Rule Name="стоиммонит3">
+    <Condition>монитор="19   SONY MultiScan CPD-E430   16 990 руб"</Condition>
+    <Act>стоим=стоим+16990</Act>
+    <Act>р=1</Act>
+    <Enable>true</Enable>
+    <Priority>50</Priority>
+  </Rule>
+  <Rule Name="стоиммонит4">
+    <Condition>монитор="24   SONY MultiScan GDM-FW900   16 887 руб"</Condition>
+    <Act>стоим=стоим+16887</Act>
+    <Act>р=1</Act>
+    <Enable>true</Enable>
+    <Priority>50</Priority>
+  </Rule>
+  <Rule Name="стоиммонит5">
+    <Condition>монитор="Далее"</Condition>
+    <Act>стоим=стоим+0</Act>
+    <Act>р=1</Act>
+    <Enable>true</Enable>
+    <Priority>50</Priority>
+  </Rule>
+  <Rule Name="выбвинч">
+    <Condition>р=1</Condition>
+    <Act>винчестер=ВЫБОР("Выбор винчестера",["HDD IDE 40.0Gb   UltraDMA   100 Mb/s   2 941 руб","HDD IDE 61.4Gb   UltraDMA 100Mb/s   3 629 руб","HDD Ultra2 Wide SCSI 18.3 Gb   6 159 руб","HDD IDE 120.0Gb UltraDMA 100 Mb/s  7 649 руб","Далее"])</Act>
+    <Enable>true</Enable>
+    <Priority>50</Priority>
+  </Rule>
+  <Rule Name="стоимвинч1">
+    <Condition>винчестер="HDD IDE 40.0Gb   UltraDMA   100 Mb/s   2 941 руб"</Condition>
+    <Act>стоим=стоим+2941</Act>
+    <Act>п=1</Act>
+    <Enable>true</Enable>
+    <Priority>50</Priority>
+  </Rule>
+  <Rule Name="стоимвинч2">
+    <Condition>винчестер="HDD IDE 61.4Gb   UltraDMA 100Mb/s   3 629 руб"</Condition>
+    <Act>стоим=стоим+3629</Act>
+    <Act>п=1</Act>
+    <Enable>true</Enable>
+    <Priority>50</Priority>
+  </Rule>
+  <Rule Name="стоимвинч3">
+    <Condition>винчестер="HDD Ultra2 Wide SCSI 18.3 Gb   6 159 руб"</Condition>
+    <Act>стоим=стоим+6159</Act>
+    <Act>п=1</Act>
+    <Enable>true</Enable>
+    <Priority>50</Priority>
+  </Rule>
+  <Rule Name="стоимвинч4">
+    <Condition>винчестер="HDD IDE 120.0Gb UltraDMA 100 Mb/s  7 649 руб"</Condition>
+    <Act>стоим=стоим+7649</Act>
+    <Act>п=1</Act>
+    <Enable>true</Enable>
+    <Priority>50</Priority>
+  </Rule>
+  <Rule Name="стоимвинч5">
+    <Condition>винчестер="Далее"</Condition>
+    <Act>стоим=стоим+0</Act>
+    <Act>п=1</Act>
+    <Enable>true</Enable>
+    <Priority>50</Priority>
+  </Rule>
+  <Rule Name="выбкарты">
+    <Condition>п=1</Condition>
+    <Act>видкарта=ВЫБОР("Выбор видео карты",["NVidia GeForce2 MX400 32Mb  AGP 4x  1 198 руб","NVidia GeForce4 64Mb 350 MHz AGP  2 277 руб","ATI Radeon 9000 128Mb TV-Out  3 807 руб","MicroStar MS-8871 NVidia 128Mb 11 337 руб","Далее"])</Act>
+    <Enable>true</Enable>
+    <Priority>50</Priority>
+  </Rule>
+  <Rule Name="стоимвидкарты1">
+    <Condition>видкарта="NVidia GeForce2 MX400 32Mb  AGP 4x  1 198 руб"</Condition>
+    <Act>стоим=стоим+1198</Act>
+    <Act>т=1</Act>
+    <Enable>true</Enable>
+    <Priority>50</Priority>
+  </Rule>
+  <Rule Name="стоимвидкарты2">
+    <Condition>видкарта="NVidia GeForce4 64Mb 350 MHz AGP  2 277 руб"</Condition>
+    <Act>стоим=стоим+2277</Act>
+    <Act>т=1</Act>
+    <Enable>true</Enable>
+    <Priority>50</Priority>
+  </Rule>
+  <Rule Name="стоимвидкарты3">
+    <Condition>видкарта="ATI Radeon 9000 128Mb TV-Out  3 807 руб"</Condition>
+    <Act>стоим=стоим+3807</Act>
+    <Act>т=1</Act>
+    <Enable>true</Enable>
+    <Priority>50</Priority>
+  </Rule>
+  <Rule Name="стоимвидкарты4">
+    <Condition>видкарта="MicroStar MS-8871 NVidia 128Mb 11 337 руб"</Condition>
+    <Act>стоим=стоим+11337</Act>
+    <Act>т=1</Act>
+    <Enable>true</Enable>
+    <Priority>50</Priority>
+  </Rule>
+  <Rule Name="стоимвидкарты5">
+    <Condition>видкарта="Далее"</Condition>
+    <Act>стоим=стоим+0</Act>
+    <Act>т=1</Act>
+    <Enable>true</Enable>
+    <Priority>50</Priority>
+  </Rule>
+  <Rule Name="выбCD">
+    <Condition>т=1</Condition>
+    <Act>сдром=ВЫБОР("Выбор CD-ROM",["CD-ROM Drive IDE 52x Speed Samsung  783 руб","CD-ROM Drive IDE 52x Speed  LG  832 руб","CD-ROM Drive IDE 56x Speed  ACER  951 руб","CD-ROM Drive IDE 52x Speed  ASUS  1 168 руб","Далее"])</Act>
+    <Enable>true</Enable>
+    <Priority>50</Priority>
+  </Rule>
+  <Rule Name="стоимCD1">
+    <Condition>сдром="CD-ROM Drive IDE 52x Speed Samsung  783 руб"</Condition>
+    <Act>стоим=стоим+783</Act>
+    <Act>м=1</Act>
+    <Enable>true</Enable>
+    <Priority>50</Priority>
+  </Rule>
+  <Rule Name="стоимCD2">
+    <Condition>сдром="CD-ROM Drive IDE 52x Speed  LG  832 руб"</Condition>
+    <Act>стоим=стоим+832</Act>
+    <Act>м=1</Act>
+    <Enable>true</Enable>
+    <Priority>50</Priority>
+  </Rule>
+  <Rule Name="стоимCD3">
+    <Condition>сдром="CD-ROM Drive IDE 56x Speed  ACER  951 руб"</Condition>
+    <Act>стоим=стоим+951</Act>
+    <Act>м=1</Act>
+    <Enable>true</Enable>
+    <Priority>50</Priority>
+  </Rule>
+  <Rule Name="стоимCD4">
+    <Condition>сдром="CD-ROM Drive IDE 52x Speed  ASUS  1 168 руб"</Condition>
+    <Act>стоим=стоим+1168</Act>
+    <Act>м=1</Act>
+    <Enable>true</Enable>
+    <Priority>50</Priority>
+  </Rule>
+  <Rule Name="стоимCD5">
+    <Condition>сдром="Далее"</Condition>
+    <Act>стоим=стоим+0</Act>
+    <Act>м=1</Act>
+    <Enable>true</Enable>
+    <Priority>50</Priority>
+  </Rule>
+  <Rule Name="выбклавы">
+    <Condition>м=1</Condition>
+    <Act>клава=ВЫБОР("Выбор клавиатуры",["Клавиатура Win95  Genius  237 руб","Клавиатура Win95 Genius Comfy-MultiMedia   549 руб","Клавиатура Win95  CHERRY PS/2  971 руб","Клавиатура Win95  CHERRY   1 010 руб","Далее"])</Act>
+    <Enable>true</Enable>
+    <Priority>50</Priority>
+  </Rule>
+  <Rule Name="стоимклавы1">
+    <Condition>клава="Клавиатура Win95  Genius  237 руб"</Condition>
+    <Act>стоим=стоим+237</Act>
+    <Act>к=1</Act>
+    <Enable>true</Enable>
+    <Priority>50</Priority>
+  </Rule>
+  <Rule Name="стоимклавы2">
+    <Condition>клава="Клавиатура Win95 Genius Comfy-MultiMedia   549 руб"</Condition>
+    <Act>стоим=стоим+549</Act>
+    <Act>к=1</Act>
+    <Enable>true</Enable>
+    <Priority>50</Priority>
+  </Rule>
+  <Rule Name="стоимклавы3">
+    <Condition>клава="Клавиатура Win95  CHERRY PS/2  971 руб"</Condition>
+    <Act>стоим=стоим+971</Act>
+    <Act>к=1</Act>
+    <Enable>true</Enable>
+    <Priority>50</Priority>
+  </Rule>
+  <Rule Name="стоимклавы4">
+    <Condition>клава="Клавиатура Win95  CHERRY   1 010 руб"</Condition>
+    <Act>стоим=стоим+1010</Act>
+    <Act>к=1</Act>
+    <Enable>true</Enable>
+    <Priority>50</Priority>
+  </Rule>
+  <Rule Name="стоимклавы5">
+    <Condition>клава="Далее"</Condition>
+    <Act>стоим=стоим+0</Act>
+    <Act>к=1</Act>
+    <Enable>true</Enable>
+    <Priority>50</Priority>
+  </Rule>
+  <Rule Name="выбмыши">
+    <Condition>к=1</Condition>
+    <Act>мышь=ВЫБОР("Выбор мышки",["Мышь  3-button  PS/2  OEM   90 руб","Мышь  Genius NetScroll+  MagicRoller   168 руб","Мышь Gold Mouse Wheel Colors  217 руб","Мышь  Logitech MouseMan Optical Scroll  2 004 руб","Далее"])</Act>
+    <Enable>true</Enable>
+    <Priority>50</Priority>
+  </Rule>
+  <Rule Name="стоиммыши1">
+    <Condition>мышь="Мышь  3-button  PS/2  OEM   90 руб"</Condition>
+    <Act>стоим=стоим+90</Act>
+    <Act>ж=1</Act>
+    <Enable>true</Enable>
+    <Priority>50</Priority>
+  </Rule>
+  <Rule Name="стоиммыши2">
+    <Condition>мышь="Мышь  Genius NetScroll+  MagicRoller   168 руб"</Condition>
+    <Act>стоим=стоим+168</Act>
+    <Act>ж=1</Act>
+    <Enable>true</Enable>
+    <Priority>50</Priority>
+  </Rule>
+  <Rule Name="стоиммыши3">
+    <Condition>мышь="Мышь Gold Mouse Wheel Colors  217 руб"</Condition>
+    <Act>стоим=стоим+217</Act>
+    <Act>ж=1</Act>
+    <Enable>true</Enable>
+    <Priority>50</Priority>
+  </Rule>
+  <Rule Name="стоиммыши4">
+    <Condition>мышь="Мышь  Logitech MouseMan Optical Scroll  2 004 руб"</Condition>
+    <Act>стоим=стоим+2004</Act>
+    <Act>ж=1</Act>
+    <Enable>true</Enable>
+    <Priority>50</Priority>
+  </Rule>
+  <Rule Name="стоиммыши5">
+    <Condition>мышь="Далее"</Condition>
+    <Act>стоим=стоим+0</Act>
+    <Act>ж=1</Act>
+    <Enable>true</Enable>
+    <Priority>50</Priority>
+  </Rule>
+  <Rule Name="итого">
+    <Condition>ж=1</Condition>
+    <Act>итог=стоим</Act>
+    <Act>ВЫВОД("Итоговая сумма",итог)</Act>
+    <Enable>true</Enable>
+    <Priority>50</Priority>
+  </Rule>
+  <Variable xsi:type="StringVariable" Name="Комп" Goal="false">
+    <IsBackward>false</IsBackward>
+    <Goal>False</Goal>
+    <Comment>Вид комплектации</Comment>
+    <StartValue />
+    <Opredelena>false</Opredelena>
+  </Variable>
+  <Variable xsi:type="StringVariable" Name="мплата" Goal="false">
+    <IsBackward>false</IsBackward>
+    <Goal>False</Goal>
+    <Comment>мат.плата для корпуса mATX</Comment>
+    <StartValue />
+    <Opredelena>false</Opredelena>
+  </Variable>
+  <Variable xsi:type="StringVariable" Name="монитор" Goal="false">
+    <IsBackward>false</IsBackward>
+    <Goal>False</Goal>
+    <Comment />
+    <StartValue />
+    <Opredelena>false</Opredelena>
+  </Variable>
+  <Variable xsi:type="Number" Name="итог" Goal="true">
+    <IsBackward>false</IsBackward>
+    <Goal>True</Goal>
+    <Comment>итого</Comment>
+    <StartValue />
+    <Opredelena>false</Opredelena>
+  </Variable>
+  <Variable xsi:type="Number" Name="сумма" Goal="false">
+    <IsBackward>false</IsBackward>
+    <Goal>False</Goal>
+    <Comment />
+    <StartValue />
+    <Opredelena>false</Opredelena>
+  </Variable>
+  <Variable xsi:type="NoType" Name="стоим" Goal="false">
+    <IsBackward>false</IsBackward>
+    <Goal>False</Goal>
+    <Comment>Стоимость покупки</Comment>
+    <StartValue />
+    <Opredelena>false</Opredelena>
+  </Variable>
+  <Variable xsi:type="NoType" Name="а" Goal="false">
+    <IsBackward>false</IsBackward>
+    <Goal>False</Goal>
+    <Comment />
+    <StartValue />
+    <Opredelena>false</Opredelena>
+  </Variable>
+  <Variable xsi:type="NoType" Name="в" Goal="false">
+    <IsBackward>false</IsBackward>
+    <Goal>False</Goal>
+    <Comment />
+    <StartValue />
+    <Opredelena>false</Opredelena>
+  </Variable>
+  <Variable xsi:type="StringVariable" Name="Корпус" Goal="false">
+    <IsBackward>false</IsBackward>
+    <Goal>False</Goal>
+    <Comment />
+    <StartValue />
+    <Opredelena>false</Opredelena>
+  </Variable>
+  <Variable xsi:type="StringVariable" Name="память" Goal="false">
+    <IsBackward>false</IsBackward>
+    <Goal>False</Goal>
+    <Comment />
+    <StartValue />
+    <Opredelena>false</Opredelena>
+  </Variable>
+  <Variable xsi:type="StringVariable" Name="процессор" Goal="false">
+    <IsBackward>false</IsBackward>
+    <Goal>False</Goal>
+    <Comment />
+    <StartValue />
+    <Opredelena>false</Opredelena>
+  </Variable>
+  <Variable xsi:type="StringVariable" Name="матплата" Goal="false">
+    <IsBackward>false</IsBackward>
+    <Goal>False</Goal>
+    <Comment />
+    <StartValue />
+    <Opredelena>false</Opredelena>
+  </Variable>
+  <Variable xsi:type="StringVariable" Name="Корп1" Goal="false">
+    <IsBackward>false</IsBackward>
+    <Goal>False</Goal>
+    <Comment />
+    <StartValue />
+    <Opredelena>false</Opredelena>
+  </Variable>
+  <Variable xsi:type="NoType" Name="с" Goal="false">
+    <IsBackward>false</IsBackward>
+    <Goal>False</Goal>
+    <Comment />
+    <StartValue />
+    <Opredelena>false</Opredelena>
+  </Variable>
+  <Variable xsi:type="NoType" Name="р" Goal="false">
+    <IsBackward>false</IsBackward>
+    <Goal>False</Goal>
+    <Comment />
+    <StartValue />
+    <Opredelena>false</Opredelena>
+  </Variable>
+  <Variable xsi:type="NoType" Name="винчестер" Goal="false">
+    <IsBackward>false</IsBackward>
+    <Goal>False</Goal>
+    <Comment />
+    <StartValue />
+    <Opredelena>false</Opredelena>
+  </Variable>
+  <Variable xsi:type="NoType" Name="конфигурация" Goal="false">
+    <IsBackward>false</IsBackward>
+    <Goal>False</Goal>
+    <Comment />
+    <StartValue />
+    <Opredelena>false</Opredelena>
+  </Variable>
+  <Variable xsi:type="NoType" Name="п" Goal="false">
+    <IsBackward>false</IsBackward>
+    <Goal>False</Goal>
+    <Comment />
+    <StartValue />
+    <Opredelena>false</Opredelena>
+  </Variable>
+  <Variable xsi:type="NoType" Name="видкарта" Goal="false">
+    <IsBackward>false</IsBackward>
+    <Goal>False</Goal>
+    <Comment />
+    <StartValue />
+    <Opredelena>false</Opredelena>
+  </Variable>
+  <Variable xsi:type="NoType" Name="т" Goal="false">
+    <IsBackward>false</IsBackward>
+    <Goal>False</Goal>
+    <Comment />
+    <StartValue />
+    <Opredelena>false</Opredelena>
+  </Variable>
+  <Variable xsi:type="NoType" Name="сдром" Goal="false">
+    <IsBackward>false</IsBackward>
+    <Goal>False</Goal>
+    <Comment />
+    <StartValue />
+    <Opredelena>false</Opredelena>
+  </Variable>
+  <Variable xsi:type="NoType" Name="м" Goal="false">
+    <IsBackward>false</IsBackward>
+    <Goal>False</Goal>
+    <Comment />
+    <StartValue />
+    <Opredelena>false</Opredelena>
+  </Variable>
+  <Variable xsi:type="NoType" Name="клава" Goal="false">
+    <IsBackward>false</IsBackward>
+    <Goal>False</Goal>
+    <Comment />
+    <StartValue />
+    <Opredelena>false</Opredelena>
+  </Variable>
+  <Variable xsi:type="NoType" Name="к" Goal="false">
+    <IsBackward>false</IsBackward>
+    <Goal>False</Goal>
+    <Comment />
+    <StartValue />
+    <Opredelena>false</Opredelena>
+  </Variable>
+  <Variable xsi:type="NoType" Name="мышь" Goal="false">
+    <IsBackward>false</IsBackward>
+    <Goal>False</Goal>
+    <Comment />
+    <StartValue />
+    <Opredelena>false</Opredelena>
+  </Variable>
+  <Variable xsi:type="NoType" Name="ж" Goal="false">
+    <IsBackward>false</IsBackward>
+    <Goal>False</Goal>
+    <Comment />
+    <StartValue />
+    <Opredelena>false</Opredelena>
+  </Variable>
+  <CommentHtml />
+  <SearchStrategy>Обратный вывод</SearchStrategy>
+</BZ>

@@ -1,0 +1,1421 @@
+<?xml version="1.0"?>
+<BZ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Name="Тест доступа к переменным по именам" Version="1.14" Author="Максим" IsRelease="false" CreateDate="06.01.2016 14:59:30" UpdateDate="06.01.2016 15:40:54">
+  <Comment />
+  <Rule Name="Опрос пользователя">
+    <Act>данные=ВводДанных("Простой тест для школьников",Вопросник)</Act>
+    <Enable>true</Enable>
+    <Priority>50</Priority>
+  </Rule>
+  <Rule Name="Обработка результатов теста">
+    <Condition>данные.ок=TRUE()</Condition>
+    <Act>//инициализация значений</Act>
+    <Act>баллы=0</Act>
+    <Act>верно=0</Act>
+    <Act>i=1</Act>
+    <Act>ответы=ВерныеОтветы</Act>
+    <Act>//цикл по таблице верных ответов для проверки результатов</Act>
+    <Act>ПОКА(i&lt;=КОЛСТР(ответы))</Act>
+    <Act>верно=верно+ЕСЛИ(ЗНАЧЕНИЕ("данные.ответ"+i)=ЭЛЕМТАБ(ответы,i,1),1,0)</Act>
+    <Act>баллы=баллы+ЕСЛИ(ЗНАЧЕНИЕ("данные.ответ"+i)=ЭЛЕМТАБ(ответы,i,1),ЭЛЕМТАБ(ответы,i,2),0)</Act>
+    <Act>i=i+1</Act>
+    <Act>ВЫХОД</Act>
+    <Enable>true</Enable>
+    <Priority>50</Priority>
+  </Rule>
+  <Rule Name="Вывод результата">
+    <Condition>//т.к. в правиле нет никаких использвоаний переменных, то явно указываем, что должно быть найдено (работает только для прямого вывода!)</Condition>
+    <Condition>ОПРЕДЕЛЕНА("баллы")</Condition>
+    <Condition>ОПРЕДЕЛЕНА("верно")</Condition>
+    <Act>док=ДОКУМЕНТ(Результат)</Act>
+    <Enable>true</Enable>
+    <Priority>50</Priority>
+  </Rule>
+  <Rule Name="Выход из теста">
+    <Condition>данные.отмена=TRUE()</Condition>
+    <Act>ВЫВОД("Вы отказались от прохождения теста")</Act>
+    <Act>док=""</Act>
+    <Enable>true</Enable>
+    <Priority>50</Priority>
+  </Rule>
+  <Variable xsi:type="NoType" Name="данные" Goal="false">
+    <IsBackward>false</IsBackward>
+    <Goal>False</Goal>
+    <Comment />
+    <StartValue />
+    <Opredelena>false</Opredelena>
+  </Variable>
+  <Variable xsi:type="NoType" Name="док" Goal="true">
+    <IsBackward>false</IsBackward>
+    <Goal>True</Goal>
+    <Comment />
+    <StartValue />
+    <Opredelena>false</Opredelena>
+  </Variable>
+  <Variable xsi:type="NoType" Name="баллы" Goal="false">
+    <IsBackward>false</IsBackward>
+    <Goal>False</Goal>
+    <Comment />
+    <StartValue />
+    <Opredelena>false</Opredelena>
+  </Variable>
+  <Variable xsi:type="NoType" Name="верно" Goal="false">
+    <IsBackward>false</IsBackward>
+    <Goal>False</Goal>
+    <Comment />
+    <StartValue />
+    <Opredelena>false</Opredelena>
+  </Variable>
+  <Variable xsi:type="NoType" Name="i" Goal="false">
+    <IsBackward>false</IsBackward>
+    <Goal>False</Goal>
+    <Comment />
+    <StartValue />
+    <Opredelena>false</Opredelena>
+  </Variable>
+  <Variable xsi:type="NoType" Name="ответы" Goal="false">
+    <IsBackward>false</IsBackward>
+    <Goal>False</Goal>
+    <Comment />
+    <StartValue />
+    <Opredelena>false</Opredelena>
+  </Variable>
+  <CommentHtml />
+  <SearchStrategy>Прямой вывод</SearchStrategy>
+  <Group>
+    <Name>Новые БЗ</Name>
+    <Reference>gl:Новые БЗ</Reference>
+    <UserElement>true</UserElement>
+    <Elements>
+      <ElementInfo xsi:type="KNBModuleInfo">
+        <Name>test</Name>
+        <Reference>gl:Новые БЗ:test</Reference>
+        <UserElement>true</UserElement>
+        <Folder>67e57ef4-ca13-4ec8-b8fb-15deea56d104</Folder>
+        <Crypt>false</Crypt>
+        <ContentBase>
+          <Base>
+            <Name>test</Name>
+            <FromPath>C:\Users\MATRIX\Documents\ExPRO 3\GlobalStorage\67e57ef4-ca13-4ec8-b8fb-15deea56d104\test</FromPath>
+          </Base>
+          <Help>
+            <Name>help.html</Name>
+            <FromPath>C:\Users\MATRIX\Documents\ExPRO 3\GlobalStorage\67e57ef4-ca13-4ec8-b8fb-15deea56d104\help.html</FromPath>
+          </Help>
+          <Content />
+        </ContentBase>
+      </ElementInfo>
+      <ElementInfo xsi:type="KNBModuleInfo">
+        <Name>w</Name>
+        <Reference>gl:Новые БЗ:w</Reference>
+        <UserElement>true</UserElement>
+        <Folder>23f1f2c4-580b-4e55-95de-fa96a83f6f93</Folder>
+        <Crypt>false</Crypt>
+        <ContentBase>
+          <Base>
+            <Name>w</Name>
+            <FromPath>C:\Users\MATRIX\Documents\ExPRO 3\GlobalStorage\23f1f2c4-580b-4e55-95de-fa96a83f6f93\w</FromPath>
+          </Base>
+          <Help>
+            <Name>help.html</Name>
+            <FromPath>C:\Users\MATRIX\Documents\ExPRO 3\GlobalStorage\23f1f2c4-580b-4e55-95de-fa96a83f6f93\help.html</FromPath>
+          </Help>
+          <Content />
+        </ContentBase>
+      </ElementInfo>
+      <ElementInfo xsi:type="KNBModuleInfo">
+        <Name>test</Name>
+        <Reference>gl:Новые БЗ:test</Reference>
+        <UserElement>true</UserElement>
+        <Folder>eecb5823-3858-48ee-a2a3-799e9cdbc207</Folder>
+        <Crypt>false</Crypt>
+        <ContentBase>
+          <Base>
+            <Name>test</Name>
+            <FromPath>C:\Users\MATRIX\Documents\ExPRO 3\GlobalStorage\eecb5823-3858-48ee-a2a3-799e9cdbc207\test</FromPath>
+          </Base>
+          <Help>
+            <Name>help.html</Name>
+            <FromPath>C:\Users\MATRIX\Documents\ExPRO 3\GlobalStorage\eecb5823-3858-48ee-a2a3-799e9cdbc207\help.html</FromPath>
+          </Help>
+          <Content />
+        </ContentBase>
+      </ElementInfo>
+      <ElementInfo xsi:type="KNBModuleInfo">
+        <Name>test</Name>
+        <Reference>gl:Новые БЗ:test</Reference>
+        <UserElement>true</UserElement>
+        <Folder>4daef272-b484-4938-99b7-46c303e8323f</Folder>
+        <Crypt>false</Crypt>
+        <ContentBase>
+          <Base>
+            <Name>test</Name>
+            <FromPath>C:\Users\MATRIX\Documents\ExPRO 3\GlobalStorage\4daef272-b484-4938-99b7-46c303e8323f\test</FromPath>
+          </Base>
+          <Help>
+            <Name>help.html</Name>
+            <FromPath>C:\Users\MATRIX\Documents\ExPRO 3\GlobalStorage\4daef272-b484-4938-99b7-46c303e8323f\help.html</FromPath>
+          </Help>
+          <Content />
+        </ContentBase>
+      </ElementInfo>
+      <ElementInfo xsi:type="KNBModuleInfo">
+        <Name>intersection</Name>
+        <Reference>gl:Новые БЗ:intersection</Reference>
+        <UserElement>true</UserElement>
+        <Folder>0a0690e0-5be0-4e63-8fa6-14c71bd1a17e</Folder>
+        <Crypt>false</Crypt>
+        <ContentBase>
+          <Base>
+            <Name>intersection</Name>
+            <FromPath>C:\Users\MATRIX\Documents\ExPRO 3\GlobalStorage\0a0690e0-5be0-4e63-8fa6-14c71bd1a17e\intersection</FromPath>
+          </Base>
+          <Help>
+            <Name>help.html</Name>
+            <FromPath>C:\Users\MATRIX\Documents\ExPRO 3\GlobalStorage\0a0690e0-5be0-4e63-8fa6-14c71bd1a17e\help.html</FromPath>
+          </Help>
+          <Content />
+        </ContentBase>
+      </ElementInfo>
+      <ElementInfo xsi:type="KNBModuleInfo">
+        <Name>intersection</Name>
+        <Reference>gl:Новые БЗ:intersection</Reference>
+        <UserElement>true</UserElement>
+        <Folder>f9423fa3-8fc5-4fca-8167-89affaebd729</Folder>
+        <Crypt>false</Crypt>
+        <ContentBase>
+          <Base>
+            <Name>intersection</Name>
+            <FromPath>C:\Users\MATRIX\Documents\ExPRO 3\GlobalStorage\f9423fa3-8fc5-4fca-8167-89affaebd729\intersection</FromPath>
+          </Base>
+          <Help>
+            <Name>help.html</Name>
+            <FromPath>C:\Users\MATRIX\Documents\ExPRO 3\GlobalStorage\f9423fa3-8fc5-4fca-8167-89affaebd729\help.html</FromPath>
+          </Help>
+          <Content />
+        </ContentBase>
+      </ElementInfo>
+      <ElementInfo xsi:type="KNBModuleInfo">
+        <Name>testFucts</Name>
+        <Reference>gl:Новые БЗ:testFucts</Reference>
+        <UserElement>true</UserElement>
+        <Folder>21a407e0-92ea-485d-ac83-d46f4afda429</Folder>
+        <Crypt>false</Crypt>
+        <ContentBase>
+          <Base>
+            <Name>testFucts</Name>
+            <FromPath>C:\Users\MATRIX\Documents\ExPRO 3\GlobalStorage\21a407e0-92ea-485d-ac83-d46f4afda429\testFucts</FromPath>
+          </Base>
+          <Help>
+            <Name>help.html</Name>
+            <FromPath>C:\Users\MATRIX\Documents\ExPRO 3\GlobalStorage\21a407e0-92ea-485d-ac83-d46f4afda429\help.html</FromPath>
+          </Help>
+          <Content />
+        </ContentBase>
+      </ElementInfo>
+      <ElementInfo xsi:type="KNBModuleInfo">
+        <Name>Визуализация работ с помощью диаграммы ганта</Name>
+        <Reference>gl:Новые БЗ:Визуализация работ с помощью диаграммы ганта</Reference>
+        <UserElement>true</UserElement>
+        <Folder>8f1e1dac-975b-4bb8-b836-3012669a748e</Folder>
+        <Crypt>false</Crypt>
+        <ContentBase>
+          <Base>
+            <Name>Визуализация работ с помощью диаграммы ганта</Name>
+            <FromPath>C:\Users\MATRIX\Documents\ExPRO 3\GlobalStorage\8f1e1dac-975b-4bb8-b836-3012669a748e\Визуализация работ с помощью диаграммы ганта</FromPath>
+          </Base>
+          <Help>
+            <Name>help.html</Name>
+            <FromPath>C:\Users\MATRIX\Documents\ExPRO 3\GlobalStorage\8f1e1dac-975b-4bb8-b836-3012669a748e\help.html</FromPath>
+          </Help>
+          <Content />
+        </ContentBase>
+      </ElementInfo>
+      <ElementInfo xsi:type="KNBModuleInfo">
+        <Name>Операктивно-календарное планирование</Name>
+        <Reference>gl:Новые БЗ:Операктивно-календарное планирование</Reference>
+        <UserElement>true</UserElement>
+        <Folder>40cf1ae8-3f17-44d8-a2da-8bac7a605439</Folder>
+        <Crypt>false</Crypt>
+        <ContentBase>
+          <Base>
+            <Name>Операктивно-календарное планирование</Name>
+            <FromPath>C:\Users\MATRIX\Documents\ExPRO 3\GlobalStorage\40cf1ae8-3f17-44d8-a2da-8bac7a605439\Операктивно-календарное планирование</FromPath>
+          </Base>
+          <Help>
+            <Name>help.html</Name>
+            <FromPath>C:\Users\MATRIX\Documents\ExPRO 3\GlobalStorage\40cf1ae8-3f17-44d8-a2da-8bac7a605439\help.html</FromPath>
+          </Help>
+          <Content />
+        </ContentBase>
+      </ElementInfo>
+      <ElementInfo xsi:type="KNBModuleInfo">
+        <Name>Маршрутная карта</Name>
+        <Reference>gl:Новые БЗ:Маршрутная карта</Reference>
+        <UserElement>true</UserElement>
+        <Folder>1a26643c-2c1f-4b09-9bcd-dc703ac93bbf</Folder>
+        <Crypt>false</Crypt>
+        <ContentBase>
+          <Base>
+            <Name>Маршрутная карта</Name>
+            <FromPath>C:\Users\MATRIX\Documents\ExPRO 3\GlobalStorage\1a26643c-2c1f-4b09-9bcd-dc703ac93bbf\Маршрутная карта</FromPath>
+          </Base>
+          <Help>
+            <Name>help.html</Name>
+            <FromPath>C:\Users\MATRIX\Documents\ExPRO 3\GlobalStorage\1a26643c-2c1f-4b09-9bcd-dc703ac93bbf\help.html</FromPath>
+          </Help>
+          <Content />
+        </ContentBase>
+      </ElementInfo>
+      <ElementInfo xsi:type="KNBModuleInfo">
+        <Name>Площадь пересечения</Name>
+        <Reference>gl:Новые БЗ:Площадь пересечения</Reference>
+        <UserElement>true</UserElement>
+        <Folder>4422703e-d304-4231-94ec-dfff9d1839d4</Folder>
+        <Crypt>false</Crypt>
+        <ContentBase>
+          <Base>
+            <Name>Площадь пересечения</Name>
+            <FromPath>C:\Users\MATRIX\Documents\ExPRO 3\GlobalStorage\4422703e-d304-4231-94ec-dfff9d1839d4\Площадь пересечения</FromPath>
+          </Base>
+          <Help>
+            <Name>help.html</Name>
+            <FromPath>C:\Users\MATRIX\Documents\ExPRO 3\GlobalStorage\4422703e-d304-4231-94ec-dfff9d1839d4\help.html</FromPath>
+          </Help>
+          <Content />
+        </ContentBase>
+      </ElementInfo>
+      <ElementInfo xsi:type="KNBModuleInfo">
+        <Name>Расчет площади пересечения прямоугольников</Name>
+        <Reference>gl:Новые БЗ:Расчет площади пересечения прямоугольников</Reference>
+        <UserElement>true</UserElement>
+        <Folder>a72109b4-0b47-485a-aea1-e21c9ace1366</Folder>
+        <Crypt>false</Crypt>
+        <ContentBase>
+          <Base>
+            <Name>Расчет площади пересечения прямоугольников</Name>
+            <FromPath>C:\Users\MATRIX\Documents\ExPRO 3\GlobalStorage\a72109b4-0b47-485a-aea1-e21c9ace1366\Расчет площади пересечения прямоугольников</FromPath>
+          </Base>
+          <Help>
+            <Name>help.html</Name>
+            <FromPath>C:\Users\MATRIX\Documents\ExPRO 3\GlobalStorage\a72109b4-0b47-485a-aea1-e21c9ace1366\help.html</FromPath>
+          </Help>
+          <Content />
+        </ContentBase>
+      </ElementInfo>
+      <ElementInfo xsi:type="KNBModuleInfo">
+        <Name>тестирование пересечения прямоугольников</Name>
+        <Reference>gl:Новые БЗ:тестирование пересечения прямоугольников</Reference>
+        <UserElement>true</UserElement>
+        <Folder>0af65a00-15db-475f-b9ef-99525436050a</Folder>
+        <Crypt>false</Crypt>
+        <ContentBase>
+          <Base>
+            <Name>тестирование пересечения прямоугольников</Name>
+            <FromPath>C:\Users\MATRIX\Documents\ExPRO 3\GlobalStorage\0af65a00-15db-475f-b9ef-99525436050a\тестирование пересечения прямоугольников</FromPath>
+          </Base>
+          <Help>
+            <Name>help.html</Name>
+            <FromPath>C:\Users\MATRIX\Documents\ExPRO 3\GlobalStorage\0af65a00-15db-475f-b9ef-99525436050a\help.html</FromPath>
+          </Help>
+          <Content />
+        </ContentBase>
+      </ElementInfo>
+      <ElementInfo xsi:type="KNBModuleInfo">
+        <Name>Определение квалитета</Name>
+        <Reference>gl:Новые БЗ:Определение квалитета</Reference>
+        <UserElement>true</UserElement>
+        <Folder>df15beb2-3589-4894-9fcc-6da2fe832fab</Folder>
+        <Crypt>false</Crypt>
+        <ContentBase>
+          <Base>
+            <Name>Определение квалитета</Name>
+            <FromPath>C:\Users\MATRIX\Documents\ExPRO 3\GlobalStorage\df15beb2-3589-4894-9fcc-6da2fe832fab\Определение квалитета</FromPath>
+          </Base>
+          <Help>
+            <Name>help.html</Name>
+            <FromPath>C:\Users\MATRIX\Documents\ExPRO 3\GlobalStorage\df15beb2-3589-4894-9fcc-6da2fe832fab\help.html</FromPath>
+          </Help>
+          <Content />
+        </ContentBase>
+      </ElementInfo>
+      <ElementInfo xsi:type="KNBModuleInfo">
+        <Name>test</Name>
+        <Reference>gl:Новые БЗ:test</Reference>
+        <UserElement>true</UserElement>
+        <Folder>27b2586d-0730-47ed-a0f2-9e8f7785558d</Folder>
+        <Crypt>false</Crypt>
+        <ContentBase>
+          <Base>
+            <Name>test</Name>
+            <FromPath>C:\Users\MATRIX\Documents\ExPRO 3\GlobalStorage\27b2586d-0730-47ed-a0f2-9e8f7785558d\test</FromPath>
+          </Base>
+          <Help>
+            <Name>help.html</Name>
+            <FromPath>C:\Users\MATRIX\Documents\ExPRO 3\GlobalStorage\27b2586d-0730-47ed-a0f2-9e8f7785558d\help.html</FromPath>
+          </Help>
+          <Content />
+        </ContentBase>
+      </ElementInfo>
+      <ElementInfo xsi:type="KNBModuleInfo">
+        <Name>еуые</Name>
+        <Reference>gl:Новые БЗ:еуые</Reference>
+        <UserElement>true</UserElement>
+        <Folder>fe094f3f-ded1-43cb-871e-d23ff28d676f</Folder>
+        <Crypt>false</Crypt>
+        <ContentBase>
+          <Base>
+            <Name>еуые</Name>
+            <FromPath>C:\Users\MATRIX\Documents\ExPRO 3\GlobalStorage\fe094f3f-ded1-43cb-871e-d23ff28d676f\еуые</FromPath>
+          </Base>
+          <Help>
+            <Name>help.html</Name>
+            <FromPath>C:\Users\MATRIX\Documents\ExPRO 3\GlobalStorage\fe094f3f-ded1-43cb-871e-d23ff28d676f\help.html</FromPath>
+          </Help>
+          <Content />
+        </ContentBase>
+      </ElementInfo>
+      <ElementInfo xsi:type="KNBModuleInfo">
+        <Name>test</Name>
+        <Reference>gl:Новые БЗ:test</Reference>
+        <UserElement>true</UserElement>
+        <Folder>6a696101-1f22-4be8-b23e-65f7861ee465</Folder>
+        <Crypt>false</Crypt>
+        <ContentBase>
+          <Base>
+            <Name>test</Name>
+            <FromPath>C:\Users\MATRIX\Documents\ExPRO 3\GlobalStorage\6a696101-1f22-4be8-b23e-65f7861ee465\test</FromPath>
+          </Base>
+          <Help>
+            <Name>help.html</Name>
+            <FromPath>C:\Users\MATRIX\Documents\ExPRO 3\GlobalStorage\6a696101-1f22-4be8-b23e-65f7861ee465\help.html</FromPath>
+          </Help>
+          <Content />
+        </ContentBase>
+      </ElementInfo>
+      <ElementInfo xsi:type="KNBModuleInfo">
+        <Name>Решение СЛАУ</Name>
+        <Reference>gl:Новые БЗ:Решение СЛАУ</Reference>
+        <UserElement>true</UserElement>
+        <Folder>929b27c8-fa53-4f9c-84ed-f31a11ea007b</Folder>
+        <Crypt>false</Crypt>
+        <ContentBase>
+          <Base>
+            <Name>Решение СЛАУ</Name>
+            <FromPath>C:\Users\MATRIX\Documents\ExPRO 3\GlobalStorage\929b27c8-fa53-4f9c-84ed-f31a11ea007b\Решение СЛАУ</FromPath>
+          </Base>
+          <Help>
+            <Name>help.html</Name>
+            <FromPath>C:\Users\MATRIX\Documents\ExPRO 3\GlobalStorage\929b27c8-fa53-4f9c-84ed-f31a11ea007b\help.html</FromPath>
+          </Help>
+          <Content />
+        </ContentBase>
+      </ElementInfo>
+      <ElementInfo xsi:type="KNBModuleInfo">
+        <Name>test</Name>
+        <Reference>gl:Новые БЗ:test</Reference>
+        <UserElement>true</UserElement>
+        <Folder>a215f668-b0d6-440e-aa20-9b39f4764b5e</Folder>
+        <Crypt>false</Crypt>
+        <ContentBase>
+          <Base>
+            <Name>test</Name>
+            <FromPath>C:\Users\MATRIX\Documents\ExPRO 3\GlobalStorage\a215f668-b0d6-440e-aa20-9b39f4764b5e\test</FromPath>
+          </Base>
+          <Help>
+            <Name>help.html</Name>
+            <FromPath>C:\Users\MATRIX\Documents\ExPRO 3\GlobalStorage\a215f668-b0d6-440e-aa20-9b39f4764b5e\help.html</FromPath>
+          </Help>
+          <Content />
+        </ContentBase>
+      </ElementInfo>
+      <ElementInfo xsi:type="KNBModuleInfo">
+        <Name>Тест документа</Name>
+        <Reference>gl:Новые БЗ:Тест документа</Reference>
+        <UserElement>true</UserElement>
+        <Folder>e9079965-c986-48a8-944e-b29a9ff0ae08</Folder>
+        <Crypt>false</Crypt>
+        <ContentBase>
+          <Base>
+            <Name>Тест документа</Name>
+            <FromPath>C:\Users\MATRIX\Documents\ExPRO 3\GlobalStorage\e9079965-c986-48a8-944e-b29a9ff0ae08\Тест документа</FromPath>
+          </Base>
+          <Help>
+            <Name>help.html</Name>
+            <FromPath>C:\Users\MATRIX\Documents\ExPRO 3\GlobalStorage\e9079965-c986-48a8-944e-b29a9ff0ae08\help.html</FromPath>
+          </Help>
+          <Content />
+        </ContentBase>
+      </ElementInfo>
+      <ElementInfo xsi:type="KNBModuleInfo">
+        <Name>Расчет площади плоской фигуры</Name>
+        <Reference>gl:Новые БЗ:Расчет площади плоской фигуры</Reference>
+        <UserElement>true</UserElement>
+        <Folder>b06cb6b8-e673-4c73-b0d0-772d6b0b61cd</Folder>
+        <Crypt>false</Crypt>
+        <ContentBase>
+          <Base>
+            <Name>Расчет площади плоской фигуры</Name>
+            <FromPath>C:\Users\MATRIX\Documents\ExPRO 3\GlobalStorage\b06cb6b8-e673-4c73-b0d0-772d6b0b61cd\Расчет площади плоской фигуры</FromPath>
+          </Base>
+          <Help>
+            <Name>help.html</Name>
+            <FromPath>C:\Users\MATRIX\Documents\ExPRO 3\GlobalStorage\b06cb6b8-e673-4c73-b0d0-772d6b0b61cd\help.html</FromPath>
+          </Help>
+          <Content />
+        </ContentBase>
+      </ElementInfo>
+      <ElementInfo xsi:type="KNBModuleInfo">
+        <Name>Отображение составной фигуры</Name>
+        <Reference>gl:Новые БЗ:Отображение составной фигуры</Reference>
+        <UserElement>true</UserElement>
+        <Folder>39f9d9cf-7cdf-4073-8df0-3ca0caa37409</Folder>
+        <Crypt>false</Crypt>
+        <ContentBase>
+          <Base>
+            <Name>Отображение составной фигуры</Name>
+            <FromPath>C:\Users\MATRIX\Documents\ExPRO 3\GlobalStorage\39f9d9cf-7cdf-4073-8df0-3ca0caa37409\Отображение составной фигуры</FromPath>
+          </Base>
+          <Help>
+            <Name>help.html</Name>
+            <FromPath>C:\Users\MATRIX\Documents\ExPRO 3\GlobalStorage\39f9d9cf-7cdf-4073-8df0-3ca0caa37409\help.html</FromPath>
+          </Help>
+          <Content />
+        </ContentBase>
+      </ElementInfo>
+      <ElementInfo xsi:type="KNBModuleInfo">
+        <Name>Тест шаблонов</Name>
+        <Reference>gl:Новые БЗ:Тест шаблонов</Reference>
+        <UserElement>true</UserElement>
+        <Folder>266a477c-2434-45d0-81b5-266e3cfd4224</Folder>
+        <Crypt>false</Crypt>
+        <ContentBase>
+          <Base>
+            <Name>Тест шаблонов</Name>
+            <FromPath>C:\Users\MATRIX\Documents\ExPRO 3\GlobalStorage\266a477c-2434-45d0-81b5-266e3cfd4224\Тест шаблонов</FromPath>
+          </Base>
+          <Help>
+            <Name>help.html</Name>
+            <FromPath>C:\Users\MATRIX\Documents\ExPRO 3\GlobalStorage\266a477c-2434-45d0-81b5-266e3cfd4224\help.html</FromPath>
+          </Help>
+          <Content />
+        </ContentBase>
+      </ElementInfo>
+      <ElementInfo xsi:type="KNBModuleInfo">
+        <Name>тест-цикла</Name>
+        <Reference>gl:Новые БЗ:тест-цикла</Reference>
+        <UserElement>true</UserElement>
+        <Folder>cbe5fa08-473c-442b-b478-5ac524deb2a2</Folder>
+        <Crypt>false</Crypt>
+        <ContentBase>
+          <Base>
+            <Name>тест-цикла</Name>
+            <FromPath>C:\Users\MATRIX\Documents\ExPRO 3\GlobalStorage\cbe5fa08-473c-442b-b478-5ac524deb2a2\тест-цикла</FromPath>
+          </Base>
+          <Help>
+            <Name>help.html</Name>
+            <FromPath>C:\Users\MATRIX\Documents\ExPRO 3\GlobalStorage\cbe5fa08-473c-442b-b478-5ac524deb2a2\help.html</FromPath>
+          </Help>
+          <Content />
+        </ContentBase>
+      </ElementInfo>
+      <ElementInfo xsi:type="KNBModuleInfo">
+        <Name>test</Name>
+        <Reference>gl:Новые БЗ:test</Reference>
+        <UserElement>true</UserElement>
+        <Folder>3af89db4-5e23-4e3f-9b33-4f255b8652d2</Folder>
+        <Crypt>false</Crypt>
+        <ContentBase>
+          <Base>
+            <Name>test</Name>
+            <FromPath>C:\Users\MATRIX\Documents\ExPRO 3\GlobalStorage\3af89db4-5e23-4e3f-9b33-4f255b8652d2\test</FromPath>
+          </Base>
+          <Help>
+            <Name>help.html</Name>
+            <FromPath>C:\Users\MATRIX\Documents\ExPRO 3\GlobalStorage\3af89db4-5e23-4e3f-9b33-4f255b8652d2\help.html</FromPath>
+          </Help>
+          <Content />
+        </ContentBase>
+      </ElementInfo>
+      <ElementInfo xsi:type="KNBModuleInfo">
+        <Name>Расчет цепи резисторов</Name>
+        <Reference>gl:Новые БЗ:Расчет цепи резисторов</Reference>
+        <UserElement>true</UserElement>
+        <Folder>b4f1c790-ca7e-4947-8974-4ad114a19d79</Folder>
+        <Crypt>false</Crypt>
+        <ContentBase>
+          <Base>
+            <Name>Расчет цепи резисторов</Name>
+            <FromPath>C:\Users\MATRIX\Documents\ExPRO 3\GlobalStorage\b4f1c790-ca7e-4947-8974-4ad114a19d79\Расчет цепи резисторов</FromPath>
+          </Base>
+          <Help>
+            <Name>help.html</Name>
+            <FromPath>C:\Users\MATRIX\Documents\ExPRO 3\GlobalStorage\b4f1c790-ca7e-4947-8974-4ad114a19d79\help.html</FromPath>
+          </Help>
+          <Content />
+        </ContentBase>
+      </ElementInfo>
+      <ElementInfo xsi:type="KNBModuleInfo">
+        <Name>Возведение элентов таблицы в квадрат двумя способами</Name>
+        <Reference>gl:Новые БЗ:Возведение элентов таблицы в квадрат двумя способами</Reference>
+        <UserElement>true</UserElement>
+        <Folder>78357104-bdbf-4e93-b915-f6ec6b77a404</Folder>
+        <Crypt>false</Crypt>
+        <ContentBase>
+          <Base>
+            <Name>Возведение элентов таблицы в квадрат двумя способами</Name>
+            <FromPath>C:\Users\MATRIX\Documents\ExPRO 3\GlobalStorage\78357104-bdbf-4e93-b915-f6ec6b77a404\Возведение элентов таблицы в квадрат двумя способами</FromPath>
+          </Base>
+          <Help>
+            <Name>help.html</Name>
+            <FromPath>C:\Users\MATRIX\Documents\ExPRO 3\GlobalStorage\78357104-bdbf-4e93-b915-f6ec6b77a404\help.html</FromPath>
+          </Help>
+          <Content />
+        </ContentBase>
+      </ElementInfo>
+      <ElementInfo xsi:type="KNBModuleInfo">
+        <Name>Модель парикмахерской</Name>
+        <Reference>gl:Новые БЗ:Модель парикмахерской</Reference>
+        <UserElement>true</UserElement>
+        <Folder>3845c033-d156-4589-ac18-d5fc761c61ce</Folder>
+        <Crypt>false</Crypt>
+        <ContentBase>
+          <Base>
+            <Name>Модель парикмахерской</Name>
+            <FromPath>C:\Users\MATRIX\Documents\ExPRO 3\GlobalStorage\3845c033-d156-4589-ac18-d5fc761c61ce\Модель парикмахерской</FromPath>
+          </Base>
+          <Help>
+            <Name>help.html</Name>
+            <FromPath>C:\Users\MATRIX\Documents\ExPRO 3\GlobalStorage\3845c033-d156-4589-ac18-d5fc761c61ce\help.html</FromPath>
+          </Help>
+          <Content />
+        </ContentBase>
+      </ElementInfo>
+      <ElementInfo xsi:type="KNBModuleInfo">
+        <Name>Генератор транзактов</Name>
+        <Reference>gl:Новые БЗ:Генератор транзактов</Reference>
+        <UserElement>true</UserElement>
+        <Folder>4b05d289-acd2-4194-a7e1-ec3c222a7d17</Folder>
+        <Crypt>false</Crypt>
+        <ContentBase>
+          <Base>
+            <Name>Генератор транзактов</Name>
+            <FromPath>C:\Users\MATRIX\Documents\ExPRO 3\GlobalStorage\4b05d289-acd2-4194-a7e1-ec3c222a7d17\Генератор транзактов</FromPath>
+          </Base>
+          <Help>
+            <Name>help.html</Name>
+            <FromPath>C:\Users\MATRIX\Documents\ExPRO 3\GlobalStorage\4b05d289-acd2-4194-a7e1-ec3c222a7d17\help.html</FromPath>
+          </Help>
+          <Content />
+        </ContentBase>
+      </ElementInfo>
+      <ElementInfo xsi:type="KNBModuleInfo">
+        <Name>Очередь</Name>
+        <Reference>gl:Новые БЗ:Очередь</Reference>
+        <UserElement>true</UserElement>
+        <Folder>6b115915-944a-4e99-8386-73bb2c5b7ee0</Folder>
+        <Crypt>false</Crypt>
+        <ContentBase>
+          <Base>
+            <Name>Очередь</Name>
+            <FromPath>C:\Users\MATRIX\Documents\ExPRO 3\GlobalStorage\6b115915-944a-4e99-8386-73bb2c5b7ee0\Очередь</FromPath>
+          </Base>
+          <Help>
+            <Name>help.html</Name>
+            <FromPath>C:\Users\MATRIX\Documents\ExPRO 3\GlobalStorage\6b115915-944a-4e99-8386-73bb2c5b7ee0\help.html</FromPath>
+          </Help>
+          <Content />
+        </ContentBase>
+      </ElementInfo>
+      <ElementInfo xsi:type="KNBModuleInfo">
+        <Name>Обсулживание</Name>
+        <Reference>gl:Новые БЗ:Обсулживание</Reference>
+        <UserElement>true</UserElement>
+        <Folder>e8526c94-0478-42eb-9f1d-4adf8401275d</Folder>
+        <Crypt>false</Crypt>
+        <ContentBase>
+          <Base>
+            <Name>Обсулживание</Name>
+            <FromPath>C:\Users\MATRIX\Documents\ExPRO 3\GlobalStorage\e8526c94-0478-42eb-9f1d-4adf8401275d\Обсулживание</FromPath>
+          </Base>
+          <Help>
+            <Name>help.html</Name>
+            <FromPath>C:\Users\MATRIX\Documents\ExPRO 3\GlobalStorage\e8526c94-0478-42eb-9f1d-4adf8401275d\help.html</FromPath>
+          </Help>
+          <Content />
+        </ContentBase>
+      </ElementInfo>
+      <ElementInfo xsi:type="KNBModuleInfo">
+        <Name>Выход</Name>
+        <Reference>gl:Новые БЗ:Выход</Reference>
+        <UserElement>true</UserElement>
+        <Folder>70174c9f-279f-4c4b-8d48-936aeb7404b3</Folder>
+        <Crypt>false</Crypt>
+        <ContentBase>
+          <Base>
+            <Name>Выход</Name>
+            <FromPath>C:\Users\MATRIX\Documents\ExPRO 3\GlobalStorage\70174c9f-279f-4c4b-8d48-936aeb7404b3\Выход</FromPath>
+          </Base>
+          <Help>
+            <Name>help.html</Name>
+            <FromPath>C:\Users\MATRIX\Documents\ExPRO 3\GlobalStorage\70174c9f-279f-4c4b-8d48-936aeb7404b3\help.html</FromPath>
+          </Help>
+          <Content />
+        </ContentBase>
+      </ElementInfo>
+      <ElementInfo xsi:type="KNBModuleInfo">
+        <Name>ew</Name>
+        <Reference>gl:Новые БЗ:ew</Reference>
+        <UserElement>true</UserElement>
+        <Folder>0afaff0a-0c87-4540-992f-40c00b9376c4</Folder>
+        <Crypt>false</Crypt>
+        <ContentBase>
+          <Base>
+            <Name>ew</Name>
+            <FromPath>C:\Users\MATRIX\Documents\ExPRO 3\GlobalStorage\0afaff0a-0c87-4540-992f-40c00b9376c4\ew</FromPath>
+          </Base>
+          <Help>
+            <Name>help.html</Name>
+            <FromPath>C:\Users\MATRIX\Documents\ExPRO 3\GlobalStorage\0afaff0a-0c87-4540-992f-40c00b9376c4\help.html</FromPath>
+          </Help>
+          <Content />
+        </ContentBase>
+      </ElementInfo>
+      <ElementInfo xsi:type="KNBModuleInfo">
+        <Name>ew</Name>
+        <Reference>gl:Новые БЗ:ew</Reference>
+        <UserElement>true</UserElement>
+        <Folder>b8931de7-6638-4929-ba86-c7ae78b89391</Folder>
+        <Crypt>false</Crypt>
+        <ContentBase>
+          <Base>
+            <Name>ew</Name>
+            <FromPath>C:\Users\MATRIX\Documents\ExPRO 3\GlobalStorage\b8931de7-6638-4929-ba86-c7ae78b89391\ew</FromPath>
+          </Base>
+          <Help>
+            <Name>help.html</Name>
+            <FromPath>C:\Users\MATRIX\Documents\ExPRO 3\GlobalStorage\b8931de7-6638-4929-ba86-c7ae78b89391\help.html</FromPath>
+          </Help>
+          <Content />
+        </ContentBase>
+      </ElementInfo>
+      <ElementInfo xsi:type="KNBModuleInfo">
+        <Name>111</Name>
+        <Reference>gl:Новые БЗ:111</Reference>
+        <UserElement>true</UserElement>
+        <Folder>d30d11bf-36e2-4819-a183-aa16a46a6256</Folder>
+        <Crypt>false</Crypt>
+        <ContentBase>
+          <Base>
+            <Name>111</Name>
+            <FromPath>C:\Users\MATRIX\Documents\ExPRO 3\GlobalStorage\d30d11bf-36e2-4819-a183-aa16a46a6256\111</FromPath>
+          </Base>
+          <Help>
+            <Name>help.html</Name>
+            <FromPath>C:\Users\MATRIX\Documents\ExPRO 3\GlobalStorage\d30d11bf-36e2-4819-a183-aa16a46a6256\help.html</FromPath>
+          </Help>
+          <Content />
+        </ContentBase>
+      </ElementInfo>
+      <ElementInfo xsi:type="KNBModuleInfo">
+        <Name>ТестИнтернетЗапроса</Name>
+        <Reference>gl:Новые БЗ:ТестИнтернетЗапроса</Reference>
+        <UserElement>true</UserElement>
+        <Folder>35c2d92e-6c6b-447e-90df-87104d00a1bc</Folder>
+        <Crypt>false</Crypt>
+        <ContentBase>
+          <Base>
+            <Name>ТестИнтернетЗапроса</Name>
+            <FromPath>C:\Users\MATRIX\Documents\ExPRO 3\GlobalStorage\35c2d92e-6c6b-447e-90df-87104d00a1bc\ТестИнтернетЗапроса</FromPath>
+          </Base>
+          <Help>
+            <Name>help.html</Name>
+            <FromPath>C:\Users\MATRIX\Documents\ExPRO 3\GlobalStorage\35c2d92e-6c6b-447e-90df-87104d00a1bc\help.html</FromPath>
+          </Help>
+          <Content />
+        </ContentBase>
+      </ElementInfo>
+      <ElementInfo xsi:type="KNBModuleInfo">
+        <Name>testЗапись</Name>
+        <Reference>gl:Новые БЗ:testЗапись</Reference>
+        <UserElement>true</UserElement>
+        <Folder>41d329cf-c23d-4a98-b2a5-7faaed0d5123</Folder>
+        <Crypt>false</Crypt>
+        <ContentBase>
+          <Base>
+            <Name>testЗапись</Name>
+            <FromPath>C:\Users\MATRIX\Documents\ExPRO 3\GlobalStorage\41d329cf-c23d-4a98-b2a5-7faaed0d5123\testЗапись</FromPath>
+          </Base>
+          <Help>
+            <Name>help.html</Name>
+            <FromPath>C:\Users\MATRIX\Documents\ExPRO 3\GlobalStorage\41d329cf-c23d-4a98-b2a5-7faaed0d5123\help.html</FromPath>
+          </Help>
+          <Content />
+        </ContentBase>
+      </ElementInfo>
+      <ElementInfo xsi:type="KNBModuleInfo">
+        <Name>111</Name>
+        <Reference>gl:Новые БЗ:111</Reference>
+        <UserElement>true</UserElement>
+        <Folder>b749b63b-1459-4947-976b-de00a0da11aa</Folder>
+        <Crypt>false</Crypt>
+        <ContentBase>
+          <Base>
+            <Name>111</Name>
+            <FromPath>C:\Users\MATRIX\Documents\ExPRO 3\GlobalStorage\b749b63b-1459-4947-976b-de00a0da11aa\111</FromPath>
+          </Base>
+          <Help>
+            <Name>help.html</Name>
+            <FromPath>C:\Users\MATRIX\Documents\ExPRO 3\GlobalStorage\b749b63b-1459-4947-976b-de00a0da11aa\help.html</FromPath>
+          </Help>
+          <Content />
+        </ContentBase>
+      </ElementInfo>
+      <ElementInfo xsi:type="KNBModuleInfo">
+        <Name>test</Name>
+        <Reference>gl:Новые БЗ:test</Reference>
+        <UserElement>true</UserElement>
+        <Folder>210a3ef9-b62b-4f98-a3bd-c7208ed5658c</Folder>
+        <Crypt>false</Crypt>
+        <ContentBase>
+          <Base>
+            <Name>test</Name>
+            <FromPath>C:\Users\MATRIX\Documents\ExPRO 3\GlobalStorage\210a3ef9-b62b-4f98-a3bd-c7208ed5658c\test</FromPath>
+          </Base>
+          <Help>
+            <Name>help.html</Name>
+            <FromPath>C:\Users\MATRIX\Documents\ExPRO 3\GlobalStorage\210a3ef9-b62b-4f98-a3bd-c7208ed5658c\help.html</FromPath>
+          </Help>
+          <Content />
+        </ContentBase>
+      </ElementInfo>
+      <ElementInfo xsi:type="KNBModuleInfo">
+        <Name>Расчет параметром электрической цепи (ООП)</Name>
+        <Reference>gl:Новые БЗ:Расчет параметром электрической цепи (ООП)</Reference>
+        <UserElement>true</UserElement>
+        <Folder>b967a9d8-3645-46fd-a453-ba8d052352c2</Folder>
+        <Crypt>false</Crypt>
+        <ContentBase>
+          <Base>
+            <Name>Расчет параметром электрической цепи (ООП)</Name>
+            <FromPath>C:\Users\MATRIX\Documents\ExPRO 3\GlobalStorage\b967a9d8-3645-46fd-a453-ba8d052352c2\Расчет параметром электрической цепи (ООП)</FromPath>
+          </Base>
+          <Help>
+            <Name>help.html</Name>
+            <FromPath>C:\Users\MATRIX\Documents\ExPRO 3\GlobalStorage\b967a9d8-3645-46fd-a453-ba8d052352c2\help.html</FromPath>
+          </Help>
+          <Content />
+        </ContentBase>
+      </ElementInfo>
+      <ElementInfo xsi:type="KNBModuleInfo">
+        <Name>Диганостика неисправностей компьютера</Name>
+        <Reference>gl:Новые БЗ:Диганостика неисправностей компьютера</Reference>
+        <UserElement>true</UserElement>
+        <Folder>c013a69a-00b5-4a4b-ad81-c12c940f59b2</Folder>
+        <Crypt>false</Crypt>
+        <ContentBase>
+          <Base>
+            <Name>Диганостика неисправностей компьютера</Name>
+            <FromPath>C:\Users\MATRIX\Documents\ExPRO 3\GlobalStorage\c013a69a-00b5-4a4b-ad81-c12c940f59b2\Диганостика неисправностей компьютера</FromPath>
+          </Base>
+          <Help>
+            <Name>help.html</Name>
+            <FromPath>C:\Users\MATRIX\Documents\ExPRO 3\GlobalStorage\c013a69a-00b5-4a4b-ad81-c12c940f59b2\help.html</FromPath>
+          </Help>
+          <Content />
+        </ContentBase>
+      </ElementInfo>
+      <ElementInfo xsi:type="KNBModuleInfo">
+        <Name>Диагностика по спичеру</Name>
+        <Reference>gl:Новые БЗ:Диагностика по спичеру</Reference>
+        <UserElement>true</UserElement>
+        <Folder>6d8d4b0b-7ac7-4bef-babf-e28326d5c4f3</Folder>
+        <Crypt>false</Crypt>
+        <ContentBase>
+          <Base>
+            <Name>Диагностика по спичеру</Name>
+            <FromPath>C:\Users\MATRIX\Documents\ExPRO 3\GlobalStorage\6d8d4b0b-7ac7-4bef-babf-e28326d5c4f3\Диагностика по спичеру</FromPath>
+          </Base>
+          <Help>
+            <Name>help.html</Name>
+            <FromPath>C:\Users\MATRIX\Documents\ExPRO 3\GlobalStorage\6d8d4b0b-7ac7-4bef-babf-e28326d5c4f3\help.html</FromPath>
+          </Help>
+          <Content />
+        </ContentBase>
+      </ElementInfo>
+      <ElementInfo xsi:type="KNBModuleInfo">
+        <Name>Управление</Name>
+        <Reference>gl:Новые БЗ:Управление</Reference>
+        <UserElement>true</UserElement>
+        <Folder>b89e4ba2-89ca-4565-96d3-0abebaaf6b10</Folder>
+        <Crypt>false</Crypt>
+        <ContentBase>
+          <Base>
+            <Name>Управление</Name>
+            <FromPath>C:\Users\MATRIX\Documents\ExPRO 3\GlobalStorage\b89e4ba2-89ca-4565-96d3-0abebaaf6b10\Управление</FromPath>
+          </Base>
+          <Help>
+            <Name>help.html</Name>
+            <FromPath>C:\Users\MATRIX\Documents\ExPRO 3\GlobalStorage\b89e4ba2-89ca-4565-96d3-0abebaaf6b10\help.html</FromPath>
+          </Help>
+          <Content />
+        </ContentBase>
+      </ElementInfo>
+      <ElementInfo xsi:type="KNBModuleInfo">
+        <Name>Состояние</Name>
+        <Reference>gl:Новые БЗ:Состояние</Reference>
+        <UserElement>true</UserElement>
+        <Folder>ce024cc7-7eb6-4a84-a48e-b1799140a7a8</Folder>
+        <Crypt>false</Crypt>
+        <ContentBase>
+          <Base>
+            <Name>Состояние</Name>
+            <FromPath>C:\Users\MATRIX\Documents\ExPRO 3\GlobalStorage\ce024cc7-7eb6-4a84-a48e-b1799140a7a8\Состояние</FromPath>
+          </Base>
+          <Help>
+            <Name>help.html</Name>
+            <FromPath>C:\Users\MATRIX\Documents\ExPRO 3\GlobalStorage\ce024cc7-7eb6-4a84-a48e-b1799140a7a8\help.html</FromPath>
+          </Help>
+          <Content />
+        </ContentBase>
+      </ElementInfo>
+      <ElementInfo xsi:type="KNBModuleInfo">
+        <Name>ОбработкаСобытий</Name>
+        <Reference>gl:Новые БЗ:ОбработкаСобытий</Reference>
+        <UserElement>true</UserElement>
+        <Folder>18b89dcc-b240-4b5a-aa16-0a35cc60d9b7</Folder>
+        <Crypt>false</Crypt>
+        <ContentBase>
+          <Base>
+            <Name>ОбработкаСобытий</Name>
+            <FromPath>C:\Users\MATRIX\Documents\ExPRO 3\GlobalStorage\18b89dcc-b240-4b5a-aa16-0a35cc60d9b7\ОбработкаСобытий</FromPath>
+          </Base>
+          <Help>
+            <Name>help.html</Name>
+            <FromPath>C:\Users\MATRIX\Documents\ExPRO 3\GlobalStorage\18b89dcc-b240-4b5a-aa16-0a35cc60d9b7\help.html</FromPath>
+          </Help>
+          <Content />
+        </ContentBase>
+      </ElementInfo>
+      <ElementInfo xsi:type="KNBModuleInfo">
+        <Name>Интерфейс</Name>
+        <Reference>gl:Новые БЗ:Интерфейс</Reference>
+        <UserElement>true</UserElement>
+        <Folder>f23cb5c2-be39-428a-96b5-891a82613cf1</Folder>
+        <Crypt>false</Crypt>
+        <ContentBase>
+          <Base>
+            <Name>Интерфейс</Name>
+            <FromPath>C:\Users\MATRIX\Documents\ExPRO 3\GlobalStorage\f23cb5c2-be39-428a-96b5-891a82613cf1\Интерфейс</FromPath>
+          </Base>
+          <Help>
+            <Name>help.html</Name>
+            <FromPath>C:\Users\MATRIX\Documents\ExPRO 3\GlobalStorage\f23cb5c2-be39-428a-96b5-891a82613cf1\help.html</FromPath>
+          </Help>
+          <Content />
+        </ContentBase>
+      </ElementInfo>
+      <ElementInfo xsi:type="KNBModuleInfo">
+        <Name>УправлениеПользователем</Name>
+        <Reference>gl:Новые БЗ:УправлениеПользователем</Reference>
+        <UserElement>true</UserElement>
+        <Folder>ca851f92-eb6c-4f8b-912d-a1add97e9cc9</Folder>
+        <Crypt>false</Crypt>
+        <ContentBase>
+          <Base>
+            <Name>УправлениеПользователем</Name>
+            <FromPath>C:\Users\MATRIX\Documents\ExPRO 3\GlobalStorage\ca851f92-eb6c-4f8b-912d-a1add97e9cc9\УправлениеПользователем</FromPath>
+          </Base>
+          <Help>
+            <Name>help.html</Name>
+            <FromPath>C:\Users\MATRIX\Documents\ExPRO 3\GlobalStorage\ca851f92-eb6c-4f8b-912d-a1add97e9cc9\help.html</FromPath>
+          </Help>
+          <Content />
+        </ContentBase>
+      </ElementInfo>
+      <ElementInfo xsi:type="KNBModuleInfo">
+        <Name>ЗапросСервера</Name>
+        <Reference>gl:Новые БЗ:ЗапросСервера</Reference>
+        <UserElement>true</UserElement>
+        <Folder>3cf336d9-6017-40c0-ae05-0c7ac8209855</Folder>
+        <Crypt>false</Crypt>
+        <ContentBase>
+          <Base>
+            <Name>ЗапросСервера</Name>
+            <FromPath>C:\Users\MATRIX\Documents\ExPRO 3\GlobalStorage\3cf336d9-6017-40c0-ae05-0c7ac8209855\ЗапросСервера</FromPath>
+          </Base>
+          <Help>
+            <Name>help.html</Name>
+            <FromPath>C:\Users\MATRIX\Documents\ExPRO 3\GlobalStorage\3cf336d9-6017-40c0-ae05-0c7ac8209855\help.html</FromPath>
+          </Help>
+          <Content />
+        </ContentBase>
+      </ElementInfo>
+      <ElementInfo xsi:type="KNBModuleInfo">
+        <Name>ФормированиеОбходногоЛиста</Name>
+        <Reference>gl:Новые БЗ:ФормированиеОбходногоЛиста</Reference>
+        <UserElement>true</UserElement>
+        <Folder>88ca368a-2793-4071-a6f4-4fc39372c13d</Folder>
+        <Crypt>false</Crypt>
+        <ContentBase>
+          <Base>
+            <Name>ФормированиеОбходногоЛиста</Name>
+            <FromPath>C:\Users\MATRIX\Documents\ExPRO 3\GlobalStorage\88ca368a-2793-4071-a6f4-4fc39372c13d\ФормированиеОбходногоЛиста</FromPath>
+          </Base>
+          <Help>
+            <Name>help.html</Name>
+            <FromPath>C:\Users\MATRIX\Documents\ExPRO 3\GlobalStorage\88ca368a-2793-4071-a6f4-4fc39372c13d\help.html</FromPath>
+          </Help>
+          <Content />
+        </ContentBase>
+      </ElementInfo>
+      <ElementInfo xsi:type="KNBModuleInfo">
+        <Name>ОпределениеСердечноСосудистогоРиска</Name>
+        <Reference>gl:Новые БЗ:ОпределениеСердечноСосудистогоРиска</Reference>
+        <UserElement>true</UserElement>
+        <Folder>25cd1aad-bfbf-4f5b-9546-dbea5dced6c3</Folder>
+        <Crypt>false</Crypt>
+        <ContentBase>
+          <Base>
+            <Name>ОпределениеСердечноСосудистогоРиска</Name>
+            <FromPath>C:\Users\MATRIX\Documents\ExPRO 3\GlobalStorage\25cd1aad-bfbf-4f5b-9546-dbea5dced6c3\ОпределениеСердечноСосудистогоРиска</FromPath>
+          </Base>
+          <Help>
+            <Name>help.html</Name>
+            <FromPath>C:\Users\MATRIX\Documents\ExPRO 3\GlobalStorage\25cd1aad-bfbf-4f5b-9546-dbea5dced6c3\help.html</FromPath>
+          </Help>
+          <Content />
+        </ContentBase>
+      </ElementInfo>
+      <ElementInfo xsi:type="KNBModuleInfo">
+        <Name>ФормированиеЗаключения</Name>
+        <Reference>gl:Новые БЗ:ФормированиеЗаключения</Reference>
+        <UserElement>true</UserElement>
+        <Folder>40eb43a5-663f-4030-a91a-f35ffa5fd869</Folder>
+        <Crypt>false</Crypt>
+        <ContentBase>
+          <Base>
+            <Name>ФормированиеЗаключения</Name>
+            <FromPath>C:\Users\MATRIX\Documents\ExPRO 3\GlobalStorage\40eb43a5-663f-4030-a91a-f35ffa5fd869\ФормированиеЗаключения</FromPath>
+          </Base>
+          <Help>
+            <Name>help.html</Name>
+            <FromPath>C:\Users\MATRIX\Documents\ExPRO 3\GlobalStorage\40eb43a5-663f-4030-a91a-f35ffa5fd869\help.html</FromPath>
+          </Help>
+          <Content />
+        </ContentBase>
+      </ElementInfo>
+      <ElementInfo xsi:type="KNBModuleInfo">
+        <Name>fibtest</Name>
+        <Reference>gl:Новые БЗ:fibtest</Reference>
+        <UserElement>true</UserElement>
+        <Folder>1a3a9125-d8b9-46c0-b828-3d59b8373126</Folder>
+        <Crypt>false</Crypt>
+        <ContentBase>
+          <Base>
+            <Name>fibtest</Name>
+            <FromPath>C:\Users\MATRIX\Documents\ExPRO 3\GlobalStorage\1a3a9125-d8b9-46c0-b828-3d59b8373126\fibtest</FromPath>
+          </Base>
+          <Help>
+            <Name>help.html</Name>
+            <FromPath>C:\Users\MATRIX\Documents\ExPRO 3\GlobalStorage\1a3a9125-d8b9-46c0-b828-3d59b8373126\help.html</FromPath>
+          </Help>
+          <Content />
+        </ContentBase>
+      </ElementInfo>
+      <ElementInfo xsi:type="KNBModuleInfo">
+        <Name>Моделировани управлением склада</Name>
+        <Reference>gl:Новые БЗ:Моделировани управлением склада</Reference>
+        <UserElement>true</UserElement>
+        <Folder>1af491a5-759e-4a6a-b97f-57e206005351</Folder>
+        <Crypt>false</Crypt>
+        <ContentBase>
+          <Base>
+            <Name>Моделировани управлением склада</Name>
+            <FromPath>C:\Users\MATRIX\Documents\ExPRO 3\GlobalStorage\1af491a5-759e-4a6a-b97f-57e206005351\Моделировани управлением склада</FromPath>
+          </Base>
+          <Help>
+            <Name>help.html</Name>
+            <FromPath>C:\Users\MATRIX\Documents\ExPRO 3\GlobalStorage\1af491a5-759e-4a6a-b97f-57e206005351\help.html</FromPath>
+          </Help>
+          <Content />
+        </ContentBase>
+      </ElementInfo>
+      <ElementInfo xsi:type="KNBModuleInfo">
+        <Name>Моделирование управления складом</Name>
+        <Reference>gl:Новые БЗ:Моделирование управления складом</Reference>
+        <UserElement>true</UserElement>
+        <Folder>207db10e-6c0c-476e-81a1-7f6b05450467</Folder>
+        <Crypt>false</Crypt>
+        <ContentBase>
+          <Base>
+            <Name>Моделирование управления складом</Name>
+            <FromPath>C:\Users\MATRIX\Documents\ExPRO 3\GlobalStorage\207db10e-6c0c-476e-81a1-7f6b05450467\Моделирование управления складом</FromPath>
+          </Base>
+          <Help>
+            <Name>help.html</Name>
+            <FromPath>C:\Users\MATRIX\Documents\ExPRO 3\GlobalStorage\207db10e-6c0c-476e-81a1-7f6b05450467\help.html</FromPath>
+          </Help>
+          <Content />
+        </ContentBase>
+      </ElementInfo>
+      <ElementInfo xsi:type="KNBModuleInfo">
+        <Name>Расчет площади плоских фигур</Name>
+        <Reference>gl:Новые БЗ:Расчет площади плоских фигур</Reference>
+        <UserElement>true</UserElement>
+        <Folder>33bfd197-3e66-4e21-9533-e4c56ec6ce88</Folder>
+        <Crypt>false</Crypt>
+        <ContentBase>
+          <Base>
+            <Name>Расчет площади плоских фигур</Name>
+            <FromPath>C:\Users\MATRIX\Documents\ExPRO 3\GlobalStorage\33bfd197-3e66-4e21-9533-e4c56ec6ce88\Расчет площади плоских фигур</FromPath>
+          </Base>
+          <Help>
+            <Name>help.html</Name>
+            <FromPath>C:\Users\MATRIX\Documents\ExPRO 3\GlobalStorage\33bfd197-3e66-4e21-9533-e4c56ec6ce88\help.html</FromPath>
+          </Help>
+          <Content />
+        </ContentBase>
+      </ElementInfo>
+      <ElementInfo xsi:type="KNBModuleInfo">
+        <Name>Распознавание образов с использованием ИНС</Name>
+        <Reference>gl:Новые БЗ:Распознавание образов с использованием ИНС</Reference>
+        <UserElement>true</UserElement>
+        <Folder>7e443136-de2c-4c6e-82cb-f502eeb0ef2d</Folder>
+        <Crypt>false</Crypt>
+        <ContentBase>
+          <Base>
+            <Name>Распознавание образов с использованием ИНС</Name>
+            <FromPath>C:\Users\MATRIX\Documents\ExPRO 3\GlobalStorage\7e443136-de2c-4c6e-82cb-f502eeb0ef2d\Распознавание образов с использованием ИНС</FromPath>
+          </Base>
+          <Help>
+            <Name>help.html</Name>
+            <FromPath>C:\Users\MATRIX\Documents\ExPRO 3\GlobalStorage\7e443136-de2c-4c6e-82cb-f502eeb0ef2d\help.html</FromPath>
+          </Help>
+          <Content />
+        </ContentBase>
+      </ElementInfo>
+      <ElementInfo xsi:type="KNBModuleInfo">
+        <Name>Отображение фигуры</Name>
+        <Reference>gl:Новые БЗ:Отображение фигуры</Reference>
+        <UserElement>true</UserElement>
+        <Folder>e5e5960c-4b51-416b-87ce-023c44e67c58</Folder>
+        <Crypt>false</Crypt>
+        <ContentBase>
+          <Base>
+            <Name>Отображение фигуры</Name>
+            <FromPath>C:\Users\MATRIX\Documents\ExPRO 3\GlobalStorage\e5e5960c-4b51-416b-87ce-023c44e67c58\Отображение фигуры</FromPath>
+          </Base>
+          <Help>
+            <Name>help.html</Name>
+            <FromPath>C:\Users\MATRIX\Documents\ExPRO 3\GlobalStorage\e5e5960c-4b51-416b-87ce-023c44e67c58\help.html</FromPath>
+          </Help>
+          <Content />
+        </ContentBase>
+      </ElementInfo>
+      <ElementInfo xsi:type="KNBModuleInfo">
+        <Name>График</Name>
+        <Reference>gl:Новые БЗ:График</Reference>
+        <UserElement>true</UserElement>
+        <Folder>b02d143e-2c56-44ac-8e84-7554cac0e72c</Folder>
+        <Crypt>false</Crypt>
+        <ContentBase>
+          <Base>
+            <Name>График</Name>
+            <FromPath>C:\Users\MATRIX\Documents\ExPRO 3\GlobalStorage\b02d143e-2c56-44ac-8e84-7554cac0e72c\График</FromPath>
+          </Base>
+          <Help>
+            <Name>help.html</Name>
+            <FromPath>C:\Users\MATRIX\Documents\ExPRO 3\GlobalStorage\b02d143e-2c56-44ac-8e84-7554cac0e72c\help.html</FromPath>
+          </Help>
+          <Content />
+        </ContentBase>
+      </ElementInfo>
+      <ElementInfo xsi:type="KNBModuleInfo">
+        <Name>График</Name>
+        <Reference>gl:Новые БЗ:График</Reference>
+        <UserElement>true</UserElement>
+        <Folder>92412a99-f555-4acd-ab7b-af06fcd56868</Folder>
+        <Crypt>false</Crypt>
+        <ContentBase>
+          <Base>
+            <Name>График</Name>
+            <FromPath>C:\Users\MATRIX\Documents\ExPRO 3\GlobalStorage\92412a99-f555-4acd-ab7b-af06fcd56868\График</FromPath>
+          </Base>
+          <Help>
+            <Name>help.html</Name>
+            <FromPath>C:\Users\MATRIX\Documents\ExPRO 3\GlobalStorage\92412a99-f555-4acd-ab7b-af06fcd56868\help.html</FromPath>
+          </Help>
+          <Content />
+        </ContentBase>
+      </ElementInfo>
+      <ElementInfo xsi:type="KNBModuleInfo">
+        <Name>Оперативно календарное планирование</Name>
+        <Reference>gl:Новые БЗ:Оперативно календарное планирование</Reference>
+        <UserElement>true</UserElement>
+        <Folder>0504f049-925f-4dfd-a394-3666df37ed2f</Folder>
+        <Crypt>false</Crypt>
+        <ContentBase>
+          <Base>
+            <Name>Оперативно календарное планирование</Name>
+            <FromPath>C:\Users\MATRIX\Documents\ExPRO 3\GlobalStorage\0504f049-925f-4dfd-a394-3666df37ed2f\Оперативно календарное планирование</FromPath>
+          </Base>
+          <Help>
+            <Name>help.html</Name>
+            <FromPath>C:\Users\MATRIX\Documents\ExPRO 3\GlobalStorage\0504f049-925f-4dfd-a394-3666df37ed2f\help.html</FromPath>
+          </Help>
+          <Content />
+        </ContentBase>
+      </ElementInfo>
+      <ElementInfo xsi:type="KNBModuleInfo">
+        <Name>Экспресс оценка образа жизни</Name>
+        <Reference>gl:Новые БЗ:Экспресс оценка образа жизни</Reference>
+        <UserElement>true</UserElement>
+        <Folder>cb18ab3e-6bb3-4825-b68e-dd502d116105</Folder>
+        <Crypt>false</Crypt>
+        <ContentBase>
+          <Base>
+            <Name>Экспресс оценка образа жизни</Name>
+            <FromPath>C:\Users\MATRIX\Documents\ExPRO 3\GlobalStorage\cb18ab3e-6bb3-4825-b68e-dd502d116105\Экспресс оценка образа жизни</FromPath>
+          </Base>
+          <Help>
+            <Name>help.html</Name>
+            <FromPath>C:\Users\MATRIX\Documents\ExPRO 3\GlobalStorage\cb18ab3e-6bb3-4825-b68e-dd502d116105\help.html</FromPath>
+          </Help>
+          <Content />
+        </ContentBase>
+      </ElementInfo>
+      <ElementInfo xsi:type="KNBModuleInfo">
+        <Name>Тест ввода блока</Name>
+        <Reference>gl:Новые БЗ:Тест ввода блока</Reference>
+        <UserElement>true</UserElement>
+        <Folder>2e8294b2-18bb-40b7-89cc-4755eb861907</Folder>
+        <Crypt>false</Crypt>
+        <ContentBase>
+          <Base>
+            <Name>Тест ввода блока</Name>
+            <FromPath>C:\Users\MATRIX\Documents\ExPRO 3\GlobalStorage\2e8294b2-18bb-40b7-89cc-4755eb861907\Тест ввода блока</FromPath>
+          </Base>
+          <Help>
+            <Name>help.html</Name>
+            <FromPath>C:\Users\MATRIX\Documents\ExPRO 3\GlobalStorage\2e8294b2-18bb-40b7-89cc-4755eb861907\help.html</FromPath>
+          </Help>
+          <Content />
+        </ContentBase>
+      </ElementInfo>
+    </Elements>
+  </Group>
+  <Table Name="ВерныеОтветы" ColCount="2">
+    <Width>100%</Width>
+    <WidthColum>
+      <twc />
+      <twc />
+    </WidthColum>
+    <Headers>
+      <h>Ответ</h>
+      <h>Баллы</h>
+    </Headers>
+    <tr>
+      <td>4</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <td>50</td>
+      <td>2</td>
+    </tr>
+    <tr>
+      <td>7</td>
+      <td>3</td>
+    </tr>
+    <Comment />
+  </Table>
+  <Templates Name="Результат">
+    <Comment />
+    <Value>&lt;!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN"&gt;
+&lt;HTML&gt;&lt;HEAD&gt;
+&lt;META content="text/html; charset=unicode" http-equiv=Content-Type&gt;
+&lt;META name=GENERATOR content="MSHTML 8.00.7601.17514"&gt;&lt;/HEAD&gt;
+&lt;BODY&gt;
+&lt;P align=center&gt;&lt;STRONG&gt;Результаты тестирования&lt;/STRONG&gt;&lt;/P&gt;
+&lt;P&gt;Ваш результат #баллы из&amp;nbsp;6&amp;nbsp;баллов&lt;/P&gt;
+&lt;P&gt;Верно отвечено на #верно из 3&amp;nbsp;вопросов&lt;/P&gt;&lt;/BODY&gt;&lt;/HTML&gt;
+</Value>
+  </Templates>
+  <Forms Name="Вопросник">
+    <Comment />
+    <FormSize>
+      <Width>290</Width>
+      <Height>256</Height>
+    </FormSize>
+    <Elements>
+      <Type>1</Type>
+      <Location>
+        <X>58</X>
+        <Y>218</Y>
+      </Location>
+      <Size>
+        <Width>75</Width>
+        <Height>23</Height>
+      </Size>
+      <Parametrs>
+        <key>2</key>
+        <param>отмена</param>
+      </Parametrs>
+      <Parametrs>
+        <key>1</key>
+        <param>Отмена</param>
+      </Parametrs>
+    </Elements>
+    <Elements>
+      <Type>1</Type>
+      <Location>
+        <X>162</X>
+        <Y>218</Y>
+      </Location>
+      <Size>
+        <Width>75</Width>
+        <Height>23</Height>
+      </Size>
+      <Parametrs>
+        <key>2</key>
+        <param>ок</param>
+      </Parametrs>
+      <Parametrs>
+        <key>1</key>
+        <param>OK</param>
+      </Parametrs>
+    </Elements>
+    <Elements>
+      <Type>3</Type>
+      <Location>
+        <X>169</X>
+        <Y>158</Y>
+      </Location>
+      <Size>
+        <Width>100</Width>
+        <Height>20</Height>
+      </Size>
+      <Parametrs>
+        <key>2</key>
+        <param>ответ3</param>
+      </Parametrs>
+      <Parametrs>
+        <key>1</key>
+        <param />
+      </Parametrs>
+    </Elements>
+    <Elements>
+      <Type>2</Type>
+      <Location>
+        <X>24</X>
+        <Y>156</Y>
+      </Location>
+      <Size>
+        <Width>114</Width>
+        <Height>43</Height>
+      </Size>
+      <Parametrs>
+        <key>2</key>
+        <param />
+      </Parametrs>
+      <Parametrs>
+        <key>1</key>
+        <param>Значение x в уравнении x+5=12</param>
+      </Parametrs>
+    </Elements>
+    <Elements>
+      <Type>3</Type>
+      <Location>
+        <X>167</X>
+        <Y>98</Y>
+      </Location>
+      <Size>
+        <Width>100</Width>
+        <Height>20</Height>
+      </Size>
+      <Parametrs>
+        <key>2</key>
+        <param>ответ2</param>
+      </Parametrs>
+      <Parametrs>
+        <key>1</key>
+        <param />
+      </Parametrs>
+    </Elements>
+    <Elements>
+      <Type>2</Type>
+      <Location>
+        <X>23</X>
+        <Y>89</Y>
+      </Location>
+      <Size>
+        <Width>115</Width>
+        <Height>44</Height>
+      </Size>
+      <Parametrs>
+        <key>2</key>
+        <param />
+      </Parametrs>
+      <Parametrs>
+        <key>1</key>
+        <param>Площадь прямоугольника со сторонами 5 и 10</param>
+      </Parametrs>
+    </Elements>
+    <Elements>
+      <Type>3</Type>
+      <Location>
+        <X>166</X>
+        <Y>53</Y>
+      </Location>
+      <Size>
+        <Width>100</Width>
+        <Height>20</Height>
+      </Size>
+      <Parametrs>
+        <key>2</key>
+        <param>ответ1</param>
+      </Parametrs>
+      <Parametrs>
+        <key>1</key>
+        <param />
+      </Parametrs>
+    </Elements>
+    <Elements>
+      <Type>2</Type>
+      <Location>
+        <X>22</X>
+        <Y>55</Y>
+      </Location>
+      <Size>
+        <Width>122</Width>
+        <Height>20</Height>
+      </Size>
+      <Parametrs>
+        <key>2</key>
+        <param />
+      </Parametrs>
+      <Parametrs>
+        <key>1</key>
+        <param>Сколько будет 2+2</param>
+      </Parametrs>
+    </Elements>
+    <Elements>
+      <Type>2</Type>
+      <Location>
+        <X>63</X>
+        <Y>12</Y>
+      </Location>
+      <Size>
+        <Width>164</Width>
+        <Height>18</Height>
+      </Size>
+      <Parametrs>
+        <key>2</key>
+        <param />
+      </Parametrs>
+      <Parametrs>
+        <key>1</key>
+        <param>Ответьте на вопросы теста</param>
+      </Parametrs>
+    </Elements>
+  </Forms>
+</BZ>

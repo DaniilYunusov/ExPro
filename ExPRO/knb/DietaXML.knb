@@ -1,0 +1,34 @@
+<?xml version="1.0"?>
+<BZ Name="Диета" Author="Диета" CreateDate="14.09.2008 16:19:45" UpdateDate="01.10.2008 20:27:05">
+  <Comment>rtyrthdfghdfghdfgh</Comment>
+  <Variable Name="KISL">
+    <Comment>кислотность</Comment>
+    <Type>double</Type>
+  </Variable>
+  <Variable Name="P">
+    <Comment>вывод</Comment>
+    <Type>string</Type>
+    <Goal />
+  </Variable>
+  <Rule Name="пр1">
+    <Condition>ВОПРОС("гастрит")</Condition>
+    <Condition>ВОПРОС("панкреатит")</Condition>
+    <Act>P="взять творог"</Act>
+    <Act>ВЫВОД(P)</Act>
+  </Rule>
+  <Rule Name="пр2">
+    <Condition>ВОПРОС("кислотность")</Condition>
+    <Condition>KISL&gt;10</Condition>
+    <Act>P="взять молоко"</Act>
+    <Act>ВЫВОД(P)</Act>
+  </Rule>
+  <Rule Name="пр4">
+    <Act>KISL=ВВОД("ввести KISL")</Act>
+  </Rule>
+  <Rule Name="пр3">
+    <Condition>ВОПРОС("нет заболеваний")</Condition>
+    <Condition>KISL&lt;=10</Condition>
+    <Act>P="взять бифштекс"</Act>
+    <Act>ВЫВОД(P)</Act>
+  </Rule>
+</BZ>

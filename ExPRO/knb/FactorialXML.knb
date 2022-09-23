@@ -1,0 +1,34 @@
+<?xml version="1.0"?>
+<BZ Name="Fact" Author="EDS">
+  <Comment>Пдсчёт факториала без циклов только через правила :)</Comment>
+  <Variable Name="N" />
+  <Variable Name="od" />
+  <Variable Name="N2" />
+  <Variable Name="Fact">
+    <Goal />
+  </Variable>
+  <Variable Name="F" />
+  <Variable Name="FN" />
+  <Variable Name="odd" />
+  <Variable Name="B" />
+  <Variable Name="A" />
+  <Rule Name="Правило1">
+    <Act>N=5</Act>
+    <Act>od=1</Act>
+    <Act>F=1</Act>
+  </Rule>
+  <Rule Name="Правило2">
+    <Condition>N&gt;od</Condition>
+    <Act>F=F*od</Act>
+    <Act>od=od+1</Act>
+    <Act>B=A</Act>
+    <Act>A=0</Act>
+  </Rule>
+  <Rule Name="Правило4">
+    <Act>A=0</Act>
+  </Rule>
+  <Rule Name="Правило3">
+    <Act>Fact=F+A</Act>
+    <Act>ВЫВОД("   ",Fact)</Act>
+  </Rule>
+</BZ>

@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<BZ Name="testFile" Author="Dem" CreateDate="14.09.2008 17:28:19" UpdateDate="14.09.2008 18:45:26">
+  <Comment>testFile</Comment>
+  <Variable Name="S">
+    <Goal />
+  </Variable>
+  <Rule Name="Правило1">
+    <Comment>
+    </Comment>
+    <Act>S=ОТКР_HTML("1.htm")</Act>
+    <Act>ВЫВОД(S)</Act>
+  </Rule>
+</BZ>

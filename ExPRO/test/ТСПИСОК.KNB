@@ -1,0 +1,73 @@
+<?xml version="1.0"?>
+<BZ Name="Тест по работе со списками" Author="Юрин А.М.">
+  <Comment>СПВСТР</Comment>
+  <Variable Name="L" />
+  <Variable Name="N" />
+  <Variable Name="L1" />
+  <Variable Name="L2" />
+  <Variable Name="LS" />
+  <Variable Name="LNew" />
+  <Variable Name="LN" />
+  <Variable Name="LN2" />
+  <Variable Name="S1" />
+  <Variable Name="L3" />
+  <Variable Name="LV">
+    <Goal />
+  </Variable>
+  <Variable Name="X1" />
+  <Variable Name="X2" />
+  <Variable Name="X3" />
+  <Variable Name="X4" />
+  <Variable Name="MV">
+    <Goal />
+  </Variable>
+  <Variable Name="LC">
+    <Goal />
+  </Variable>
+  <Rule Name="Пр1">
+    <Act>L=["A","B","C","D"]</Act>
+  </Rule>
+  <Rule Name="Пр2">
+    <Act>N=КОЛЭЛЕМ(L)</Act>
+    <Act>ВЫВОД("N= ",N)</Act>
+  </Rule>
+  <Rule Name="Пр4">
+    <Act>L1=["A1","B1"]</Act>
+    <Act>L2=["A2","B2"]</Act>
+  </Rule>
+  <Rule Name="Пр6">
+    <Act>LN=[55,35,23,21,14]</Act>
+    <Act>LNew=СОРТ(LN)</Act>
+    <Act>ВЫВОД(LNew)</Act>
+  </Rule>
+  <Rule Name="Пр7">
+    <Act>L=["A","B","C"]</Act>
+    <Act>S1=СП_СТР(L)</Act>
+    <Act>ВЫВОД("Строка:",S1)</Act>
+  </Rule>
+  <Rule Name="Пр8">
+    <Act>L3=ДОПСП(L1,L2)</Act>
+    <Act>ДОПСП(L3,"SP")</Act>
+    <Act>ВЫВОД(L3)</Act>
+  </Rule>
+  <Rule Name="Пр9">
+    <Act>LV=[X1,"AB",X2,X3,X4]</Act>
+    <Act>ВЫВОД("LV= ",LV)</Act>
+  </Rule>
+  <Rule Name="Пр10">
+    <Act>X1="A1"</Act>
+    <Act>X2="B2"</Act>
+    <Act>X3="C3"</Act>
+    <Act>X4="D4"</Act>
+  </Rule>
+  <Rule Name="Пр11">
+    <Act>MV=ЭЛЕМСП(2,LV)</Act>
+    <Act>ВЫВОД("MV= ",MV)</Act>
+  </Rule>
+  <Rule Name="ИзмСП">
+    <Act>LN=[55,35,23,21,14]</Act>
+    <Act>LC=ИЗМЭЛЕМСП(2,LN,56)</Act>
+    <Act>ВЫВОД("LN=",LN)</Act>
+    <Act>ВЫВОД("LC=",LC)</Act>
+  </Rule>
+</BZ>

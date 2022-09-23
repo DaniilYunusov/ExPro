@@ -1,0 +1,38 @@
+<?xml version="1.0"?>
+<BZ Name="Тест" Author="Юрин">
+  <Comment>4</Comment>
+  <Variable Name="F" />
+  <Variable Name="Y">
+    <Goal />
+  </Variable>
+  <Variable Name="X" />
+  <Variable Name="Переменная2">
+    <StartValue>you_are_fool!</StartValue>
+  </Variable>
+  <Variable Name="F_" />
+  <Rule Name="Правило1">
+    <Comment>
+    </Comment>
+    <Act>Y=X+5</Act>
+    <Act>ВЫВОД(Y)</Act>
+  </Rule>
+  <Rule Name="Правило2">
+    <Comment>
+    </Comment>
+    <Condition>//F="да"</Condition>
+    <Act>X=ВВОД("Введите_число")</Act>
+  </Rule>
+  <Rule Name="Правило3">
+    <Comment>
+    </Comment>
+    <Act>F=ВВОД("Ввод_признака")</Act>
+    <Act>F="да"</Act>
+  </Rule>
+  <Rule Name="Правило4">
+    <Comment>
+    </Comment>
+    <Condition>F &lt;&gt; "да"</Condition>
+    <Act>Y=0</Act>
+    <Act>ВЫВОД("Нет_решения")</Act>
+  </Rule>
+</BZ>

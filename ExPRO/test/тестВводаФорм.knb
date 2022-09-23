@@ -1,0 +1,271 @@
+<?xml version="1.0"?>
+<BZ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Name="Тест использования пользовательских форм" Version="1.14" Author="Максим" IsRelease="false" CreateDate="13.05.2015 0:54:53" UpdateDate="10.06.2015 18:18:08">
+  <Comment />
+  <Rule Name="Расчет площади">
+    <Condition>данные.тип="Площадь"</Condition>
+    <Condition>данные.подтверждение=TRUE()</Condition>
+    <Act>ВЫВОД(данные.текст)</Act>
+    <Act>Расчет=данные.a*данные.b</Act>
+    <Act>ВЫВОД("S= ",Расчет)</Act>
+    <Enable>true</Enable>
+    <Priority>50</Priority>
+  </Rule>
+  <Rule Name="Ввод формы">
+    <Act>//тестирование обращения к свойствам полям текстовым</Act>
+    <Act>ВЫВОД("Выбранный по-умолчанию тип: ",ЭлементФормы(формаВводаПрямоуг,"тип","текст"))</Act>
+    <Act>ВЫВОД("Подпись к ширине прямоугольника: ",ЭлементФормы(формаВводаПрямоуг,"надписьА","текст"))</Act>
+    <Act>//тестирование обращения к списку ключей выбора</Act>
+    <Act>списокВыбора=ЭлементФормы(формаВводаПрямоуг,"тип","ключи")</Act>
+    <Act>ВЫВОД("Возможный выбор:")</Act>
+    <Act>ВЫВОД(списокВыбора)</Act>
+    <Act>//тест изменения свойства элемента</Act>
+    <Act>ИзмЭлемФормы(формаВводаПрямоуг,"тип","ключи",ДОПСП(списокВыбора,"свой ключ"))</Act>
+    <Act>//ввод данных с формы</Act>
+    <Act>данные=ВводДанных("Введите парамтеры прямоугольника",формаВводаПрямоуг)</Act>
+    <Enable>true</Enable>
+    <Priority>50</Priority>
+  </Rule>
+  <Rule Name="Расчет периметра">
+    <Condition>данные.тип="Периметр"</Condition>
+    <Condition>данные.подтверждение=TRUE()</Condition>
+    <Act>ВЫВОД(данные.текст)</Act>
+    <Act>Расчет=2*(данные.a+0+данные.b)</Act>
+    <Act>ВЫВОД("P= ",Расчет)</Act>
+    <Enable>true</Enable>
+    <Priority>50</Priority>
+  </Rule>
+  <Rule Name="Отмена">
+    <Condition>данные.отмена=TRUE()</Condition>
+    <Act>ВЫВОД("Вы отменили ввод данных. Расчет остановлен")</Act>
+    <Act>Расчет=0</Act>
+    <Enable>true</Enable>
+    <Priority>50</Priority>
+  </Rule>
+  <Rule Name="Выбран свой ключ">
+    <Condition>данные.тип="свой ключ"</Condition>
+    <Act>ВЫВОД("Выбран свой ключ - это тест, расчет остановлен")</Act>
+    <Act>Расчет=0</Act>
+    <Enable>true</Enable>
+    <Priority>50</Priority>
+  </Rule>
+  <Variable xsi:type="NoType" Name="k" Goal="false">
+    <IsBackward>false</IsBackward>
+    <Goal>False</Goal>
+    <Comment />
+    <StartValue />
+    <Opredelena>false</Opredelena>
+  </Variable>
+  <Variable xsi:type="NoType" Name="данные" Goal="false">
+    <IsBackward>false</IsBackward>
+    <Goal>False</Goal>
+    <Comment />
+    <StartValue />
+    <Opredelena>false</Opredelena>
+  </Variable>
+  <Variable xsi:type="NoType" Name="Расчет" Goal="true">
+    <IsBackward>false</IsBackward>
+    <Goal>True</Goal>
+    <Comment />
+    <StartValue />
+    <Opredelena>false</Opredelena>
+  </Variable>
+  <Variable xsi:type="List" Name="списокВыбора" Goal="false">
+    <IsBackward>false</IsBackward>
+    <Goal>False</Goal>
+    <Comment />
+    <StartValue />
+    <Opredelena>false</Opredelena>
+  </Variable>
+  <Variable xsi:type="NoType" Name="новыйКлючВыбора" Goal="false">
+    <IsBackward>false</IsBackward>
+    <Goal>False</Goal>
+    <Comment />
+    <StartValue />
+    <Opredelena>false</Opredelena>
+  </Variable>
+  <CommentHtml />
+  <SearchStrategy>Прямой вывод</SearchStrategy>
+  <Forms Name="формаВводаПрямоуг">
+    <Comment />
+    <FormSize>
+      <Width>247</Width>
+      <Height>189</Height>
+    </FormSize>
+    <Elements>
+      <Type>1</Type>
+      <Location>
+        <X>13</X>
+        <Y>157</Y>
+      </Location>
+      <Size>
+        <Width>75</Width>
+        <Height>23</Height>
+      </Size>
+      <Parametrs>
+        <key>2</key>
+        <param>отмена</param>
+      </Parametrs>
+      <Parametrs>
+        <key>1</key>
+        <param>Отмена</param>
+      </Parametrs>
+    </Elements>
+    <Elements>
+      <Type>2</Type>
+      <Location>
+        <X>9</X>
+        <Y>119</Y>
+      </Location>
+      <Size>
+        <Width>100</Width>
+        <Height>23</Height>
+      </Size>
+      <Parametrs>
+        <key>2</key>
+        <param />
+      </Parametrs>
+      <Parametrs>
+        <key>1</key>
+        <param>Тип расчета</param>
+      </Parametrs>
+    </Elements>
+    <Elements>
+      <Type>5</Type>
+      <Location>
+        <X>118</X>
+        <Y>116</Y>
+      </Location>
+      <Size>
+        <Width>121</Width>
+        <Height>21</Height>
+      </Size>
+      <Parametrs>
+        <key>2</key>
+        <param>тип</param>
+      </Parametrs>
+      <Parametrs>
+        <key>1</key>
+        <param>Периметр</param>
+      </Parametrs>
+      <Parametrs>
+        <key>3</key>
+        <param>Периметр
+Площадь</param>
+      </Parametrs>
+    </Elements>
+    <Elements>
+      <Type>4</Type>
+      <Location>
+        <X>7</X>
+        <Y>67</Y>
+      </Location>
+      <Size>
+        <Width>230</Width>
+        <Height>41</Height>
+      </Size>
+      <Parametrs>
+        <key>2</key>
+        <param>текст</param>
+      </Parametrs>
+      <Parametrs>
+        <key>1</key>
+        <param>Введите текст для пояснения вывода результата</param>
+      </Parametrs>
+    </Elements>
+    <Elements>
+      <Type>3</Type>
+      <Location>
+        <X>136</X>
+        <Y>39</Y>
+      </Location>
+      <Size>
+        <Width>100</Width>
+        <Height>20</Height>
+      </Size>
+      <Parametrs>
+        <key>2</key>
+        <param>b</param>
+      </Parametrs>
+      <Parametrs>
+        <key>1</key>
+        <param />
+      </Parametrs>
+    </Elements>
+    <Elements>
+      <Type>2</Type>
+      <Location>
+        <X>6</X>
+        <Y>38</Y>
+      </Location>
+      <Size>
+        <Width>113</Width>
+        <Height>18</Height>
+      </Size>
+      <Parametrs>
+        <key>2</key>
+        <param />
+      </Parametrs>
+      <Parametrs>
+        <key>1</key>
+        <param>Длина стороны b</param>
+      </Parametrs>
+    </Elements>
+    <Elements>
+      <Type>2</Type>
+      <Location>
+        <X>7</X>
+        <Y>10</Y>
+      </Location>
+      <Size>
+        <Width>116</Width>
+        <Height>20</Height>
+      </Size>
+      <Parametrs>
+        <key>2</key>
+        <param>надписьА</param>
+      </Parametrs>
+      <Parametrs>
+        <key>1</key>
+        <param>Длина стороны a</param>
+      </Parametrs>
+    </Elements>
+    <Elements>
+      <Type>3</Type>
+      <Location>
+        <X>136</X>
+        <Y>9</Y>
+      </Location>
+      <Size>
+        <Width>100</Width>
+        <Height>20</Height>
+      </Size>
+      <Parametrs>
+        <key>2</key>
+        <param>a</param>
+      </Parametrs>
+      <Parametrs>
+        <key>1</key>
+        <param />
+      </Parametrs>
+    </Elements>
+    <Elements>
+      <Type>1</Type>
+      <Location>
+        <X>164</X>
+        <Y>157</Y>
+      </Location>
+      <Size>
+        <Width>75</Width>
+        <Height>23</Height>
+      </Size>
+      <Parametrs>
+        <key>2</key>
+        <param>подтверждение</param>
+      </Parametrs>
+      <Parametrs>
+        <key>1</key>
+        <param>OK</param>
+      </Parametrs>
+    </Elements>
+  </Forms>
+</BZ>

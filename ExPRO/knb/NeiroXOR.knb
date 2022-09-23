@@ -1,0 +1,158 @@
+﻿<?xml version="1.0"?>
+<BZ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Name="XOR тест" Author="Максим" CreateDate="08.05.2011 14:59:55" UpdateDate="08.05.2011 15:14:26">
+  <Comment />
+  <Rule Name="Ввод данных">
+    <Act>ВВОДБЛ("переменные",х,у)</Act>
+    <Act>ввод=1</Act>
+    <Enable>true</Enable>
+    <Priority>50</Priority>
+  </Rule>
+  <Rule Name="Вычислить xor">
+    <Condition>ввод=1</Condition>
+    <Act>результат=ЭЛЕМСП(1,ИНС(xor,[х,у]))</Act>
+    <Enable>true</Enable>
+    <Priority>25</Priority>
+  </Rule>
+  <Rule Name="вывод1">
+    <Condition>результат&gt;0.5</Condition>
+    <Act>ВЫВОД("True")</Act>
+    <Act>goal=1</Act>
+    <Enable>true</Enable>
+    <Priority>12.5</Priority>
+  </Rule>
+  <Rule Name="вывод0">
+    <Condition>результат&lt;=0.5</Condition>
+    <Act>ВЫВОД("False")</Act>
+    <Act>goal=0</Act>
+    <Enable>true</Enable>
+    <Priority>6.25</Priority>
+  </Rule>
+  <Variable Name="х" Goal="false">
+    <Goal>False</Goal>
+    <Comment />
+    <StartValue />
+    <Type>NoType</Type>
+  </Variable>
+  <Variable Name="у" Goal="false">
+    <Goal>False</Goal>
+    <Comment />
+    <StartValue />
+    <Type>NoType</Type>
+  </Variable>
+  <Variable Name="ввод" Goal="false">
+    <Goal>False</Goal>
+    <Comment />
+    <StartValue />
+    <Type>NoType</Type>
+  </Variable>
+  <Variable Name="результат" Goal="false">
+    <Goal>False</Goal>
+    <Comment />
+    <StartValue />
+    <Type>NoType</Type>
+  </Variable>
+  <Variable Name="goal" Goal="true">
+    <Goal>True</Goal>
+    <Comment />
+    <StartValue />
+    <Type>NoType</Type>
+  </Variable>
+  <Networks Name="xor" Type="1">
+    <Comment />
+    <Network>
+      <Network>
+        <Topo>
+          <Layer>
+            <NeironsCount>2</NeironsCount>
+          </Layer>
+          <Layer>
+            <NeironsCount>2</NeironsCount>
+            <Neiron>
+              <Weight>-2,60452626096947</Weight>
+              <Weight>-3,19913628632715</Weight>
+              <Weight>-3,20337259214705</Weight>
+            </Neiron>
+            <Neiron>
+              <Weight>-3,44081647796112</Weight>
+              <Weight>3,80459329511857</Weight>
+              <Weight>3,80928491965712</Weight>
+            </Neiron>
+          </Layer>
+          <Layer>
+            <NeironsCount>1</NeironsCount>
+            <Neiron>
+              <Weight>4,05307224851391</Weight>
+              <Weight>4,80378007845781</Weight>
+              <Weight>4,75089753300663</Weight>
+            </Neiron>
+          </Layer>
+        </Topo>
+        <SpecialIn>
+          <special>
+            <Key>1</Key>
+            <Param>2</Param>
+            <Param>0</Param>
+            <Param>1</Param>
+          </special>
+          <special>
+            <Key>2</Key>
+            <Param>2</Param>
+            <Param>0</Param>
+            <Param>1</Param>
+          </special>
+        </SpecialIn>
+        <SpecialIn>
+          <special>
+            <Key>1</Key>
+            <Param>2</Param>
+            <Param>0</Param>
+            <Param>1</Param>
+          </special>
+        </SpecialIn>
+        <SpecialIn>
+          <EducateEnters>
+            <Elements>
+              <value>1</value>
+              <value>1</value>
+            </Elements>
+            <Elements>
+              <value>1</value>
+              <value>0</value>
+            </Elements>
+            <Elements>
+              <value>0</value>
+              <value>1</value>
+            </Elements>
+            <Elements>
+              <value>0</value>
+              <value>0</value>
+            </Elements>
+          </EducateEnters>
+          <EducateOutputs>
+            <Elements>
+              <value>0</value>
+            </Elements>
+            <Elements>
+              <value>1</value>
+            </Elements>
+            <Elements>
+              <value>1</value>
+            </Elements>
+            <Elements>
+              <value>0</value>
+            </Elements>
+          </EducateOutputs>
+        </SpecialIn>
+        <ApdaptiveStep>True</ApdaptiveStep>
+        <InfiniteStep>True</InfiniteStep>
+        <MaxStep>10</MaxStep>
+        <Step>1</Step>
+        <Sigmoid>1</Sigmoid>
+        <Impulse>0</Impulse>
+        <Scheme>True</Scheme>
+        <EducateError>0,001</EducateError>
+        <MaxEpoch>50</MaxEpoch>
+      </Network>
+    </Network>
+  </Networks>
+</BZ>

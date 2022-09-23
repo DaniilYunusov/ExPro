@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<BZ Name="Тест на функции div, mod " Author="Юрин А.М.">
+  <Variable Name="A" />
+  <Variable Name="B" />
+  <Variable Name="X">
+    <Comment>Значение деления без остатка</Comment>
+    <Goal />
+  </Variable>
+  <Variable Name="Y">
+    <Comment>Остаток от деления целых чисел</Comment>
+    <Goal />
+  </Variable>
+  <Rule Name="Правило1">
+    <Act>X=div(A,B)</Act>
+    <Act>ВЫВОД("X=",X)</Act>
+  </Rule>
+  <Rule Name="Правило2">
+    <Act>Y=mod(A,B)</Act>
+    <Act>ВЫВОД("Y=",Y)</Act>
+  </Rule>
+  <Rule Name="Правило3">
+    <Act>A=ВВОД("Введите число A")</Act>
+    <Act>B=ВВОД("Введите число B")</Act>
+  </Rule>
+</BZ>

@@ -1,0 +1,71 @@
+<?xml version="1.0"?>
+<BZ Name="Нормирование измерения поверхностей" Author="Юрин А.М.">
+  <Comment>Нормирование измерения поверхностей деталей при точении и фрезеровании.</Comment>
+  <Variable Name="Пар_изм">
+    <Goal />
+  </Variable>
+  <Variable Name="L">
+    <Comment>Длина поверхности</Comment>
+    <Type>double</Type>
+  </Variable>
+  <Variable Name="T">
+    <Comment>Время контроля</Comment>
+    <Type>double</Type>
+    <Goal />
+  </Variable>
+  <Variable Name="Инструмент">
+    <Comment>Тип инструмента</Comment>
+    <Type>string</Type>
+    <Goal />
+  </Variable>
+  <Variable Name="Обр">
+    <Comment>Вид обработки</Comment>
+    <Type>string</Type>
+    <Goal />
+  </Variable>
+  <Variable Name="R">
+    <Comment>Радиус сечения поверхности детали</Comment>
+    <Type>double</Type>
+  </Variable>
+  <Variable Name="Расчет">
+    <Comment>Расчет</Comment>
+    <Goal />
+  </Variable>
+  <Rule Name="Правило1">
+    <Comment>
+    </Comment>
+    <Condition>Обр="Точение"</Condition>
+    <Act>Инструмент="Штангенциркуль"</Act>
+    <Act>ВЫВОД("Инструмент: ",Инструмент)</Act>
+  </Rule>
+  <Rule Name="Правило3">
+    <Comment>
+    </Comment>
+    <Act>Обр=ВЫБОР("Выбор вида обработки",["Точение","Фрезерование"])</Act>
+  </Rule>
+  <Rule Name="Правило4">
+    <Comment>
+    </Comment>
+    <Condition>Обр="Фрезерование"</Condition>
+    <Act>Инструмент="Микрометр"</Act>
+    <Act>ВЫВОД("Инструмент: ",Инструмент)</Act>
+  </Rule>
+  <Rule Name="Правило5">
+    <Comment>
+    </Comment>
+    <Condition>Инструмент="Штангенциркуль"</Condition>
+    <Act>T=ПОСЛ(Пар_изм,Расчет)</Act>
+    <Act>ВЫВОД("T = ",T)</Act>
+  </Rule>
+  <Rule Name="Правило6">
+    <Comment>
+    </Comment>
+    <Condition>Инструмент="Штангенциркуль"</Condition>
+    <Act>Пар_изм=ВВОДБЛ("параметры измерения поверхности",L,R)</Act>
+  </Rule>
+  <Rule Name="Пр7">
+    <Comment>
+    </Comment>
+    <Act>Расчет=0.01*(L*0.34)*R*35</Act>
+  </Rule>
+</BZ>

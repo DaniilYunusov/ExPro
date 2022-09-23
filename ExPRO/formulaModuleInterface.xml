@@ -1,0 +1,74 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>formulaModuleInterface</name>
+    </assembly>
+    <members>
+        <member name="M:formulaModuleInterface.formulaModule.getName">
+            <summary>
+            Название модуля на русском языке
+            </summary>
+        </member>
+        <member name="M:formulaModuleInterface.formulaModule.getInternalName">
+            <summary>
+            Внутреннее название модуля 
+            (на английском, в соответствии с именованием переменных)
+            </summary>
+        </member>
+        <member name="M:formulaModuleInterface.formulaModule.addControl(formulaModuleInterface.formulaModule,System.Boolean)">
+            <summary>
+            Добавить элемент в модуль
+            </summary>
+        </member>
+        <member name="M:formulaModuleInterface.formulaModule.remove(System.Windows.Controls.TextBox)">
+            <summary>
+            Удалить себя
+            </summary>
+        </member>
+        <member name="M:formulaModuleInterface.formulaModule.getString">
+            <summary>
+            Возврат формулы в строковом виде
+            </summary>
+        </member>
+        <member name="M:formulaModuleInterface.formulaModule.getView">
+            <summary>
+            Возвращает UIElement для графической визуализации
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:formulaModuleInterface.formulaModule.focused">
+            <summary>
+            У меня фокус?
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:formulaModuleInterface.formulaModule.serialize(System.Xml.XmlWriter)">
+            <summary>
+            Сериализует даный модуль. Данные, полученные при сериализации, будут возвращены модулю для восстановления его из файла
+            </summary>
+            <param name="xw">Готовый для записи XmlWriter. Открытие либо сохранение не требуется</param>
+        </member>
+        <member name="M:formulaModuleInterface.formulaModule.restore(System.Xml.XmlReader)">
+            <summary>
+            Восстановить формулу в графический вид
+            </summary>
+            <param name="xr">Готовый для чтения XmlReader</param>
+        </member>
+        <member name="T:formulaModuleInterface.Properties.Resources">
+            <summary>
+              Класс ресурса со строгой типизацией для поиска локализованных строк и т.д.
+            </summary>
+        </member>
+        <member name="P:formulaModuleInterface.Properties.Resources.ResourceManager">
+            <summary>
+              Возвращает кэшированный экземпляр ResourceManager, использованный этим классом.
+            </summary>
+        </member>
+        <member name="P:formulaModuleInterface.Properties.Resources.Culture">
+            <summary>
+              Перезаписывает свойство CurrentUICulture текущего потока для всех
+              обращений к ресурсу с помощью этого класса ресурса со строгой типизацией.
+            </summary>
+        </member>
+    </members>
+</doc>

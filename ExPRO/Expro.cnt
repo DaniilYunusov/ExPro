@@ -1,0 +1,53 @@
+:BASE Expro.hlp
+1 Общая информация о системе
+2 Общие сведения=ID_GeneralInfo@Expro.hlp
+2 Управление логическим выводом=ID_Logic@Expro.hlp
+1 Интерфейс
+2 Главное окно=ID_MainWindow@Expro.hlp
+2 Главное меню
+3 Обзор=ID_MainMenu_Overview@Expro.hlp
+3 Меню Файл=ID_FileMenu@Expro.hlp
+3 Меню Правка=ID_EditMenu@Expro.hlp
+3 Меню Вид=ID_ViewMenu@Expro.hlp
+3 Меню База знаний=ID_KnowledgeBaseMenu@Expro.hlp
+3 Меню Решение=ID_SolveMenu@Expro.hlp
+3 Меню Документ=ID_DocumentMenu@Expro.hlp
+3 Меню Настройка=ID_PropertiesMenu@Expro.hlp
+3 Меню Справка=ID_HelpMenu@Expro.hlp
+2 Редактор баз знаний
+3 Общая информация=ID_EditorGeneralInfo@Expro.hlp
+3 Список правил=ID_EditorRulesList@Expro.hlp
+3 Тело правила=ID_RuleBody@Expro.hlp
+2 Диалоговые окна
+3 Видимость правил=ID_RulesVisibilityDialog@Expro.hlp
+3 Документ MS Word
+4 Перенос результатов в Word=ID_ResultsInWordDialog@Expro.hlp
+4 Заполнение шаблона=ID_PatternFillDialog@Expro.hlp
+2 Значения переменных=ID_VariablesValuesDialog@Expro.hlp
+3 Импорт правил=ID_RulesImportDialog@Expro.hlp
+3 Настройки
+4 Шаблоны=ID_PatternsDialog@Expro.hlp
+4 Шрифты=ID_FontsDialog@Expro.hlp
+2 Общие сведения=ID_GeneralPropertiesDialog@Expro.hlp
+3 Объяснение=ID_ExplainationDialog@Expro.hlp
+3 Переменные базы знаний=ID_VariablesDialog@Expro.hlp
+3 Просмотр базы знаний=ID_BrowseDialog@Expro.hlp
+3 Решение=ID_SolveDialog@Expro.hlp
+3 Связь базы с рисунками=ID_PicturesDialog@Expro.hlp
+3 Цели=ID_GoalsListDialog@Expro.hlp
+1 Работа с системой
+2 Создание базы знаний=ID_CreateKnowledgeBase@Expro.hlp
+2 Открытие и редактирование базы знаний=ID_OpenEditKnowledgeBase@Expro.hlp
+2 Создание документов и шаблонов=ID_CreateDocumentsPatterns@Expro.hlp
+1 Язык представления знаний Expro
+2 Общая информация=ID_LanguageGeneralInfo@Expro.hlp
+2 Функции языка
+3 Состав функций=ID_FunctionsContents@Expro.hlp
+3 Функции ввода и вывода данных=ID_InputOutputFunctions@Expro.hlp
+3 Функции управления=ID_ManagmentFunctions@Expro.hlp
+3 Вычислительные функции=ID_CalculatingFunctions@Expro.hlp
+3 Тригонометрические функции=ID_TrigonometricFunctions@Expro.hlp
+3 Функции работы со списками=ID_ListFunctions@Expro.hlp
+3 Функции работы с таблицами=ID_TablesFunctions@Expro.hlp
+3 Функции работы со строками=ID_StringFunctions@Expro.hlp
+3 Функции файлового ввода и вывода=ID_FileInputOutputFunctions@Expro.hlp
